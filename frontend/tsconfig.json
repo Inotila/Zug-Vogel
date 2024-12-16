@@ -4,6 +4,7 @@
       "lib": ["dom", "es2015"],
       "module": "esnext",
       "moduleResolution": "node",
+      "allowJs": true,
       "strict": true,
       "jsx": "react-jsx",
       "esModuleInterop": true,
