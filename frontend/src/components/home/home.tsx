@@ -38,22 +38,29 @@ const HomePage: React.FC = () => {
                   <img className="home-img-links card-img-top" src={yoga}
                         alt="#" aria-label="an image link leads to details about the art work"/>
                 </Link>
-              <button className='home-link-button'> Activities</button>
+                <div className='d-flex justify-content-center my-1'>
+                    <button className='home-link-button'> Activities</button>
+                </div>
+             
             </div>
             <div className="card homepage-cards accomdation-card mx-3">
                 <Link to="/" className='home-img-links-container'>
                   <img className="home-img-links card-img-top"  src={house1}
                         alt="#" aria-label="an image link leads to details about the art work"/>
                 </Link>
-              <button className='home-link-button'> Accomodation</button>
-            </div>
+                <div className='d-flex justify-content-center'></div>
+                <div className='d-flex justify-content-center my-1'>
+                    <button className='home-link-button'> Accomodation</button>
+                </div>            </div>
             <div className="card homepage-cards">
                 <Link to="/" className='home-img-links-container'>
                   <img className="home-img-links card-img-top" src={gallery}
                         alt="#" aria-label="an image link leads to details about the art work"/>
                 </Link>
-              <button className='home-link-button'> Gallery</button>
-            </div>
+                <div className='d-flex justify-content-center'></div>
+                <div className='d-flex justify-content-center my-1'>
+                    <button className='home-link-button'> Gallery</button>
+                </div>            </div>
           </div>
         </div>
         <div className="row mt-1">

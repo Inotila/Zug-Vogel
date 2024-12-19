@@ -34,3 +34,9 @@ code {
   display: flex;
   flex-direction: column;
 }
+
+button {
+  background-color: #0083B7;
+  border-radius: 0.5rem !important;
+  width:fit-content;
+}
