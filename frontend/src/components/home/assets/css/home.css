@@ -16,4 +16,27 @@
 
   .hero-text-container{
     background-color: #E8620F!important;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7); /* Optional: Add a text shadow */
   }
+
+  .card-col {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+   align-items: center;
+   justify-content: center;
+   height: 20rem;
+
+  }
+  
+  .homepage-cards{
+    width: 33%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-height: 100% !important;
+  }
+
+
+.home-img-links {
+  height: 15rem !important;
+}

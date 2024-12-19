@@ -2,6 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 // import '../assets/index.css';
 import './assets/css/home.css';
+import house1 from './assets/images/house1.jpg';
+import yoga from './assets/images/yoga.jpg'
+import gallery from './assets/images/gallery.jpg'
 
 const HomePage: React.FC = () => {
   const imagePath = '/images/home/';
@@ -15,45 +18,41 @@ const HomePage: React.FC = () => {
         </div>
         <div className="row hero-text-container">
           <div className="col">
-            <h2>Welcome to Zug Vogel</h2>
              <p>Trade in the cold dark winter, for the warm Namibian sun!
                 <br />
                 Namibia is locatated in South West Africa, and offers affordable living conditions, friendly locals, and a wide range
-                activities to keep you busy.
-             </p>
-             <Link to="/" className='learn-about-namibia-link-text-container'>
+                activities to keep you busy. <Link to="/" className='learn-about-namibia-link-text-container'>
                   Learn more about Namibia
+            </Link>
+             </p>
+            <p>Zug Vogel Namibia is dedicated to making your stay in Namibia.</p>
+            <Link to="/" className='learn-about-namibia-link-text-container'>
+                  Learn more about our services here
             </Link>
           </div>
         </div>
         <div className="row">
-          <div className="col">
-            <div className="card home-card">
+          <div className="col card-col">
+            <div className="card homepage-cards">
                 <Link to="/" className='home-img-links-container'>
-                  <img className="home-img-links card-img-top" src={imagePath + "services.png"}
+                  <img className="home-img-links card-img-top" src={yoga}
                         alt="#" aria-label="an image link leads to details about the art work"/>
                 </Link>
-              <button className='home-link-button'> services</button>
+              <button className='home-link-button'> Activities</button>
             </div>
-          </div>
-          <div className="col">
-          <div className="card">
+            <div className="card homepage-cards accomdation-card mx-3">
                 <Link to="/" className='home-img-links-container'>
-                  <img className="home-img-links card-img-top" src={imagePath + "entertainment.png"}
+                  <img className="home-img-links card-img-top"  src={house1}
                         alt="#" aria-label="an image link leads to details about the art work"/>
                 </Link>
-                <Link to="/entertainment">
-                  <button className="home-link-button"> Media Center</button>
-                </Link>
+              <button className='home-link-button'> Accomodation</button>
             </div>
-          </div>
-          <div className="col">
-          <div className="card">
+            <div className="card homepage-cards">
                 <Link to="/" className='home-img-links-container'>
-                  <img className="home-img-links card-img-top" src={imagePath + "projects.png"}
+                  <img className="home-img-links card-img-top" src={gallery}
                         alt="#" aria-label="an image link leads to details about the art work"/>
                 </Link>
-              <button className='home-link-button'>Projects</button>
+              <button className='home-link-button'> Gallery</button>
             </div>
           </div>
         </div>
