@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-1">
           <div className="col card-col">
             <div className="card homepage-cards">
                 <Link to="/" className='home-img-links-container'>
@@ -56,11 +56,20 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-1">
           <div className="col">
-            <p>
-              Contact us today!
-            </p>
+            <div className='contact-and-faq-container' >
+            <h3> Contact detials & Frequently Asked Question </h3>
+                <h4>FAQ</h4>
+                <p>We have some valuable info in our FAQ section that will help you better prepare for your trip
+                    <br />
+                    and you can add some questions of your own!
+                </p>
+               
+                <h4>Contact</h4>
+                <p>Please feel free to contact us at:</p>
+                Email: zugvogel@gmail.com or 264 81 85 88 650
+            </div>
           </div>
         </div>
       </div>
