@@ -7,7 +7,6 @@ import yoga from './assets/images/yoga.jpg'
 import gallery from './assets/images/gallery.jpg'
 
 const HomePage: React.FC = () => {
-  const imagePath = '/images/home/';
   return (
       <div className="container text-center">
         <div className="row">
