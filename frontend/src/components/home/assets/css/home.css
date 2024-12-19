@@ -1,0 +1,19 @@
+.hero-banner-container {
+    background-image: url('../../../../assets/images/whk-mountains.jpg');
+    height: 10rem !important;
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 400px; /* Set a fixed height for the banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Add a text shadow */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text-container{
+    background-color: #E8620F!important;
+  }

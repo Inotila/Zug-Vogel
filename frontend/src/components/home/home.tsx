@@ -8,15 +8,22 @@ const HomePage: React.FC = () => {
   return (
       <div className="container text-center">
         <div className="row">
-          <div className="col">
+          <div className="col hero-banner-container">
             <h1>Zug Vogel</h1>
+            <p>Überwintern im Sonnnparadis</p>
           </div>
         </div>
-        <div className="row">
+        <div className="row hero-text-container">
           <div className="col">
-            <p>Welcome to Zug Vogel
-            <br />
-          Your assisted living provider</p>
+            <h2>Welcome to Zug Vogel</h2>
+             <p>Trade in the cold dark winter, for the warm Namibian sun!
+                <br />
+                Namibia is locatated in South West Africa, and offers affordable living conditions, friendly locals, and a wide range
+                activities to keep you busy.
+             </p>
+             <Link to="/" className='learn-about-namibia-link-text-container'>
+                  Learn more about Namibia
+            </Link>
           </div>
         </div>
         <div className="row">

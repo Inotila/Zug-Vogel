@@ -1,7 +1,7 @@
 // frontend/src/components/Navbar.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../assets/index.css';
+import '../../assets/css/index.css';
 import './navbar.css';
 
 
