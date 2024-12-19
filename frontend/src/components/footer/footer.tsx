@@ -4,7 +4,7 @@ import './assets/footer.css';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="footer text-center mt-3">
+    <footer className="footer text-center mt-1">
       {/* Row 1: Links to Facebook and Instagram */}
       <div className="row">
         <div className="col">

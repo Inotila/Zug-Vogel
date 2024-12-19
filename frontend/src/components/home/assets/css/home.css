@@ -1,5 +1,6 @@
 .hero-banner-container {
     background-image: url('../../../../assets/images/whk-mountains.jpg');
+    max-width: 100% !important;
     height: 10rem !important;
     background-size: cover; /* Ensure the image covers the entire container */
     background-position: center; /* Center the image */
@@ -18,6 +19,11 @@
     background-color: #E8620F!important;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7); /* Optional: Add a text shadow */
   }
+
+  .container-fluid {
+    padding: 0 !important; /* Removes padding around the container */
+  }
+  
 
   .card-col {
     display: flex;

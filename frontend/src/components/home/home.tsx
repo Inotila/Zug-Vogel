@@ -8,7 +8,7 @@ import gallery from './assets/images/gallery.jpg'
 
 const HomePage: React.FC = () => {
   return (
-      <div className="container text-center">
+      <div className="container-fluid text-center">
         <div className="row">
           <div className="col hero-banner-container">
             <h1>Zug Vogel</h1>
