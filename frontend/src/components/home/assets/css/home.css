@@ -1,63 +1,86 @@
 .hero-banner-container {
-    background-image: url('../../../../assets/images/whk-mountains.jpg');
-    max-width: 100% !important;
-    height: 10rem !important;
-    background-size: cover; /* Ensure the image covers the entire container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    height: 400px; /* Set a fixed height for the banner */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white; /* Adjust text color for visibility */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Add a text shadow */
-    display: flex;
-    flex-direction: column;
-  }
+  background-image: url('../../../../assets/images/whk-mountains.jpg');
+  max-width: 100% !important;
+  height: 10rem !important;
+  font-weight: 600;
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  height: 400px; /* Set a fixed height for the banner */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Adjust text color for visibility */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Add a text shadow */
+  display: flex;
+  flex-direction: column;
+}
 
-  .hero-text-container{
-    background-color: #E8620F!important;
-    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7); /* Optional: Add a text shadow */
-  }
+.learn-about-namibia-link-text-container {
+  color: #fff !important;
+}
 
-  .container-fluid {
-    padding: 0 !important; /* Removes padding around the container */
-  }
-  
+.hero-text-container {
+  font-weight: 600;
+  background-color: #E8620F !important;
+  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7); /* Optional: Add a text shadow */
+  background: linear-gradient(
+    to bottom,
+    #e8620f 0%,
+    #e8620f 50%,
+    rgba(232, 98, 15, 0.8) 75%,
+    rgba(232, 98, 15, 0) 100%
+  ) !important;
+}
 
-  .card-col {
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(255, 255, 255);
-    align-items: center;
-    justify-content: center;
-    height: 20rem;
-  }
-  
-  .homepage-cards{
-    width: 33%;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    max-height: 100% !important;
-  }
+.container-fluid {
+  padding: 0 !important; /* Removes padding around the container */
+}
 
+.card-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.8) 85%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important; /* Add gradient effect */
+}
+
+.homepage-cards {
+  width: 33%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-height: 100% !important;
+  background-color:transparent !important;
+  border: none !important;
+}
 
 .home-img-links {
   height: 15rem !important;
 }
 
-.contact-and-faq-container{
-  background-color: rgb(255, 255, 255);
+.contact-and-faq-container {
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.8) 75%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important; /* Add gradient effect */
 }
 
 .home-link-button {
   width: 30% !important;
-  font-weight:bold;
+  font-weight: bold;
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Optional: Add a text shadow */
 }
 
 .home-link-button:hover {
   background-color: #7ad8f1;
   text-shadow: 2px 2px 4px rgba(6, 56, 117, 0.7); /* Optional: Add a text shadow */
-
 }
