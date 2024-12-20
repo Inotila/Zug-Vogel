@@ -30,36 +30,42 @@ const HomePage: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="row mt-1">
-          <div className="col card-col">
-            <div className="card homepage-cards">
-                <Link to="/" className='home-img-links-container'>
-                  <img className="home-img-links card-img-top" src={yoga}
-                        alt="#" aria-label="an image link leads to details about the art work"/>
-                </Link>
-                <div className='d-flex justify-content-center my-1'>
-                    <button className='home-link-button'> Activities</button>
+        <div className="row home-card-row mt-1">
+          <div className="col card-col m-3">
+            <div className="card homepage-card flex-fill">
+                <img className="homepage-cover-image card-img-top" src={yoga} alt="#" />
+                  <div className="card-body d-flex flex-column">
+                      <h5 className="card-title accomodation-title">Activities</h5>
+                      <p className="card-text accomodation-text">Stay busy with our many activities on offer. We offer fun activities to keep you healthy and learning local skills</p>
+                      <Link to="/" className="btn btn-primary mt-auto">
+                        View More Details
+                      </Link>
                 </div>
-             
             </div>
-            <div className="card homepage-cards accomdation-card mx-3">
-                <Link to="/accomodation" className='home-img-links-container'>
-                  <img className="home-img-links card-img-top"  src={house1}
-                        alt="#" aria-label="an image link leads to details about the art work"/>
-                </Link>
-                <div className='d-flex justify-content-center'></div>
-                <div className='d-flex justify-content-center my-1'>
-                    <button className='home-link-button'> Accomodation</button>
-                </div>            </div>
-            <div className="card homepage-cards">
-                <Link to="/" className='home-img-links-container'>
-                  <img className="home-img-links card-img-top" src={gallery}
-                        alt="#" aria-label="an image link leads to details about the art work"/>
-                </Link>
-                <div className='d-flex justify-content-center'></div>
-                <div className='d-flex justify-content-center my-1'>
-                    <button className='home-link-button'> Gallery</button>
-                </div>            </div>
+          </div>
+          <div className="col card-col m-3">
+            <div className="card homepage-card flex-fill">
+                <img className="homepage-cover-image card-img-top" src={house1} alt="#" />
+                  <div className="card-body d-flex flex-column">
+                      <h5 className="card-title accomodation-title">Accomodation</h5>
+                      <p className="card-text accomodation-text">Find your perfect summer home from our carefully curated homes</p>
+                      <Link to="/accomodation" className="btn btn-primary mt-auto">
+                        View More Details
+                      </Link>
+                </div>
+            </div>
+          </div>
+          <div className="col card-col m-3">
+            <div className="card homepage-card flex-fill">
+                <img className="homepage-cover-image card-img-top" src={gallery} alt="#" />
+                  <div className="card-body d-flex flex-column">
+                      <h5 className="card-title accomodation-title">Learn about Namibia</h5>
+                      <p className="card-text accomodation-text">Find factualy information and tips on how to make your stay in Namibia memorable</p>
+                      <Link to="/" className="btn btn-primary mt-auto">
+                        View More Details
+                      </Link>
+                </div>
+            </div>
           </div>
         </div>
         <div className="row mt-1">

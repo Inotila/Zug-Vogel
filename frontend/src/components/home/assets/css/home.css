@@ -37,30 +37,6 @@
   padding: 0 !important; /* Removes padding around the container */
 }
 
-.card-col {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  height: 20rem;
-  background: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0.8) 85%,
-    rgba(255, 255, 255, 0) 100%
-  ) !important; /* Add gradient effect */
-}
-
-.homepage-cards {
-  width: 33%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  max-height: 100% !important;
-  background-color:transparent !important;
-  border: none !important;
-}
-
 .home-img-links {
   height: 15rem !important;
 }
@@ -83,4 +59,53 @@
 .home-link-button:hover {
   background-color: #7ad8f1;
   text-shadow: 2px 2px 4px rgba(6, 56, 117, 0.7); /* Optional: Add a text shadow */
+}
+
+
+/* CARD STYLING */
+
+.homepage-card {
+  /* Make the card fill the available space */
+ display: flex;
+ flex-direction: column; /* Stack content vertically */
+}
+
+.homepage-cover-image {
+ height: 15rem; /* Fixed height for all images */
+ object-fit: cover; /* Ensure images don't stretch */
+}
+
+.card-body {
+ /* height: 48px !important; */
+}
+
+
+.home-card-row{
+background-color: #fff;
+border-radius: ;
+}
+
+.homepage-cards {
+  width: 33%;
+  /* margin-top: 5px; */
+  /* margin-bottom: 5px; */
+  max-height: 100% !important;
+  background-color:transparent !important;
+  border: none !important;
+  
+}
+
+.card-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  /* height: 20rem; */
+  background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0.8) 85%,
+    rgba(255, 255, 255, 0) 100%
+  ) !important; /* Add gradient effect */
 }
