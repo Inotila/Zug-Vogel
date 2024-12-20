@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import '../assets/index.css';
+import '../../assets/css/index.css';
 import './assets/css/home.css';
 import house1 from './assets/images/house1.jpg';
 import yoga from './assets/images/yoga.jpg'
@@ -43,7 +43,7 @@ const HomePage: React.FC = () => {
              
             </div>
             <div className="card homepage-cards accomdation-card mx-3">
-                <Link to="/" className='home-img-links-container'>
+                <Link to="/accomodation" className='home-img-links-container'>
                   <img className="home-img-links card-img-top"  src={house1}
                         alt="#" aria-label="an image link leads to details about the art work"/>
                 </Link>

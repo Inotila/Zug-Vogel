@@ -1,0 +1,35 @@
+.hero-banner-container {
+    background-image: url('../images/teaCup.jpg');
+    max-width: 100% !important;
+    height: 15rem !important;
+    font-weight: 600;
+    background-size:cover; /* Ensure the image covers the entire container */
+    background-position:center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 400px; /* Set a fixed height for the banner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Add a text shadow */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accomodation-card {
+    height: 100%; /* Make the card fill the available space */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+  }
+  
+  .accomodation-cover-image {
+    height: 15rem; /* Fixed height for all images */
+    object-fit: cover; /* Ensure images don't stretch */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread content evenly */
+  }
+  
