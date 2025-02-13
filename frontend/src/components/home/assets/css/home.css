@@ -81,8 +81,12 @@
 
 
 .home-card-row{
-background-color: #fff;
-border-radius: ;
+background: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.8) 75%,
+    rgba(255, 255, 255, 0) 100%)
+
 }
 
 .homepage-cards {

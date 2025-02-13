@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
                   <div className="card-body d-flex flex-column">
                       <h5 className="card-title accomodation-title">Activities</h5>
                       <p className="card-text accomodation-text">Stay busy with our many activities on offer. We offer fun activities to keep you healthy and learning local skills</p>
-                      <Link to="/" className="btn btn-primary mt-auto">
+                      <Link to="/activities" className="btn btn-primary mt-auto">
                         View More Details
                       </Link>
                 </div>

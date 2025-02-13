@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import HomePage from './components/home/home';
-import AccomodationPage from './components/accomdation/accomodation'; // Use PascalCase
+import AccomodationPage from './components/accomdation/accomodation';
+import ActivitiesPage from './components/activities/activities'; // Use PascalCase
+
 
 const App: React.FC = () => {
   return (
@@ -17,6 +19,8 @@ const App: React.FC = () => {
             <Route path="/" element={<HomePage />} />
             {/* AccomodationPage route */}
             <Route path="/accomodation" element={<AccomodationPage />} /> 
+            <Route path="/activities" element={<ActivitiesPage />} /> 
+
           </Routes>
         </div>
         <Footer />
