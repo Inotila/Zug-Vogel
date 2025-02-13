@@ -44,8 +44,8 @@ const Navbar: React.FC = () => {
                   Services
                 </Link>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><Link className="dropdown-item" to="/music">Accomdation</Link></li>
-                  <li><Link className="dropdown-item" to="/videos">Acctivities</Link></li>
+                  <li><Link className="dropdown-item" to="/#">Accommodation</Link></li>
+                  <li><Link className="dropdown-item" to="/#">Activities</Link></li>
                 </ul>
               </li>
               <li className="nav-item">
