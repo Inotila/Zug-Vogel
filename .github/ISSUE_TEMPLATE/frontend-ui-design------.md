@@ -1,7 +1,7 @@
 ---
 name: 'Frontend UI design: <  >'
 about: 'Design features implemented for optimising the user interface '
-title: ''
+title: 'Frontend UI design: <  >'
 labels: ''
 assignees: Inotila
 

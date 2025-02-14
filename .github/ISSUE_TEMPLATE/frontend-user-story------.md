@@ -2,7 +2,7 @@
 name: 'Frontend USER STORY: <  >'
 about: User stories for issues that the is capable of doing and why this is a good
   thing.
-title: ''
+title: 'Frontend USER STORY: <  >'
 labels: ''
 assignees: Inotila
 
