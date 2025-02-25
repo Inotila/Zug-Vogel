@@ -5,3 +5,12 @@
 nav {
     background-color: #fff !important;
 }
+
+.dropdown-menu {
+    text-align: center; /* Centers inline elements */
+  }
+
+  .dropdown-menu li {
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+  }

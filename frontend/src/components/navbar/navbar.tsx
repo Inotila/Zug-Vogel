@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
                   >
                     Services
                   </Link>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <ul className="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                     <li>
                       <Link className="dropdown-item" to="/#">
                         Accommodation
@@ -74,19 +74,19 @@ const Navbar: React.FC = () => {
                     </li>
                     <li>
                       <Link className="dropdown-item" to="/#">
-                        Activities
+                        Tours
                       </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link" to="/services">
-                    About Us
+                    About Namibia
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link mx-3" to="/projects">
-                    Contact Us
+                  About Us
                   </Link>
                 </li>
               </ul>
