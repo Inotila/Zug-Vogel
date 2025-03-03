@@ -113,3 +113,20 @@ background: linear-gradient(
     rgba(255, 255, 255, 0) 100%
   ) !important; /* Add gradient effect */
 }
+
+.home-btn {
+  background-color: #e8620f !important;
+  border: 2px solid #000000 !important;
+  width: 50%;
+}
+
+.home-btn:hover {
+  background-color: #c64900; /* Slightly darker shade on hover */
+  color: #fff !important;
+  font-weight:bold !important;
+}
+
+.card-title {
+  margin-bottom: 3px !important;
+  margin-top: 3px !important;
+}
