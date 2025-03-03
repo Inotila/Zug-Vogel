@@ -4,14 +4,21 @@ import '../../assets/css/index.css';
 import './assets/css/home.css';
 import house1 from './assets/images/house1.jpg';
 import gallery from './assets/images/gallery.jpg'
+import whiteLogo from '../../assets/images/logo-pictures/hero-banner-zug-vogel-white-logo.png'
 
 const HomePage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
-      <div className="row">
-        <div className="col hero-banner-container">
-          <h1>Zug Vogel</h1>
-          <p>Überwintern im Sonnnparadis</p>
+      <div className="row hero-banner-container d-flex">
+        {/* Left side: Image */}
+        <div className="col-md-6 hero-banner-img-container">
+          <img className="hero-banner-img" src={whiteLogo} alt="Logo" />
+        </div>
+
+        {/* Right side: Text with border */}
+        <div className="col-md-6 hero-banner-text-container d-flex flex-column justify-content-center text-center">
+          <h1 className='hero-banner-text'>Zug Vogel</h1>
+          <p className='hero-banner-text'>Überwintern im Sonnnparadis</p>
         </div>
       </div>
       <div className="row hero-text-container">

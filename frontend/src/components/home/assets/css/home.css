@@ -142,3 +142,30 @@ background: linear-gradient(
   color: #fff !important;
   font-weight:bold !important;
 }
+
+.hero-banner-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.hero-banner-img-container {
+  width: 50%;
+  height: 100%; /* Ensure it takes full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner-img {
+  height: 100%;
+  object-fit: cover; /* Ensures it fills the container */
+}
+
+.hero-banner-text {
+  display: flex;
+  text-align: start;
+  font-weight: bold;
+  color: white; /* Main text color */
+  -webkit-text-stroke: 1px black; /* Creates a black border around text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Adds a shadow for better readability */
+}
