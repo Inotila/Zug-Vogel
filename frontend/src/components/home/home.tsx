@@ -25,10 +25,10 @@ const HomePage: React.FC = () => {
         </div>
       </div>
       <div className="row home-card-row mt-1">
-        <div className="col card-col m-3">
-          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center">
+        <div className="col card-col m-3 d-flex">
+          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
             <img className="homepage-cover-image card-img-top" src={gallery} alt="#" />
-            <div className="card-body d-flex flex-column  d-flex flex-column align-items-center text-center">
+            <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text">
                 Ob Sie einen kurzen Wochenendausflug planen oder eine längere Entdeckungsreise von bis zu
                 14 Tagen unternehmen möchten: Wir organisieren unvergessliche Touren, die Ihren
@@ -40,10 +40,10 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col card-col m-3">
-          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center">
+        <div className="col card-col m-3 d-flex">
+          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
             <img className="homepage-cover-image card-img-top" src={house1} alt="#" />
-            <div className="card-body d-flex flex-column  d-flex flex-column align-items-center text-center">
+            <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text accomodation-text">
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
                 Wählen Sie Ihr ideales Sommerhaus aus unserer Auswahl sorgfältig kuratierter Häuser.
@@ -54,10 +54,10 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col card-col m-3">
-          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center">
+        <div className="col card-col m-3 d-flex">
+          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
             <img className="homepage-cover-image card-img-top" src={gallery} alt="#" />
-            <div className="card-body d-flex flex-column  d-flex flex-column align-items-center text-center">
+            <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text accomodation-text">
                 Erfahren Sie mehr über Namibia und seine vielen Wunder.
                 Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
@@ -69,6 +69,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
+
       <div className="row mt-1">
         <div className="col">
           <div className='contact-and-faq-container' >
