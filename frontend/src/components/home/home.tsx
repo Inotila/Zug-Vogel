@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
           <p className='hero-banner-text'>Überwintern im Sonnnparadis</p>
         </div>
       </div>
-      <div className="row hero-text-container">
+      <div className="row hero-text-container text-center">
         <div className="col">
           <p>Tauschen Sie den kalten, dunklen Winter gegen die warme Sonne Namibias!
             <br />

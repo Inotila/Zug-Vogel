@@ -166,6 +166,14 @@ background: linear-gradient(
   text-align: start;
   font-weight: bold;
   color: white; /* Main text color */
-  -webkit-text-stroke: 1px black; /* Creates a black border around text */
+  -webkit-text-stroke: 0.5px black;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Adds a shadow for better readability */
 }
+
+.hero-banner-text-container h1{
+  font-size: 40px !important;
+}
+.hero-banner-text-container p{
+  font-size: 20px !important;
+}
+
