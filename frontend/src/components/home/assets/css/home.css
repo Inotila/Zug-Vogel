@@ -121,12 +121,24 @@ background: linear-gradient(
 }
 
 .home-btn:hover {
-  background-color: #c64900; /* Slightly darker shade on hover */
+  background-color: #c64900; 
   color: #fff !important;
   font-weight:bold !important;
 }
 
-.card-title {
+.card-title, .about-us-btn-text {
   margin-bottom: 3px !important;
   margin-top: 3px !important;
+}
+
+.home-about-us-btn {
+  background-color: #288deb !important;
+  border: 2px solid #000000 !important;
+  width: auto;
+}
+
+.home-about-us-btn:hover {
+  background-color: #0275e1 !important; 
+  color: #fff !important;
+  font-weight:bold !important;
 }
