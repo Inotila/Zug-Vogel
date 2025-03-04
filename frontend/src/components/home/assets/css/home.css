@@ -65,9 +65,9 @@
 /* CARD STYLING */
 
 .homepage-card {
-  /* Make the card fill the available space */
  display: flex;
- flex-direction: column; /* Stack content vertically */
+ flex-direction: column;
+ box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .homepage-cover-image {

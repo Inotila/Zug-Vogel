@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/#">
+                      <Link className="dropdown-item" to="/touren">
                         Tours
                       </Link>
                     </li>

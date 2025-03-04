@@ -12,6 +12,8 @@
     align-items: center;
     flex-direction: row; /* Ensures image is on the left and text on the right */
     padding: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+
 }
 
 .tour-content {
