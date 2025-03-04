@@ -5,7 +5,7 @@ import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import HomePage from './components/home/home';
 import AccomodationPage from './components/accomdation/accomodation';
-import ActivitiesPage from './components/activities/activities'; // Use PascalCase
+import TourPage from './components/tours/tours';
 
 
 const App: React.FC = () => {
@@ -18,9 +18,8 @@ const App: React.FC = () => {
             {/* HomePage component */}
             <Route path="/" element={<HomePage />} />
             {/* AccomodationPage route */}
-            <Route path="/accomodation" element={<AccomodationPage />} /> 
-            <Route path="/activities" element={<ActivitiesPage />} /> 
-
+            <Route path="/accomodation" element={<AccomodationPage />} />
+            <Route path="/touren" element={<TourPage />} />
           </Routes>
         </div>
         <Footer />

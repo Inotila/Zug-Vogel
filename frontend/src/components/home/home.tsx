@@ -41,7 +41,7 @@ const HomePage: React.FC = () => {
                 14 Tagen unternehmen möchten: Wir organisieren unvergessliche Touren, die Ihren
                 Interessen und Ihrem Zeitrahmen entsprechen.
               </p>
-              <Link to="/activities" className="btn home-btn mt-auto">
+              <Link to="/touren" className="btn home-btn mt-auto">
                 <h5 className="card-title accomodation-title">Touren</h5>
               </Link>
             </div>
