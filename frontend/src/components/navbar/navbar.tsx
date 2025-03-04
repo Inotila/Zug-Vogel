@@ -8,8 +8,8 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-        <div className="row w-100 align-items-center"> 
-          
+        <div className="row w-100 align-items-center">
+
           {/* Logo */}
           <div className="col-4 d-flex justify-content-start">
             <Link to="/" className="navbar-brand">
@@ -68,8 +68,8 @@ const Navbar: React.FC = () => {
                   </Link>
                   <ul className="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                     <li>
-                      <Link className="dropdown-item" to="/#">
-                        Accommodation
+                      <Link className="dropdown-item" to="/Unterkunft">
+                        Unterkunft
                       </Link>
                     </li>
                     <li>
@@ -86,7 +86,7 @@ const Navbar: React.FC = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link mx-3" to="/projects">
-                  About Us
+                    About Us
                   </Link>
                 </li>
               </ul>
