@@ -1,0 +1,17 @@
+.tour-hero-banner-container {
+    background-image: url('../images/tour.JPG');
+    max-width: 100% !important;
+    height: 10rem !important;
+    font-weight: 600;
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position:center !important; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    height: 300px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Add a text shadow */
+    display: flex;
+    flex-direction: column;
+  }
