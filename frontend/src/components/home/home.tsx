@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
         {/* tour */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
-            <img className="homepage-cover-image card-img-top" src={gallery} alt="#" />
+            <img className="home-card-image card-img-top" src={gallery} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text">
                 Ob Sie einen kurzen Wochenendausflug planen oder eine längere Entdeckungsreise von bis zu
@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
         {/* accommodation */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
-            <img className="homepage-cover-image card-img-top" src={house1} alt="#" />
+            <img className="home-card-image card-img-top" src={house1} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text accomodation-text">
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
@@ -66,7 +66,7 @@ const HomePage: React.FC = () => {
         {/* about namibia */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
-            <img className="homepage-cover-image card-img-top" src={gallery} alt="#" />
+            <img className="home-card-image card-img-top" src={gallery} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text accomodation-text">
                 Erfahren Sie mehr über Namibia und seine vielen Wunder.
@@ -81,10 +81,10 @@ const HomePage: React.FC = () => {
       </div>
 
 
-      <div className="row mt-1">
+      <div className="row">
         <div className="col">
-          <div className='contact-and-faq-container' >
-            <h3>Über uns</h3>
+          <div className='aboutus-and-contact-container mx-3' >
+            <h3 className='mt-2'>Über uns</h3>
             <p className='about-us-text'>Zugvogel Reisen Namibia richtet sich besonders an aktive und reiselustige Menschen,
               <br />
               insbesondere Rentnerinnen und Rentner, aber auch an all jene, die dem Winter entfliehen und

@@ -55,22 +55,8 @@
 }
 
 /* homepage carsds */
-
-.container-fluid {
-  padding: 0 !important; /* Removes padding around the container */
-}
-
 .home-img-links {
   height: 15rem !important;
-}
-
-.contact-and-faq-container {
-  background: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.8) 75%,
-    rgba(255, 255, 255, 0) 100%
-  ) !important; /* Add gradient effect */
 }
 
 .home-link-button {
@@ -84,9 +70,6 @@
   text-shadow: 2px 2px 4px rgba(6, 56, 117, 0.7); /* Optional: Add a text shadow */
 }
 
-
-/* CARD STYLING */
-
 .homepage-card {
  display: flex;
  flex-direction: column;
@@ -96,9 +79,9 @@
  border-radius: 10px !important;
 }
 
-.homepage-cover-image {
- height: 15rem; /* Fixed height for all images */
- object-fit: cover; /* Ensure images don't stretch */
+.home-card-image {
+ height: 15rem; 
+ object-fit: cover; 
 }
 
 .card-body {
@@ -106,14 +89,14 @@
 }
 
 
-.home-card-row{
+/* .home-card-row{
 background: linear-gradient(
     to bottom,
     rgb(255, 255, 255) 0%,
     rgba(255, 255, 255, 0.8) 75%,
     rgba(255, 255, 255, 0) 100%)
 
-}
+} */
 
 .card-col {
   display: flex;
@@ -121,13 +104,13 @@ background: linear-gradient(
   align-items: center;
   justify-content: center;
   /* height: 20rem; */
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom,
     rgb(255, 255, 255) 0%,
     rgba(255, 255, 255, 0.8) 50%,
     rgba(255, 255, 255, 0.8) 85%,
     rgba(255, 255, 255, 0) 100%
-  ) !important; /* Add gradient effect */
+  ) !important;  */
 }
 
 .home-btn {
@@ -168,6 +151,10 @@ background: linear-gradient(
 
 /* learn about namibia container */
 
-.learn-about-namibia-link-text-container {
-  color: #fff !important;
+.aboutus-and-contact-container {
+  border: 1px solid #000000 !important;
+  border-radius: 10px !important;
+  background-color: #fff;
+  color: #000000 !important;
+ box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
