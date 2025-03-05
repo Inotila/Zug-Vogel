@@ -1,0 +1,59 @@
+.about-us-container {
+    background-color: #fff;
+    border: 1px solid black !important;
+    border-radius: 10px;
+ box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+
+}
+.founders-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Individual founder image container */
+.founder-img-container {
+    margin: 1rem 1rem 1rem 1rem !important;
+}
+
+.founder-img-container>img{
+    max-height: 10rem !important;
+}
+
+/* Ensure images are responsive */
+.founder-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Show More button */
+.show-more-btn {
+    background-color: #e8620f;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: 0.3s ease-in-out;
+}
+
+.show-more-btn:hover {
+    background-color: #cc5500;
+}
+
+/* text */
+
+.about-us-text{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.about-us-text>p{
+    width: 75%;
+    justify-content: center;
+}
