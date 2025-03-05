@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
 import './assets/css/home.css';
 import accommodationImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
-import gallery from './assets/images/gallery.jpg'
-import whiteLogo from '../../assets/images/logo-pictures/hero-banner-zug-vogel-white-logo.png'
+import giraffe from '../../assets/images/tours-images/giraffe.jpg'
+import whiteLogo from '../../assets/images/logo-images/hero-banner-zug-vogel-white-logo.png'
+import churchImg from '../../assets/images/aboutNamibia-images/church.jpg';
 
 const HomePage: React.FC = () => {
   return (
@@ -37,7 +38,7 @@ const HomePage: React.FC = () => {
         {/* tour */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
-            <img className="home-card-image card-img-top" src={gallery} alt="#" />
+            <img className="home-card-image card-img-top" src={giraffe} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text">
                 Ob Sie einen kurzen Wochenendausflug planen oder eine längere Entdeckungsreise von bis zu
@@ -68,7 +69,7 @@ const HomePage: React.FC = () => {
         {/* about namibia */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
-            <img className="home-card-image card-img-top" src={gallery} alt="#" />
+            <img className="home-card-image card-img-top" src={churchImg} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text accomodation-text">
                 Erfahren Sie mehr über Namibia und seine vielen Wunder.

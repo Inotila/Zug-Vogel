@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/aboutUs.css';
-import colorLogo from '../../assets/images/logo-pictures/zug-vogel-color-logo.png'
+import colorLogo from '../../assets/images/logo-images/zug-vogel-color-logo.png'
 
 
 const AboutUsPage: React.FC = () => {

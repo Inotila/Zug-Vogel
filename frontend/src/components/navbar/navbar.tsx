@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../../assets/css/index.css";
-import logo from "../../assets/images/logo-pictures/nav-zug-vogel-color-logo.png";
+import logo from "../../assets/images/logo-images/nav-zug-vogel-color-logo.png";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
@@ -74,7 +74,7 @@ const Navbar: React.FC = () => {
                     </li>
                     <li>
                       <Link className="dropdown-item" to="/touren">
-                        Tours
+                        Touren
                       </Link>
                     </li>
                   </ul>
