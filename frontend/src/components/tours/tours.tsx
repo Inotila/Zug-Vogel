@@ -7,8 +7,8 @@ import TourCard from './TourCard';
 const ToursPage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
-      <div className="row">
-        <div className="col tour-hero-banner-container">
+      <div className="row hero-banner-container tour-hero-banner-container subpage-hero-banner">
+        <div className="col hero-page-titles">
           <h1>Touren</h1>
           <p>Entdeckungsreisen in Namibia
             und darüber hinaus</p>
@@ -16,12 +16,14 @@ const ToursPage: React.FC = () => {
       </div>
       <div className="row hero-text-container">
         <div className="col">
-          <p>Mit unseren mageschneiderten Touren haben Sie die Möglichkeit, dieses wunderschöne Land kennenzulernen.
-            <br />
-            Egal, ob Sie einen kurzen Wochenendtrip oder eine längere Entdeckungsreise von bis zu 14 Tagen planen:
-            <br />
-            Wir organisieren unvergessliche Touren, die Ihren Interessen und Ihrem Zeitrahmen entsprechen.
-          </p>
+          <div className='hero-text'>
+            <p>Mit unseren mageschneiderten Touren haben Sie die Möglichkeit, dieses wunderschöne Land kennenzulernen.
+              <br />
+              Egal, ob Sie einen kurzen Wochenendtrip oder eine längere Entdeckungsreise von bis zu 14 Tagen planen:
+              <br />
+              Wir organisieren unvergessliche Touren, die Ihren Interessen und Ihrem Zeitrahmen entsprechen.
+            </p>
+          </div>
         </div>
       </div>
       {/* Etosha, Damaraland, Waterberg */}

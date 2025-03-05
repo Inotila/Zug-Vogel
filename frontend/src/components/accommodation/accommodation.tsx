@@ -29,8 +29,8 @@ const accommodations = [
 const AccomodationPage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
-      <div className="row">
-        <div className="col accommodation-hero-banner-container">
+      <div className="row hero-banner-container accommodation-hero-banner-container subpage-hero-banner">
+        <div className="col hero-page-titles">
           <h1>Unterkünfte</h1>
           <p>Sie sich während Ihrer Reise rundum wohlfühlen können.</p>
         </div>
@@ -38,11 +38,13 @@ const AccomodationPage: React.FC = () => {
 
       <div className="row hero-text-container">
         <div className="col">
-          <p>
-            Unsere Gäste haben die Wahl zwischen zwei hochwertigen Unterkünften in Windhoek, die ideal für einen erholsamen Aufenthalt sind.
-            <br />
-            Beide Häuser bieten höchsten Komfort, exzellente Ausstattung und eine angenehme Atmosphäre.
-          </p>
+          <div className='hero-text'>
+            <p>
+              Unsere Gäste haben die Wahl zwischen zwei hochwertigen Unterkünften in Windhoek, die ideal für einen erholsamen Aufenthalt sind.
+              <br />
+              Beide Häuser bieten höchsten Komfort, exzellente Ausstattung und eine angenehme Atmosphäre.
+            </p>
+          </div>
         </div>
       </div>
 

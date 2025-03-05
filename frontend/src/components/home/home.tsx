@@ -9,29 +9,31 @@ import whiteLogo from '../../assets/images/logo-pictures/hero-banner-zug-vogel-w
 const HomePage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
-      <div className="row home-hero-banner-container d-flex">
+      <div className="row hero-banner-container home-hero-banner-container d-flex">
         {/* Left side: Image */}
         <div className="col-md-6 hero-banner-img-container">
           <img className="hero-banner-img" src={whiteLogo} alt="Logo" />
         </div>
 
         {/* Right side: Text with border */}
-        <div className="col-md-6 home-hero-banner-text-container d-flex flex-column justify-content-center text-center">
+        <div className="col-md-6  d-flex flex-column justify-content-center text-center">
           <h1 className='hero-banner-text'>Zug Vogel</h1>
           <p className='hero-banner-text'>Überwintern im Sonnnparadis</p>
         </div>
       </div>
       <div className="row hero-text-container text-center">
         <div className="col">
-          <p>Tauschen Sie den kalten, dunklen Winter gegen die warme Sonne Namibias!
-            <br />
-            Namibia liegt im Südwesten Afrikas und bietet erschwingliche Lebensbedingungen,
-            freundliche Einheimische und eine breite Palette an Freizeitaktivitäten.
-          </p>
-          <p>Zugvogel Namibia setzt sich dafür ein, dass Ihr Aufenthalt in Namibia zu einem unvergesslichen Erlebnis wird.</p>
+          <div className='hero-text'>
+            <p>Tauschen Sie den kalten, dunklen Winter gegen die warme Sonne Namibias!
+              <br />
+              Namibia liegt im Südwesten Afrikas und bietet erschwingliche Lebensbedingungen,
+              freundliche Einheimische und eine breite Palette an Freizeitaktivitäten.
+            </p>
+            <p>Zugvogel Namibia setzt sich dafür ein, dass Ihr Aufenthalt in Namibia zu einem unvergesslichen Erlebnis wird.</p>
+          </div>
         </div>
       </div>
-      <div className="row home-card-row">
+      <div className="row">
         {/* tour */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">

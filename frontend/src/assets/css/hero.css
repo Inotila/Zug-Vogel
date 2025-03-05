@@ -1,0 +1,41 @@
+/* Hero Banner and Hero Page Titles */
+.hero-banner-container {
+    max-width: 100% !important;
+    height: 15rem !important;
+    font-weight: 600;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    position: relative; 
+}
+
+.subpage-hero-banner {
+    justify-content: flex-end !important;
+}
+
+.hero-page-titles {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+/* Hero Text */
+.hero-text-container {
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7);
+    background: linear-gradient(
+      to bottom,
+      #e8620f 0%,
+      #e8620f 50%,
+      rgba(232, 98, 15, 0.8) 75%,
+      rgba(232, 98, 15, 0) 100%
+    );
+}
+
+.hero-text {
+    margin: 0.75rem 0;
+}

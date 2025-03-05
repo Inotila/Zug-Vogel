@@ -1,27 +1,12 @@
 /* hero banner */
 .home-hero-banner-container {
   background-image: url('../../../../assets/images/home-images/whk-mountains.jpg') !important;
-  max-width: 100% !important;
-  height: 15rem !important;
-  font-weight: 600;
-  background-size: cover;
-  background-position:top !important; /* Center the image */
-  background-repeat: no-repeat; /* Prevent tiling */
-  height: 400px; /* Set a fixed height for the banner */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Add a text shadow */
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Full viewport height */
-
+  background-position:top !important;
 }
 
 .home-hero-banner-img-container {
   width: 50%;
-  height: 100%; /* Ensure it takes full height */
+  height: 100%; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,32 +14,10 @@
 
 .home-hero-banner-img {
   height: 100%;
-  object-fit: cover; /* Ensures it fills the container */
+  object-fit: cover;
 }
 
-.home-hero-banner-text {
-  display: flex;
-  text-align: start;
-  font-weight: bold;
-  color: white; /* Main text color */
-  -webkit-text-stroke: 0.5px black;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Optional: Adds a shadow for better readability */
-}
-
-.hero-text-container {
-  font-weight: 600;
-  background-color: #E8620F !important;
-  text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7); /* Optional: Add a text shadow */
-  background: linear-gradient(
-    to bottom,
-    #e8620f 0%,
-    #e8620f 50%,
-    rgba(232, 98, 15, 0.8) 75%,
-    rgba(232, 98, 15, 0) 100%
-  ) !important;
-}
-
-/* homepage carsds */
+/* homepage cards */
 .home-img-links {
   height: 15rem !important;
 }
@@ -88,29 +51,11 @@
  /* height: 48px !important; */
 }
 
-
-/* .home-card-row{
-background: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.8) 75%,
-    rgba(255, 255, 255, 0) 100%)
-
-} */
-
 .card-col {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  /* height: 20rem; */
-  /* background: linear-gradient(
-    to bottom,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0.8) 85%,
-    rgba(255, 255, 255, 0) 100%
-  ) !important;  */
 }
 
 .home-btn {
