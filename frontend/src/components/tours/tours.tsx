@@ -2,8 +2,9 @@ import React from 'react';
 import '../../assets/css/index.css';
 import './assets/css/tours.css';
 import TourCard from './TourCard';
-import oryxIMG from '../../assets/images/tours-images/zebra.jpg';
-
+import oryxIMG from '../../assets/images/tours-images/oryx.jpg'
+import springBokIMG from '../../assets/images/tours-images/springbokSolo.jpg'
+import placeHolderkIMG from '../../assets/images/tours-images/ostrich.jpg'
 
 
 const ToursPage: React.FC = () => {
@@ -46,7 +47,7 @@ const ToursPage: React.FC = () => {
       <div className="mx-3">
         <TourCard
           title="Swakopmund / Walvis Bay mit Spitzkoppe und Sossusvlei"
-          image="/images/tours/tour.JPG"
+          image={placeHolderkIMG}
           description="Erleben Sie die Küstenstadt Swakopmund, bekannt für ihre charmante Kolonialarchitektur 
           und entspannte Atmosphäre. Im nahegelegenen Walvis Bay erwartet Sie eine Katamaran-Tour, 
           um Delfine und Robben in der Lagune zu beobachten. Abenteuerliche Aktivitäten wie 
@@ -63,7 +64,7 @@ const ToursPage: React.FC = () => {
       <div className="mx-3">
         <TourCard
           title="Sossusvlei / Wüste"
-          image="/images/tours/tour.JPG"
+          image={placeHolderkIMG}
           description="Die Sossusvlei ist eine der eindrucksvollsten Wüstenlandschaften der Welt. Erklimmen Sie
           die gigantischen roten Sanddünen, wandern Sie durch die karge Schönheit des Dead Vlei
           und genießen Sie die magischen Farben der Wüste bei Sonnenaufgang und Sonnenuntergang. 
@@ -74,7 +75,7 @@ const ToursPage: React.FC = () => {
       <div className="mx-3">
         <TourCard
           title="Botswana / Kalahari / SAN"
-          image="/images/tours/tour.JPG"
+          image={springBokIMG}
           description="Erleben Sie die Wildnis der Kalahari und tauchen Sie ein in das Leben der San, einer der 
           ältesten Kulturen der Welt. Lassen Sie sich von ihren traditionellen Geschichten, Tänzen und
           ihrer Kunst des Spurenlesens faszinieren. Kombinieren Sie dieses Erlebnis mit einem
@@ -86,7 +87,7 @@ const ToursPage: React.FC = () => {
       <div className="mx-3">
         <TourCard
           title="Reise in den Nordosten Namibias und zu den Victoria-Fällen"
-          image="/images/tours/tour.JPG"
+          image={placeHolderkIMG}
           description="Diese Reise führt Sie in den faszinierenden Nordosten Namibias, eine Region, die durch ihre 
           üppige Vegetation und vielfältige Tierwelt besticht. Der Nordosten wird auch das „Wetland 
           Paradise“ genannt, da die höheren Niederschlagsmengen hier eine einzigartige Flora und
@@ -102,7 +103,7 @@ const ToursPage: React.FC = () => {
       <div className="mx-3">
         <TourCard
           title="Sternenbeobachtung in Namibia"
-          image="/images/tours/tour.JPG"
+          image={placeHolderkIMG}
           description="Namibia ist ein Paradies für Sternengucker. Unweit von Windhoek befindet sich das Cuno 
           Hoffmeister Memorial Observatory, wo Sie unter fast immer wolkenlosem Himmel die 
           Wunder des südlichen Sternenhimmels erleben können. Besonders beeindruckend ist die 
