@@ -9,14 +9,14 @@ import whiteLogo from '../../assets/images/logo-pictures/hero-banner-zug-vogel-w
 const HomePage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
-      <div className="row hero-banner-container d-flex">
+      <div className="row home-hero-banner-container d-flex">
         {/* Left side: Image */}
         <div className="col-md-6 hero-banner-img-container">
           <img className="hero-banner-img" src={whiteLogo} alt="Logo" />
         </div>
 
         {/* Right side: Text with border */}
-        <div className="col-md-6 hero-banner-text-container d-flex flex-column justify-content-center text-center">
+        <div className="col-md-6 home-hero-banner-text-container d-flex flex-column justify-content-center text-center">
           <h1 className='hero-banner-text'>Zug Vogel</h1>
           <p className='hero-banner-text'>Überwintern im Sonnnparadis</p>
         </div>
@@ -31,8 +31,9 @@ const HomePage: React.FC = () => {
           <p>Zugvogel Namibia setzt sich dafür ein, dass Ihr Aufenthalt in Namibia zu einem unvergesslichen Erlebnis wird.</p>
         </div>
       </div>
-      <div className="row home-card-row mt-1">
-        <div className="col card-col m-3 d-flex">
+      <div className="row home-card-row">
+        {/* tour */}
+        <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
             <img className="homepage-cover-image card-img-top" src={gallery} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
@@ -47,7 +48,8 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="col card-col m-3 d-flex">
+        {/* accommodation */}
+        <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
             <img className="homepage-cover-image card-img-top" src={house1} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
@@ -55,13 +57,14 @@ const HomePage: React.FC = () => {
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
                 Wählen Sie Ihr ideales Sommerhaus aus unserer Auswahl sorgfältig kuratierter Häuser.
               </p>
-              <Link to="/accomodation" className="btn home-btn mt-auto">
+              <Link to="/unterkunft" className="btn home-btn mt-auto">
                 <h5 className="card-title accomodation-title">Unterkunft</h5>
               </Link>
             </div>
           </div>
         </div>
-        <div className="col card-col m-3 d-flex">
+        {/* about namibia */}
+        <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
             <img className="homepage-cover-image card-img-top" src={gallery} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
@@ -76,6 +79,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </div>
+
 
       <div className="row mt-1">
         <div className="col">
