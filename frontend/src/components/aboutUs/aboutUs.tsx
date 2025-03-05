@@ -79,7 +79,8 @@ const AboutUsPage: React.FC = () => {
                                     Landes, die Gastfreundschaft der Menschen und die kulturelle Vielfalt erlebbar machen.
                                     Durch seine enge Verbindung zur lokalen Bevölkerung ermöglicht er authentische
                                     Begegnungen und tiefgehende Einblicke, die jede Reise unvergesslich machen.
-                                    Unsere Motivation und unser Anspruch</p>
+                                    Unsere Motivation und unser Anspruch
+                                </p>
                                 <p>
                                     Unser Ziel ist es, unseren Gästen nicht nur die Schönheit Namibias zu zeigen, sondern ihnen
                                     auch ein Gefühl von Heimat und Wohlbefinden zu vermitteln. Wir legen großen Wert auf
@@ -102,7 +103,7 @@ const AboutUsPage: React.FC = () => {
                         )}
 
                         {/* Toggle Button */}
-                        <button className="show-more-btn mb-3" onClick={() => setShowMore(!showMore)}>
+                        <button className="btn show-more-btn mb-3" onClick={() => setShowMore(!showMore)}>
                             {showMore ? 'Show Less' : 'Show More'}
                         </button>
                     </div>

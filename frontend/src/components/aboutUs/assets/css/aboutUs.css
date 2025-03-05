@@ -29,24 +29,22 @@
 
 /* Show More button */
 .show-more-btn {
-    background-color: #e8620f;
-    color: white;
-    border: none;
+    background-color: #e8620f !important;
+    border: 1px solid #000 !important;
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 1rem;
-    transition: 0.3s ease-in-out;
+
 }
 
 .show-more-btn:hover {
     background-color: #cc5500;
+    color: white !important;
+    font-weight: bold;
+
 }
 
 /* text */
-
 .about-us-text{
     display: flex;
     flex-direction: column;
