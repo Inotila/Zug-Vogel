@@ -104,8 +104,49 @@ const AboutUsPage: React.FC = () => {
 
                         {/* Toggle Button */}
                         <button className="btn show-more-btn mb-3" onClick={() => setShowMore(!showMore)}>
-                            {showMore ? 'Show Less' : 'Show More'}
+                            {showMore ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                         </button>
+                    </div>
+                </div>
+            </div>
+            <div className="row ">
+                <div className="col">
+                    <div className='about-us-container mx-3'>
+                        <div className='about-us-title mt-3'>
+                            <h3>Kontaktieren Sie uns</h3>
+                        </div>
+                        <div className='about-us-title mt-3'>
+                            <p>Kontaktieren Sie uns noch heute für alle Ihre Buchungswünsche. Wir beantworten auch gerne alle Ihre Fragen zu Namibia.
+                                <br />
+                                Nachfolgend finden Sie unsere Kontaktdaten und unsere Social-Media-Links. Folgen Sie uns noch heute und bleiben Sie mit uns in Verbindung!
+                            </p>
+                        </div>
+                        <div className='contact-container d-flex justify-content-center text-center'>
+                            <div className='contact-details-container '>
+                                <div className='phone-and-email-container'>
+                                    <div className='phone-and-email'>
+                                        <div className='mx-3'>
+                                            <h3> 081 85 885650</h3>
+                                        </div>
+                                        <div className='mx-3'>
+                                            <h3> zugvogel@gmail.com</h3>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div className='social-media-links-container'>
+                                    <div className='soial-links'>
+                                        <i>icon place holder</i>
+                                        <h4 className='founder-title'>Instagram</h4>
+                                    </div>
+                                    <div className='soial-links'>
+                                        <i>icon place holder</i>
+                                        <h4 className='founder-title'>Facebook</h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
