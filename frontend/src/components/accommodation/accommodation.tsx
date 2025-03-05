@@ -30,7 +30,7 @@ const AccomodationPage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
       <div className="row">
-        <div className="col hero-banner-container">
+        <div className="col accommodation-hero-banner-container">
           <h1>Unterkünfte</h1>
           <p>Sie sich während Ihrer Reise rundum wohlfühlen können.</p>
         </div>

@@ -29,6 +29,10 @@
 
 /* content */
 
+.amenities-title{
+    text-decoration: underline;
+}
+
 .accommodation-content {
     height: 100%;
     display: flex;
