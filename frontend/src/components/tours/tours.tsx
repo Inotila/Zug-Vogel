@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/css/index.css';
 import './assets/css/tours.css';
 import TourCard from './TourCard';
-import oryxMG from '../../assets/images/tours-images/giraffe.jpg';
+import oryxIMG from '../../assets/images/tours-images/zebra.jpg';
 
 
 
@@ -32,7 +32,7 @@ const ToursPage: React.FC = () => {
       <div className="mx-3">
         <TourCard
           title="Etosha, Damaraland, Waterberg und Brandberg"
-          image="/images/tours/tour.JPG"
+          image={oryxIMG}
           description="Starten Sie Ihr Abenteuer am beeindruckenden Waterberg Plateau, wo eine einzigartige 
             Tier- und Pflanzenwelt auf Sie wartet. Anschließend geht es in den Etosha Nationalpark, 
             sein Paradies für Wildtierbeobachtungen mit Elefanten, Löwen, Giraffen und mehr. Von hier
