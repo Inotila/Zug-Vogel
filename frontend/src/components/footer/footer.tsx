@@ -1,5 +1,6 @@
 // frontend/src/components/footer.tsx
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './assets/footer.css';
 
 const Footer: React.FC = () => {
@@ -10,13 +11,12 @@ const Footer: React.FC = () => {
         <div className="col">
           <div className='mt-3'>
             <a className='mx-3' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              Facebook
+              <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
             </a>
             <a className='mx-3' href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              Instagram
+              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
             </a>
           </div>
-
         </div>
       </div>
       {/* Row 2: Privacy Policy, Terms & Conditions, and Copyright */}
