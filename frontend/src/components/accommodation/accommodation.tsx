@@ -9,26 +9,18 @@ import AccommodationCard from './accommodationCard';
 
 const accommodations = [
   {
-    title: "Luxury Villa",
+    title: "Eleganz mit Panoramablick",
     image: house1,
-    bedRooms: "3 Schlafzimmer",
+    bedRooms: "1",
     garge: "Privatparkplatz",
     pool: "Ja",
     wifi: "Kostenloses WLAN",
   },
   {
-    title: "Modern Apartment",
+    title: "Gemütliche Pension in zentraler Lage",
     image: house2,
-    bedRooms: "2 Schlafzimmer",
+    bedRooms: "2",
     garge: "Garage verfügbar",
-    pool: "Nein",
-    wifi: "Kostenloses WLAN",
-  },
-  {
-    title: "Cozy Cottage",
-    image: house3,
-    bedRooms: "2 Schlafzimmer",
-    garge: "Straßenparkplatz",
     pool: "Nein",
     wifi: "Kostenloses WLAN",
   },
