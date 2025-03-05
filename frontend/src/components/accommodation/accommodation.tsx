@@ -2,15 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
 import './assets/css/accommodation.css';
-import house1 from '../../components/home/assets/images/house1.jpg';
-import house2 from '../../components/home/assets/images/house2.jpg';
-import house3 from '../../components/home/assets/images/house3.jpg';
+import erosGuestHouseImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
+import klienWHKGuestHouseImg from '../../assets/images/accommodation-images/kleinWindhoekGuestHouse/klienWindhoekPool.jpg';
 import AccommodationCard from './accommodationCard';
 
 const accommodations = [
   {
     title: "Eleganz mit Panoramablick",
-    image: house1,
+    image: klienWHKGuestHouseImg,
     bedRooms: "1",
     garge: "Privatparkplatz",
     pool: "Ja",
@@ -18,7 +17,7 @@ const accommodations = [
   },
   {
     title: "Gemütliche Pension in zentraler Lage",
-    image: house2,
+    image: erosGuestHouseImg,
     bedRooms: "2",
     garge: "Garage verfügbar",
     pool: "Nein",

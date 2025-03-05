@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
 import './assets/css/home.css';
-import house1 from './assets/images/house1.jpg';
+import accommodationImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
 import gallery from './assets/images/gallery.jpg'
 import whiteLogo from '../../assets/images/logo-pictures/hero-banner-zug-vogel-white-logo.png'
 
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
         {/* accommodation */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
           <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
-            <img className="home-card-image card-img-top" src={house1} alt="#" />
+            <img className="home-card-image card-img-top" src={accommodationImg} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text accomodation-text">
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
