@@ -2,6 +2,8 @@ import React from 'react';
 import '../../assets/css/index.css';
 import './assets/css/tours.css';
 import TourCard from './TourCard';
+import oryxMG from '../../assets/images/tours-images/giraffe.jpg';
+
 
 
 const ToursPage: React.FC = () => {
