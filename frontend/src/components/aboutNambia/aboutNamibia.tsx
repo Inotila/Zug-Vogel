@@ -1,6 +1,9 @@
 import React from 'react';
 import '../../assets/css/index.css';
 import './assets/css/aboutNamibia.css';
+import churchImg from '../../assets/images/aboutNamibia-images/church.jpg';
+import trainStationImg from '../../assets/images/aboutNamibia-images/trainStation.jpg';
+import cbdImg from '../../assets/images/aboutNamibia-images/cbd.jpg';
 
 const AboutNamibiaPage: React.FC = () => {
     return (
@@ -127,7 +130,9 @@ const AboutNamibiaPage: React.FC = () => {
                             </p>
                         </div>
                         <div className='about-namibia-img-container mb-3'>
-                            <img src="/images/tours/tour.JPG" alt="" />
+                            <img className='about-nam-img' src={cbdImg} alt="" />
+                            <img className='about-nam-img' src={churchImg} alt="" />
+                            <img className='about-nam-img' src={trainStationImg} alt="" />
                         </div>
                     </div>
                 </div>
