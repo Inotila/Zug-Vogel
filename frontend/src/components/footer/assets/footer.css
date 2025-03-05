@@ -2,17 +2,13 @@
 footer {
     background-color:#fff !important;
     flex-shrink: 0; /* Prevent footer from shrinking */
+    padding: 5px;
   }
   
-  /* a {
-    text-decoration: none;
-    color: #fff !important;
-
-  }
-
-  a:hover {
-    color: #a2d0de !important;
-  }
-
-   */
-  
+.footter-copy-right-container {
+  display: flex; /* Enables flexbox */
+    flex-direction: row; /* Stack items vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    text-align: center;
+}
