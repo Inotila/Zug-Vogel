@@ -8,12 +8,15 @@ const Footer: React.FC = () => {
       {/* Row 1: Links to Facebook and Instagram */}
       <div className="row">
         <div className="col">
-          <a className='mx-3' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-            Facebook
-          </a>
-          <a className='mx-3' href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-            Instagram
-          </a>
+          <div className='mt-3'>
+            <a className='mx-3' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
+            <a className='mx-3' href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              Instagram
+            </a>
+          </div>
+
         </div>
       </div>
       {/* Row 2: Privacy Policy, Terms & Conditions, and Copyright */}
@@ -24,7 +27,6 @@ const Footer: React.FC = () => {
             <p className='mx-3'>&copy; {new Date().getFullYear()} Zug Vogel Namibia</p>
             <a href="/terms-conditions">Terms & Conditions</a>
           </div>
-
         </div>
       </div>
     </footer>
