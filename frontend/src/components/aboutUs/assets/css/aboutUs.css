@@ -1,3 +1,13 @@
+/* hero-banner */
+.about-us-hero-banner-container{
+    background-color: #fff;
+}
+
+.about-us-hero-img>img{
+    /* background-color: #cc5500; */
+    height:12rem;
+}
+
 .about-us-container {
     background-color: #fff;
     border: 1px solid black !important;

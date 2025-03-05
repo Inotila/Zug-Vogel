@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/aboutUs.css';
+import colorLogo from '../../assets/images/logo-pictures/zug-vogel-color-logo.png'
+
 
 const AboutUsPage: React.FC = () => {
     const [showMore, setShowMore] = useState(false);
 
     return (
         <div className="container-fluid text-center">
-            <div className="row hero-banner-container aboout-us-hero-banner-container subpage-hero-banner">
+            <div className="row hero-banner-container about-us-hero-banner-container">
                 <div className="col hero-page-titles">
+                    <div className="about-us-hero-img">
+                        <img src={colorLogo} alt="" />
+                    </div>
                     <h1>Über uns</h1>
-                    <p>Damit Sie sich wie zu Hause fühlen est 2025</p>
                 </div>
             </div>
             <div className="row hero-text-container">
