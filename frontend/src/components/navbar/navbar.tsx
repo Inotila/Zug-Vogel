@@ -85,7 +85,7 @@ const Navbar: React.FC = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link mx-3" to="/projects">
+                  <Link className="nav-link mx-3" to="/überUns">
                     Über uns
                   </Link>
                 </li>

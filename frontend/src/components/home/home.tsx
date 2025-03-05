@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
               insbesondere Rentnerinnen und Rentner, aber auch an all jene, die dem Winter entfliehen und
               die namibische Sonne genießen möchten.
             </p>
-            <Link to="/" className="btn home-about-us-btn mt-auto">
+            <Link to="/überUns" className="btn home-about-us-btn mt-auto">
               <p className='about-us-btn-text mx-3'>
                 Lernen Sie uns näher kennen
               </p>

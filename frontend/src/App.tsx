@@ -7,7 +7,7 @@ import HomePage from './components/home/home';
 import AccomodationPage from './components/accommodation/accommodation';
 import TourPage from './components/tours/tours';
 import AboutNamibiaPage from './components/aboutNambia/aboutNamibia';
-
+import AboutUsPage from './components/aboutUs/aboutUs'
 
 const App: React.FC = () => {
   return (
@@ -22,6 +22,7 @@ const App: React.FC = () => {
             <Route path="/Unterkunft" element={< AccomodationPage />} />
             <Route path="/touren" element={< TourPage />} />
             <Route path="/überNamibia" element={< AboutNamibiaPage />} />
+            <Route path="/überUns" element={< AboutUsPage />} />
           </Routes>
         </div>
         <Footer />
