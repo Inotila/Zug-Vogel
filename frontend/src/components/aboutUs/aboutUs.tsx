@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/aboutUs.css';
 import colorLogo from '../../assets/images/logo-images/zug-vogel-color-logo.png'
-
+import peterIMG from '../../assets/images/founder-images/peter.jpg'
+import heinrichMG from '../../assets/images/founder-images/heinrich.jpg'
 
 const AboutUsPage: React.FC = () => {
     const [showMore, setShowMore] = useState(false);
@@ -40,11 +41,11 @@ const AboutUsPage: React.FC = () => {
                         <div className='about-us-img-container'>
                             <div className='founders-container'>
                                 <div className='founder-img-container'>
-                                    <img src="/images/tours/tour.JPG" alt="Founder 1" />
+                                    <img src={heinrichMG} alt="Founder 1" />
                                     <h4 className='founder-title'>Heinrich Georg Pielok</h4>
                                 </div>
                                 <div className='founder-img-container'>
-                                    <img src="/images/tours/tour.JPG" alt="Founder 2" />
+                                    <img src={peterIMG} alt="Founder 2" />
                                     <h4 className='founder-title'>Peter Kaulbach</h4>
                                 </div>
                             </div>
