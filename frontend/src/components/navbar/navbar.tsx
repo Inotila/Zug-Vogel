@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Services
+                    Unsere Dienste
                   </Link>
                   <ul className="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                     <li>
@@ -80,13 +80,13 @@ const Navbar: React.FC = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/services">
-                    About Namibia
+                  <Link className="nav-link" to="/überNamibia">
+                    Über Namibia
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link mx-3" to="/projects">
-                    About Us
+                    Über uns
                   </Link>
                 </li>
               </ul>

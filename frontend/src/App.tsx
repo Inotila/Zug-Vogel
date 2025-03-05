@@ -6,6 +6,7 @@ import Footer from './components/footer/footer';
 import HomePage from './components/home/home';
 import AccomodationPage from './components/accomdation/accommodation';
 import TourPage from './components/tours/tours';
+import AboutNamibiaPage from './components/aboutNambia/aboutNamibia';
 
 
 const App: React.FC = () => {
@@ -16,10 +17,11 @@ const App: React.FC = () => {
         <div className="content">
           <Routes>
             {/* HomePage component */}
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={< HomePage />} />
             {/* AccomodationPage route */}
-            <Route path="/Unterkunft" element={<AccomodationPage />} />
-            <Route path="/touren" element={<TourPage />} />
+            <Route path="/Unterkunft" element={< AccomodationPage />} />
+            <Route path="/touren" element={< TourPage />} />
+            <Route path="/überNamibia" element={< AboutNamibiaPage />} />
           </Routes>
         </div>
         <Footer />

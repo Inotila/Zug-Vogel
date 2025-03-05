@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
                 Erfahren Sie mehr über Namibia und seine vielen Wunder.
                 Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
               </p>
-              <Link to="/" className="btn home-btn mt-auto">
+              <Link to="/überNamibia" className="btn home-btn mt-auto">
                 <h5 className="card-title accomodation-title">Über Namibia</h5>
               </Link>
             </div>
