@@ -1,47 +1,89 @@
 .tour-card {
-    border: 2px solid black;
+    border: 1px solid black !important;
     border-radius: 20px !important;
-}
-
-.card-header {
-    background-color: white;
-    font-size: 18px;
-}
-
-.tour-card .card-body {
-    display: flex;
-    align-items: center;
-    flex-direction: row; /* Ensures image is on the left and text on the right */
-    padding: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    height: 300px !important;
+}
 
+.tour-card > .card-body {
+    display: flex;
+    align-items: stretch; /* Ensure children match height */
+    flex-direction: row;
+    padding: 10px;
+    width: 100%;
+    flex-grow: 1; 
+    height: 100% !important; 
 }
 
 .tour-content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 250px;
     text-align: center;
-    flex: 1;
+    justify-content: space-between !important;
+    height: 100%;
+    flex-grow: 1;
+    padding: 10px;
 }
 
 .tour-image {
     width: auto;
-    height: 250px;
+    height: 100%;
+    max-height: 300px; /* Ensures it doesn't stretch too much */
     object-fit: cover;
     border-radius: 5px;
 }
 
 .tour-description {
-    flex: 1;
     font-size: 14px;
+    flex-grow: 1; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .tour-details-btn {
-    margin-top: auto;
+    margin-top: auto; /* Ensures button is at the bottom */
+}
+
+/* Title container */
+.tour-bigscreen-header {
+    align-self: flex-start; /* Title stays at top */
+    width: 100%;
+}
+
+.tour-header {
+    display: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1217px) {
+    .tour-card {
+        height: auto !important;
+    }
+    .card-body {
+        flex-direction: column !important;
+        text-align: center;
+        width: 100%;
+    }
+
+    .tour-image {
+        width: 100%; 
+        height: auto;
+    object-fit: contain;
+    }
+
+    .tour-content {
+        height: auto !important;
+    }
+
+    .tour-header {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .tour-bigscreen-header {
+        display: none !important;
+    }
 }
