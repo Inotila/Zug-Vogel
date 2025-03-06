@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/aboutUs.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import colorLogo from '../../assets/images/logo-images/zug-vogel-color-logo.png'
 import peterIMG from '../../assets/images/founder-images/peter.jpg'
 import heinrichMG from '../../assets/images/founder-images/heinrich.jpg'
@@ -130,22 +131,31 @@ const AboutUsPage: React.FC = () => {
                             <div className='contact-details-container '>
                                 <div className='phone-and-email-container'>
                                     <div className='phone-and-email'>
-                                        <div className='mx-3'>
+                                        <div className='phone-and-email mx-3'>
+                                            <a className='mx-3' href="#">
+                                                <FontAwesomeIcon icon="phone" size="2x" />
+                                            </a>
                                             <h3> 081 85 885650</h3>
                                         </div>
-                                        <div className='mx-3'>
+                                        <div className='phone-and-email mx-3'>
+                                            <a className='mx-3' href="#">
+                                                <FontAwesomeIcon icon="envelope" size="2x" />
+                                            </a>
                                             <h3> zugvogel@gmail.com</h3>
                                         </div>
-
                                     </div>
                                 </div>
-                                <div className='social-media-links-container'>
+                                <div className='social-media-links-container mt-3'>
                                     <div className='soial-links'>
-                                        <i>icon place holder</i>
-                                        <h4 className='founder-title'>Instagram</h4>
+                                        <a className='mx-3' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+                                            <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
+                                        </a>
+                                        <h4 className='founder-title'>Facebook</h4>
                                     </div>
                                     <div className='soial-links'>
-                                        <i>icon place holder</i>
+                                        <a className='mx-3' href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                                            <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
+                                        </a>
                                         <h4 className='founder-title'>Facebook</h4>
                                     </div>
 
