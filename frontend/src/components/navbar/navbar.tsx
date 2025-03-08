@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link mx-3" to="/signup-login">
+                  <Link className="nav-link mx-3" to="/login">
                     Signup
                   </Link>
                 </li>

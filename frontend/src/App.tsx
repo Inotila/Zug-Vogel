@@ -8,6 +8,7 @@ import AccomodationPage from './components/accommodation/accommodation';
 import TourPage from './components/tours/tours';
 import AboutNamibiaPage from './components/aboutNambia/aboutNamibia';
 import AboutUsPage from './components/aboutUs/aboutUs'
+import LoginPage from './components/login/login'
 
 const App: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const App: React.FC = () => {
             <Route path="/touren" element={< TourPage />} />
             <Route path="/überNamibia" element={< AboutNamibiaPage />} />
             <Route path="/überUns" element={< AboutUsPage />} />
+            <Route path="/login" element={< LoginPage />} />
           </Routes>
         </div>
         <Footer />
