@@ -19,4 +19,6 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/signup/', RegisterUserView.as_view(), name='signup'),  # Registration URL
+    path('api/login/', LoginView.as_view(), name='login'),
 ]
