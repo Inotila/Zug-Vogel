@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <Link className="nav-link mx-3" to="/login">
+                  <Link className="nav-link mx-3" to="/signup">
                     Signup
                   </Link>
                 </li>
@@ -68,13 +68,13 @@ const Navbar: React.FC = () => {
                   </Link>
                   <ul className="dropdown-menu text-center" aria-labelledby="navbarDropdown">
                     <li>
-                      <Link className="dropdown-item" to="/Unterkunft">
-                        Unterkunft
+                      <Link className="dropdown-item" to="/touren">
+                        Touren
                       </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/touren">
-                        Touren
+                      <Link className="dropdown-item" to="/Unterkunft">
+                        Unterkunft
                       </Link>
                     </li>
                   </ul>
