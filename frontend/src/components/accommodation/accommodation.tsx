@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
 import './assets/css/accommodation.css';
 import erosGuestHouseImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
@@ -50,7 +49,7 @@ const AccomodationPage: React.FC = () => {
       {/* ✅ Responsive Grid Layout */}
       <div className="row accommodation-grid">
         {accommodations.map((accommodation, index) => (
-          <div key={index} className="col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div key={index} className="col-sm-12 col-md-6 col-lg-6 d-flex mb-3 justify-content-center">
             <AccommodationCard {...accommodation} />
           </div>
         ))}

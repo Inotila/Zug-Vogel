@@ -15,11 +15,12 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, image, bed
     return (
         <div className="accommodation-card card">
             <div className="card-body">
+                <h3 className="card-title accommodation-card-title small-screen-title mb-3">{title}</h3>
                 <div className='accommodation-card-image-container'>
                     <img src={image} alt={title} className="accommodation-image" />
                 </div>
                 <div className="accommodation-content flex-fill d-flex flex-column align-items-center text-center">
-                    <h3 className="card-title accommodation-card-title">{title}</h3>
+                    <h3 className="card-title accommodation-card-title big-screen-title">{title}</h3>
                     <h4 className='mt-2 amenities-title'>Ausstattung</h4>
                     <ul className='accommodation-amenities-list'>
                         <li>Schlafzimmer: {bedRooms}</li>

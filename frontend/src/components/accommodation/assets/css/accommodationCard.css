@@ -4,21 +4,32 @@
     background: white;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .accommodation-card .card-body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     text-align: center;
+    width: 100%;
 }
+/* titles */
+
+.small-screen-title{
+    display: none;
+}
+
 /* card image */
 .accommodation-card-image-container{
-    object-fit:contain;
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    width: 50%;
 }
 
 .accommodation-image {
@@ -44,7 +55,8 @@
 }
 
 .accommodation-card-title {
-    margin-bottom: auto; /* Pushes it to the top */
+    margin-bottom: auto;
+    margin: 0rem 1rem ;
 }
 
 .accommodation-amenities-list {
@@ -55,3 +67,20 @@
 .accommodation-details-btn {
     margin-top: auto;
 }
+
+/* Responsive design for smaller screens */
+@media (max-width: 1217px) {
+   
+    .small-screen-title {
+        display: unset !important;
+    }
+
+    .big-screen-title {
+        display: none !important;
+    }
+
+    .accommodation-card-image-container{
+        width:100%;
+    }
+}
+
