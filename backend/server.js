@@ -26,6 +26,12 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Server error', error: err.message }); // Send a JSON response with the error message
 });
 
+app.use(cors({
+  origin: 'http://localhost:3000', // Allow requests from your frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
+  credentials: true, // If you're using cookies with the token
+})); 
+
 // Start the server
 app.listen(port, () => {
   console.log(`Backend running on http://localhost:${port}`);
