@@ -1,10 +1,17 @@
-require('dotenv').config(); // Load environment variables from .env file
+require('dotenv').config(); 
 const express = require('express');
+const connectDB = require('./config/db'); // Import DB connection
+const cors = require('cors');
+
 const app = express();
 const port = process.env.PORT || 5010;
 
-// Middleware to parse JSON
-app.use(express.json());
+// Connect to MongoDB
+connectDB();
+
+// Middleware
+app.use(express.json()); // Body parser
+app.use(cors()); // Enable CORS
 
 // Basic route
 app.get('/', (req, res) => {
