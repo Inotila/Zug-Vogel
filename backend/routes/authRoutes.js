@@ -10,6 +10,8 @@ const router = express.Router();
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
+  console.log('Received data:', req.body); // Log request body
+
   try {
     // Check if user exists
     let user = await User.findOne({ email });
@@ -28,8 +30,20 @@ router.post('/register', async (req, res) => {
 
     await user.save();
 
-    res.status(201).json({ message: 'User registered successfully!' });
+    // Generate JWT Token after successful registration
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+      expiresIn: '1h', // Token expires in 1 hour
+    });
+
+    // Return token and user info
+    res.status(201).json({
+      message: 'User registered successfully!',
+      token,
+      userId: user._id,
+      name: user.name,
+    });
   } catch (error) {
+    console.error('Error registering user:', error); // Log the error
     res.status(500).json({ message: 'Server error' });
   }
 });
@@ -37,7 +51,8 @@ router.post('/register', async (req, res) => {
 // Login Route
 router.post('/login', async (req, res) => {
     const { email, password } = req.body;
-  
+    console.log('Login attempt with email:', email); // Log the incoming email
+
     try {
       // Check if user exists
       let user = await User.findOne({ email });
@@ -54,6 +69,7 @@ router.post('/login', async (req, res) => {
   
       res.status(200).json({ token, userId: user._id, name: user.name });
     } catch (error) {
+        console.error('Error logging in user:', error); // Log the error
       res.status(500).json({ message: 'Server error' });
     }
   });
