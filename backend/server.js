@@ -13,7 +13,9 @@ connectDB();
 app.use(express.json()); // Body parser
 app.use(cors()); // Enable CORS
 
-// Basic route
+// Routes
+app.use('/api/auth', require('./routes/authRoutes'));
+
 app.get('/', (req, res) => {
   res.send('Hello from the Backend!');
 });
