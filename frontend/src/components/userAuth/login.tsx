@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
 
@@ -8,6 +9,7 @@ const LoginPage: React.FC = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
+    const navigate = useNavigate(); // Initialize navigate function
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -16,6 +18,7 @@ const LoginPage: React.FC = () => {
             console.log('User logged in:', data);
             localStorage.setItem('token', data.token); // Store token in localStorage
             setMessage('User logged in successfully!');
+            navigate('/profile');
         } catch (error: any) {
             console.error('Login error:', error.response.data.message);
             setMessage(error.response.data.message);
