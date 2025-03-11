@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../assets/css/index.css';
+import './assets/css/signup.css';
 
 import { registerUser, loginUser } from '../../services/authService';
 
@@ -46,13 +47,13 @@ const SignUpPage: React.FC = () => {
             <div className="row hero-text-container text-center">
                 <div className="col">
                     <div className='hero-text'>
-                        <p></p>
+                        <p>Erstellen Sie ein Konto oder melden Sie sich an</p>
                     </div>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <div>
+                    <div className='signup-login-container'>
                         <h2>Sign Up</h2>
                         <form onSubmit={handleSubmit}>
                             <input

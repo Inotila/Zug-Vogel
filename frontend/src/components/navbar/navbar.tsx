@@ -1,17 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../../assets/css/index.css";
 import logo from "../../assets/images/logo-images/nav-zug-vogel-color-logo.png";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
-  // Check if the user is logged in
+  const navigate = useNavigate();
+
+  // Check if the user is logged in by looking for the token in localStorage
+  const token = localStorage.getItem('token');
   const userName = localStorage.getItem('userName');
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userName');
+    navigate('/'); // Redirect to the homepage after logging out
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <div className="row w-100 align-items-center">
+
           {/* Logo */}
           <div className="col-4 d-flex justify-content-start">
             <Link to="/" className="navbar-brand">
@@ -47,22 +57,57 @@ const Navbar: React.FC = () => {
             {/* Navbar Links (inside the same column) */}
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
-                {userName ? (
-                  // If user is logged in, show their name and link to profile page
-                  <li className="nav-item">
-                    <Link className="nav-link mx-3" to="/profile">
-                      {userName}
+                {token ? (
+                  <li className="nav-item dropdown">
+                    <Link
+                      className="nav-link dropdown-toggle mx-3"
+                      to="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      {userName} {/* Display user's name */}
                     </Link>
+                    <ul className="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                      <li>
+                        <Link className="dropdown-item" to="/profile">
+                          Profile
+                        </Link>
+                      </li>
+                      <li>
+                        <button className="dropdown-item" onClick={handleLogout}>
+                          Logout
+                        </button>
+                      </li>
+                    </ul>
                   </li>
                 ) : (
-                  // Otherwise, show the signup link
-                  <li className="nav-item">
-                    <Link className="nav-link mx-3" to="/signup">
-                      Signup
+                  <li className="nav-item dropdown">
+                    <Link
+                      className="nav-link dropdown-toggle mx-3"
+                      to="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Signup/Login
                     </Link>
+                    <ul className="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                      <li>
+                        <Link className="dropdown-item" to="/login">
+                          Login
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="dropdown-item" to="/signup">
+                          Signup
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                 )}
-
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
                     Home
