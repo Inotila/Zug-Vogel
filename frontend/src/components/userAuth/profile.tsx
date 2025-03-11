@@ -29,16 +29,19 @@ const ProfilePage: React.FC = () => {
             <div className="row hero-text-container text-center">
                 <div className="col">
                     <div className='hero-text'>
-                        <p></p>
+                        <p>Willkommen in unserem Profil. Für einen besseren Service aktualisieren Sie bitte Ihre Profilinformationen.
+                            Bitte beachten Sie: Wir geben Ihre Informationen NICHT an Dritte weiter.
+                            Dies dient lediglich dazu, dass wir uns optimal auf Ihre Ankunft vorbereiten können.
+                        </p>
                     </div>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <div>
+                    <div className='signup-login-container'>
                         {user ? (
                             <div>
-                                <h2>{user.name}'s Profile</h2>
+                                <h2>{user.name}</h2>
                                 <p>Email: {user.email}</p>
                                 <p>Created at: {user.createdAt}</p>
                             </div>

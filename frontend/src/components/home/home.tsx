@@ -30,7 +30,7 @@ const HomePage: React.FC = () => {
               Namibia liegt im Südwesten Afrikas und bietet erschwingliche Lebensbedingungen,
               freundliche Einheimische und eine breite Palette an Freizeitaktivitäten.
             </p>
-            <p>Zugvogel Namibia setzt sich dafür ein, dass Ihr Aufenthalt in Namibia zu einem unvergesslichen Erlebnis wird.</p>
+            <h5>Zugvogel Namibia setzt sich dafür ein, dass Ihr Aufenthalt in Namibia zu einem unvergesslichen Erlebnis wird.</h5>
           </div>
         </div>
       </div>

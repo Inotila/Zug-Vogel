@@ -25,6 +25,10 @@
 
 /* Hero Text */
 .hero-text-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align: center; /* Ensures text inside is centered */
     font-weight: 600;
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7);
     background: linear-gradient(
@@ -37,5 +41,6 @@
 }
 
 .hero-text {
-    margin: 0.75rem 0;
+    margin: 0.75rem auto; /* Centers the block element horizontally */
+    width: 75%;
 }
