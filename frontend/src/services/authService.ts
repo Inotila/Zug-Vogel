@@ -17,7 +17,9 @@ export const loginUser = async (email: string, password: string) => {
     if (response.data.token) {
       console.log('Received token:', response.data.token);
       localStorage.setItem('token', response.data.token);
+      localStorage.setItem('userName', response.data.name); // Store the user's name
       console.log('Token saved:', response.data.token); // Confirm token is stored
+      console.log('User name saved:', response.data.name);
     } else {
       console.error('No token received from server.');
     }

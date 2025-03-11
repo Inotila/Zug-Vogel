@@ -5,11 +5,13 @@ import logo from "../../assets/images/logo-images/nav-zug-vogel-color-logo.png";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
+  // Check if the user is logged in
+  const userName = localStorage.getItem('userName');
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
         <div className="row w-100 align-items-center">
-
           {/* Logo */}
           <div className="col-4 d-flex justify-content-start">
             <Link to="/" className="navbar-brand">
@@ -45,11 +47,22 @@ const Navbar: React.FC = () => {
             {/* Navbar Links (inside the same column) */}
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
-                <li className="nav-item">
-                  <Link className="nav-link mx-3" to="/signup">
-                    Signup
-                  </Link>
-                </li>
+                {userName ? (
+                  // If user is logged in, show their name and link to profile page
+                  <li className="nav-item">
+                    <Link className="nav-link mx-3" to="/profile">
+                      {userName}
+                    </Link>
+                  </li>
+                ) : (
+                  // Otherwise, show the signup link
+                  <li className="nav-item">
+                    <Link className="nav-link mx-3" to="/signup">
+                      Signup
+                    </Link>
+                  </li>
+                )}
+
                 <li className="nav-item">
                   <Link className="nav-link" to="/">
                     Home
