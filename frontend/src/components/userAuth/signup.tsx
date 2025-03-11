@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../assets/css/index.css';
-import './assets/css/signup.css';
+import './assets/css/auth.css';
 
 import { registerUser, loginUser } from '../../services/authService';
 
@@ -47,7 +47,7 @@ const SignUpPage: React.FC = () => {
             <div className="row hero-text-container text-center">
                 <div className="col">
                     <div className='hero-text'>
-                        <p>Erstellen Sie ein Konto oder melden Sie sich an</p>
+                        <p>Ein Konto erstellen</p>
                     </div>
                 </div>
             </div>

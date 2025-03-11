@@ -33,13 +33,14 @@ const LoginPage: React.FC = () => {
                 <div className="col">
                     <div className='hero-text'>
                         <p>
+                            Melden Sie sich bei Ihrem Konto an
                         </p>
                     </div>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
-                    <div>
+                    <div className='signup-login-container'>
                         <h2>Login</h2>
                         <form onSubmit={handleSubmit}>
                             <input
