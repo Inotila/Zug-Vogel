@@ -54,10 +54,6 @@ const ProfilePage: React.FC = () => {
             const token = localStorage.getItem('token'); // Get token from localStorage
             console.log('Token:', token);
             if (token) {
-                console.log('Sending PUT request to:', 'http://localhost:5010/api/activities/select-activities');
-                console.log('Request body:', { interests });
-                console.log('Selected interests debug (activity IDs):', interests);
-
                 // Step 1: Fetch the activity names using the selected activity IDs
                 const activityNames = [];
                 for (const activityId of interests) {
@@ -66,8 +62,6 @@ const ProfilePage: React.FC = () => {
                         activityNames.push(activity.name);
                     }
                 }
-
-                console.log('Selected activity names *Debug:', activityNames);
 
                 await axios.put('http://localhost:5010/api/activities/select-activities', { interests: activityNames }, {
                     headers: {
