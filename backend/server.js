@@ -1,8 +1,9 @@
-require('dotenv').config(); 
+require('dotenv').config();
 const express = require('express');
 const connectDB = require('./config/db'); // Import DB connection
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
+const activityRoutes = require('./routes/activityRoutes');
 
 const app = express();
 const port = process.env.PORT || 5010;
@@ -12,10 +13,26 @@ connectDB();
 
 // Middleware
 app.use(express.json()); // Body parser
-app.use(cors()); // Enable CORS
+
+// CORS Configuration  
+app.use(cors({
+  origin: 'http://localhost:3000', // Allow frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allow headers
+  credentials: true, // If using cookies or authentication
+}));
+
+// Also add CORS headers to all responses
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/activities', activityRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello from the Backend!');
@@ -25,12 +42,6 @@ app.use((err, req, res, next) => {
   console.error(err.stack); // Log the error stack trace
   res.status(500).json({ message: 'Server error', error: err.message }); // Send a JSON response with the error message
 });
-
-app.use(cors({
-  origin: 'http://localhost:3000', // Allow requests from your frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
-  credentials: true, // If you're using cookies with the token
-})); 
 
 // Start the server
 app.listen(port, () => {
