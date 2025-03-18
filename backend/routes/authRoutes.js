@@ -10,8 +10,6 @@ const router = express.Router();
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
-  console.log('Received data:', req.body); // Log request body
-
   try {
     // Check if user exists
     let user = await User.findOne({ email });

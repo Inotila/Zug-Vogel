@@ -16,7 +16,6 @@ router.get('/', async (req, res) => {
 
 // Endpoint to update selected activities for a user
 router.put('/select-activities', protect, async (req, res) => {
-  console.log('PUT request received at /select-activities');
   const { interests } = req.body; // Expecting an array of activity IDs
 
   if (!interests || !Array.isArray(interests)) {
@@ -58,8 +57,6 @@ router.get('/profile', protect, async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
     }
-
-    console.log('Populated User Data:', user); 
 
     res.json(user); // Send back user with populated interests
   } catch (err) {
