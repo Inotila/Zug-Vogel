@@ -134,6 +134,8 @@ const AboutNamibiaPage: React.FC = () => {
                             <img className='about-nam-img' src={churchImg} alt="" />
                             <img className='about-nam-img' src={trainStationImg} alt="" />
                         </div>
+
+                        <h4>booking the tour here and get more details from peter at zugogel@gmail.com</h4>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,10 @@ const LoginPage: React.FC = () => {
         e.preventDefault();
         try {
             const data = await loginUser(email, password);
-            console.log('User logged in:', data);
+            console.log('Login response:', data); // Debug log
+            if (!data || !data.token) {
+                throw new Error('Invalid response from server');
+            }
             localStorage.setItem('token', data.token); // Store token in localStorage
             setMessage('User logged in successfully!');
             navigate('/profile');
