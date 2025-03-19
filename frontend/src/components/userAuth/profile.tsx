@@ -2,79 +2,124 @@ import React, { useEffect, useState } from 'react';
 import '../../assets/css/index.css';
 import { getUserProfile } from '../../services/authService';
 import axios from 'axios';
+import './assets/css/auth.css';
+import './assets/css/profile.css';
+
+interface User {
+    name: string;
+    email: string;
+    phoneNumber: string;
+    preferredLanguage: string;
+    interests: string[]; // These are the names of the user's interests
+    createdAt: Date;
+}
 
 const ProfilePage: React.FC = () => {
-    const [user, setUser] = useState<any>(null);
-    const [interests, setInterests] = useState<string[]>([]); // Store selected activities
-    const [availableActivities, setAvailableActivities] = useState<any[]>([]); // All available activities
+    const [user, setUser] = useState<User | null>(null);
+    const [interests, setInterests] = useState<string[]>([]);
+    const [availableActivities, setAvailableActivities] = useState<any[]>([]);
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [preferredLanguage, setPreferredLanguage] = useState('');
     const [message, setMessage] = useState('');
 
-    // Fetch user profile and available activities when component loads
+    // Edit mode states
+    const [isEditingPhone, setIsEditingPhone] = useState(false);
+    const [isEditingLanguage, setIsEditingLanguage] = useState(false);
+    const [isEditingInterests, setIsEditingInterests] = useState(false);
+
     useEffect(() => {
-        const token = localStorage.getItem('token'); // Get token from localStorage
+        const token = localStorage.getItem('token');
         if (token) {
-            // Fetch user profile
             getUserProfile(token)
                 .then((data) => {
-                    console.log('User data fetched:', data); // Log the response to check the populated interests
-                    setUser(data); // Set user data if the API call succeeds
-                    setInterests(data.interests || []); // Set user's selected activities (interests)
+                    console.log('User data fetched:', data);
+                    setUser(data);
+                    setInterests(data.interests || []);
+                    setPhoneNumber(data.phoneNumber || '');
+                    setPreferredLanguage(data.preferredLanguage || 'English');
                 })
-                .catch((error) => {
-                    setMessage('Failed to fetch profile.'); // Set error message if the API call fails
-                });
+                .catch(() => setMessage('Failed to fetch profile.'));
 
-            // Fetch available activities
             axios.get('http://localhost:5010/api/activities')
-                .then(response => {
-                    setAvailableActivities(response.data); // Set available activities
-                })
-                .catch(err => {
-                    console.error('Error fetching activities', err);
-                    setMessage('Failed to fetch activities.');
-                });
+                .then(response => setAvailableActivities(response.data))
+                .catch(() => setMessage('Failed to fetch activities.'));
         } else {
-            setMessage('No token found, please log in.'); // If there's no token
+            setMessage('No token found, please log in.');
         }
     }, []);
 
-    // Handle activity selection
-    const handleActivityChange = (activityId: string) => {
-        setInterests((prevInterests) => {
-            if (prevInterests.includes(activityId)) {
-                return prevInterests.filter(id => id !== activityId); // Unselect activity
+    const handleActivityChange = (activityName: string) => {
+        setInterests(prevInterests => {
+            if (prevInterests.includes(activityName)) {
+                // If the activity is already selected, remove it
+                return prevInterests.filter(interest => interest !== activityName);
+            } else {
+                // If the activity is not selected, add it
+                return [...prevInterests, activityName];
             }
-            return [...prevInterests, activityId]; // Select activity
         });
     };
 
-    // Handle submit of selected activities
-    const handleSubmit = async () => {
+    const updateUserField = async (field: 'phoneNumber' | 'preferredLanguage', value: string) => {
         try {
-            const token = localStorage.getItem('token'); // Get token from localStorage
-            console.log('Token:', token);
-            if (token) {
-                // Step 1: Fetch the activity names using the selected activity IDs
-                const activityNames = [];
-                for (const activityId of interests) {
-                    const activity = availableActivities.find(a => a._id === activityId);
-                    if (activity) {
-                        activityNames.push(activity.name);
-                    }
-                }
-
-                await axios.put('http://localhost:5010/api/activities/select-activities', { interests: activityNames }, {
-                    headers: {
-                        Authorization: `Bearer ${token}`, // Send token for authentication
-                    }
-                });
-                alert('Activities updated successfully');
+            const token = localStorage.getItem('token');
+            if (!token) {
+                setMessage('User not authenticated.');
+                return;
             }
+
+            await axios.put('http://localhost:5010/api/users/update-profile',
+                { [field]: value },
+                { headers: { Authorization: `Bearer ${token}` } }
+            );
+
+            // Reload the updated user profile
+            getUserProfile(token)
+                .then((data) => {
+                    setUser(data);
+                    setPhoneNumber(data.phoneNumber || '');
+                    setPreferredLanguage(data.preferredLanguage || 'English');
+                    alert(`${field} updated successfully!`);
+                })
+                .catch(() => setMessage(`Failed to fetch updated ${field}.`));
+
         } catch (err) {
-            console.error('Error updating activities', err);
-            setMessage('Failed to update activities.');
+            console.error(`Error updating ${field}`, err);
+            setMessage(`Failed to update ${field}.`);
         }
     };
+
+    const handleSubmit = async () => {
+        try {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                setMessage('User not authenticated.');
+                return;
+            }
+
+            const activityNames = interests;
+
+            await axios.put('http://localhost:5010/api/activities/select-activities',
+                { interests: activityNames },
+                { headers: { Authorization: `Bearer ${token}` } }
+            );
+
+            // Reload the updated user profile
+            getUserProfile(token)
+                .then((data) => {
+                    setUser(data);
+                    setInterests(data.interests || []);
+                    alert('Profile updated successfully!');
+                })
+                .catch(() => setMessage('Failed to fetch updated profile.'));
+        } catch (err) {
+            console.error('Error updating profile', err);
+            setMessage('Failed to update profile.');
+        }
+    };
+
+    // Sort activities alphabetically by name
+    const sortedActivities = [...availableActivities].sort((a, b) => a.name.localeCompare(b.name));
 
     return (
         <div className="container-fluid text-center">
@@ -97,41 +142,102 @@ const ProfilePage: React.FC = () => {
                         {user ? (
                             <div>
                                 <h2>{user.name}</h2>
-                                <p>Email: {user.email}</p>
-                                <p>Created at: {user.createdAt}</p>
+                                <p className='profile-attribute'> Email: {user.email}</p>
 
-                                {/* Display available activities and allow user to select */}
-                                <h3>Your Interests</h3>
-                                {user.interests && user.interests.length > 0 ? (
-                                    <ul>
-                                        {user.interests.map((interest: any) => (
-                                            <li key={interest}>{interest}</li> // Displaying activity names (no need to access `interest.name` anymore)
-                                        ))}
-                                    </ul>
-                                ) : (
-                                    <p>No interests selected yet</p>
-                                )}
+                                {/* Phone Number Section */}
+                                <div className='updateable-attributes'>
+                                    <p className='profile-attribute'>Phone Number: {phoneNumber}</p>
+                                    {!isEditingPhone ? (
+                                        <span onClick={() => setIsEditingPhone(true)} style={{ cursor: 'pointer', color: 'blue' }}>Edit</span>
+                                    ) : (
+                                        <>
+                                            <input
+                                                type="text"
+                                                value={phoneNumber}
+                                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                                placeholder="Enter your phone number"
+                                            />
+                                            <button onClick={() => {
+                                                updateUserField('phoneNumber', phoneNumber);
+                                                setIsEditingPhone(false);
+                                            }}>Save</button>
+                                        </>
+                                    )}
+                                </div>
 
-                                <h3>Select Activities</h3>
-                                {availableActivities.length > 0 ? (
-                                    <div>
-                                        {availableActivities.map(activity => (
-                                            <div key={activity._id}>
-                                                <label>
+                                {/* Preferred Language Section */}
+                                <div className='updateable-attributes'>
+                                    <p className='profile-attribute'>Preferred Language: {preferredLanguage}</p>
+                                    {!isEditingLanguage ? (
+                                        <span onClick={() => setIsEditingLanguage(true)} style={{ cursor: 'pointer', color: 'blue' }}>Edit</span>
+                                    ) : (
+                                        <>
+                                            <select
+                                                value={preferredLanguage}
+                                                onChange={(e) => setPreferredLanguage(e.target.value)}
+                                            >
+                                                <option value="English">English</option>
+                                                <option value="German">German</option>
+                                                <option value="French">French</option>
+                                            </select>
+                                            <button onClick={() => {
+                                                updateUserField('preferredLanguage', preferredLanguage);
+                                                setIsEditingLanguage(false);
+                                            }}>Save</button>
+                                        </>
+                                    )}
+                                </div>
+
+                                {/* Interests Section with checkboxes */}
+                                <div className='updateable-attributes activity-container' >
+                                    <p className='profile-attribute mx-3'>Interests: </p>
+                                    {isEditingInterests ? (
+                                        <div className="interest-list-container">
+                                            <p>
+                                                Wählen Sie unten Ihr Interesse aus,
+                                                <br />
+                                                damit wir Ihnen ein maßgeschneidertes Erlebnis empfehlen können
+                                            </p>
+                                            {sortedActivities.map(activity => (
+                                                <div className='interest-list' key={activity._id}>
                                                     <input
                                                         type="checkbox"
-                                                        checked={interests.includes(activity._id)}
-                                                        onChange={() => handleActivityChange(activity._id)}
+                                                        id={activity._id}
+                                                        checked={interests.includes(activity.name)} // Check based on activity name
+                                                        onChange={() => handleActivityChange(activity.name)} // Change based on activity name
                                                     />
-                                                    {activity.name}
-                                                </label>
+                                                    <label className='mx-3' htmlFor={activity._id}>{activity.name}</label>
+                                                </div>
+                                            ))}
+                                            <div className='interest-btn-container'>
+                                                <button
+                                                    className="save-button"
+                                                    onClick={() => {
+                                                        setIsEditingInterests(false);
+                                                        handleSubmit();
+                                                    }}
+                                                >
+                                                    Update
+                                                </button>
                                             </div>
-                                        ))}
-                                    </div>
-                                ) : (
-                                    <p>{message || 'Loading activities...'}</p>
-                                )}
-                                <button onClick={handleSubmit}>Save Selected Activities</button>
+
+                                        </div>
+                                    ) : (
+                                        <div>
+                                            {user.interests?.length > 0 ? (
+                                                user.interests.join(', ')
+                                            ) : (
+                                                <p>No interests selected yet</p>
+                                            )}
+                                            <span className='mx-3'
+                                                onClick={() => setIsEditingInterests(true)}
+                                                style={{ cursor: 'pointer', color: 'blue' }}>
+                                                Edit
+                                            </span>
+                                        </div>
+                                    )}
+                                </div>
+
                             </div>
                         ) : (
                             <p>{message || 'Loading profile...'}</p>
