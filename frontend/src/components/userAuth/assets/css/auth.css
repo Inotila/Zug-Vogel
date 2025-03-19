@@ -12,6 +12,10 @@
 
 }
 
-input {
+.auth-page-title{
+    margin: 0.75rem 0.75rem;
+}
+
+.auth-page-input{
     margin: 0.75rem 0.75rem;
 }

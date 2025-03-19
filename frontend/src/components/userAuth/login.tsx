@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
+import './assets/css/auth.css';
 
 import { loginUser } from '../../services/authService';
 
@@ -44,21 +45,17 @@ const LoginPage: React.FC = () => {
             <div className="row">
                 <div className="col">
                     <div className='signup-login-container'>
-                        <h2>Login</h2>
+                        <h2 className='auth-page-title'>Login</h2>
                         <form onSubmit={handleSubmit}>
                             <input
-                                type="email"
-                                placeholder="Email"
-                                value={email}
+                                className='auth-page-input' type="email" placeholder="Email" value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <input
-                                type="password"
-                                placeholder="Password"
-                                value={password}
+                                className='auth-page-input' type="password" placeholder="Password" value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                            <button type="submit">Login</button>
+                            <button className='auth-btn' type="submit">Login</button>
                         </form>
                         {message && <p>{message}</p>}
                     </div>

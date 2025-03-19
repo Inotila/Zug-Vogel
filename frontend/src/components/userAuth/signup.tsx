@@ -47,34 +47,30 @@ const SignUpPage: React.FC = () => {
             <div className="row hero-text-container text-center">
                 <div className="col">
                     <div className='hero-text'>
-                        <p>Ein Konto erstellen</p>
+                        <p>Melden Sie sich noch heute an und erhalten Sie vollen Zugriff auf alle Funktionen der Website.</p>
+                        <p>Bitte beachten Sie: Wir geben Ihre Informationen nicht an Anwendungen von Drittanbietern weiter
+                            und verwenden Ihre Informationen nur, um Ihr Erlebnis Ihren Wünschen entsprechend anzupassen.</p>
                     </div>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
                     <div className='signup-login-container'>
-                        <h2>Sign Up</h2>
+                        <h2 className='auth-page-title'>Sign Up</h2>
                         <form onSubmit={handleSubmit}>
                             <input
-                                type="text"
-                                placeholder="Name"
-                                value={name}
+                                className='auth-page-input' type="text" placeholder="Name" value={name}
                                 onChange={(e) => setName(e.target.value)}
                             />
                             <input
-                                type="email"
-                                placeholder="Email"
-                                value={email}
+                                className='auth-page-input' type="email" placeholder="Email" value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
                             <input
-                                type="password"
-                                placeholder="Password"
-                                value={password}
+                                className='auth-page-input' type="password" placeholder="Password" value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                            <button type="submit">Sign Up</button>
+                            <button className='auth-btn' type="submit">Sign Up</button>
                         </form>
                         {message && <p>{message}</p>}
                     </div>
