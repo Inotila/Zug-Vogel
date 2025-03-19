@@ -22,3 +22,20 @@
     display: flex;
     flex-direction: row;
 }
+
+.user-container{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.updateable-attributes {
+    display: flex;  
+}
+
+.updateable-attributes span {
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-left: 10px; /* Adds space between the attribute and the edit icon */
+}

@@ -4,6 +4,8 @@ import { getUserProfile } from '../../services/authService';
 import axios from 'axios';
 import './assets/css/auth.css';
 import './assets/css/profile.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';  // Import the faEdit icon
 
 interface User {
     name: string;
@@ -140,7 +142,7 @@ const ProfilePage: React.FC = () => {
                 <div className="col">
                     <div className='signup-login-container'>
                         {user ? (
-                            <div>
+                            <div className='user-container'>
                                 <h2>{user.name}</h2>
                                 <p className='profile-attribute'> Email: {user.email}</p>
 
@@ -148,7 +150,9 @@ const ProfilePage: React.FC = () => {
                                 <div className='updateable-attributes'>
                                     <p className='profile-attribute'>Phone Number: {phoneNumber}</p>
                                     {!isEditingPhone ? (
-                                        <span onClick={() => setIsEditingPhone(true)} style={{ cursor: 'pointer', color: 'blue' }}>Edit</span>
+                                        <span onClick={() => setIsEditingPhone(true)} style={{ cursor: 'pointer', color: 'blue' }}>
+                                            <FontAwesomeIcon icon={faEdit} /> {/* Font Awesome Edit Icon */}
+                                        </span>
                                     ) : (
                                         <>
                                             <input
@@ -157,7 +161,7 @@ const ProfilePage: React.FC = () => {
                                                 onChange={(e) => setPhoneNumber(e.target.value)}
                                                 placeholder="Enter your phone number"
                                             />
-                                            <button onClick={() => {
+                                            <button className='mx-3' onClick={() => {
                                                 updateUserField('phoneNumber', phoneNumber);
                                                 setIsEditingPhone(false);
                                             }}>Save</button>
@@ -169,7 +173,9 @@ const ProfilePage: React.FC = () => {
                                 <div className='updateable-attributes'>
                                     <p className='profile-attribute'>Preferred Language: {preferredLanguage}</p>
                                     {!isEditingLanguage ? (
-                                        <span onClick={() => setIsEditingLanguage(true)} style={{ cursor: 'pointer', color: 'blue' }}>Edit</span>
+                                        <span onClick={() => setIsEditingLanguage(true)} style={{ cursor: 'pointer', color: 'blue' }}>
+                                            <FontAwesomeIcon icon={faEdit} /> {/* Font Awesome Edit Icon */}
+                                        </span>
                                     ) : (
                                         <>
                                             <select
@@ -180,7 +186,7 @@ const ProfilePage: React.FC = () => {
                                                 <option value="German">German</option>
                                                 <option value="French">French</option>
                                             </select>
-                                            <button onClick={() => {
+                                            <button className='mx-3' onClick={() => {
                                                 updateUserField('preferredLanguage', preferredLanguage);
                                                 setIsEditingLanguage(false);
                                             }}>Save</button>
@@ -189,7 +195,7 @@ const ProfilePage: React.FC = () => {
                                 </div>
 
                                 {/* Interests Section with checkboxes */}
-                                <div className='updateable-attributes activity-container' >
+                                <div className='updateable-attributes activity-container'>
                                     <p className='profile-attribute mx-3'>Interests: </p>
                                     {isEditingInterests ? (
                                         <div className="interest-list-container">
@@ -220,7 +226,6 @@ const ProfilePage: React.FC = () => {
                                                     Update
                                                 </button>
                                             </div>
-
                                         </div>
                                     ) : (
                                         <div>
@@ -232,7 +237,7 @@ const ProfilePage: React.FC = () => {
                                             <span className='mx-3'
                                                 onClick={() => setIsEditingInterests(true)}
                                                 style={{ cursor: 'pointer', color: 'blue' }}>
-                                                Edit
+                                                <FontAwesomeIcon icon={faEdit} /> {/* Font Awesome Edit Icon */}
                                             </span>
                                         </div>
                                     )}
