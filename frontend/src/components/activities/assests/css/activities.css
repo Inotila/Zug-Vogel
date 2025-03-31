@@ -1,3 +1,10 @@
+/* Hero banner */
+
+.activities-hero-banner-container{
+    background-image: url('../../../../assets/images/hero-images/activities-hero-img.jpg');
+    background-position:center !important; 
+}
+
 .activities-container{
     flex-direction: column;
     width: 100% !important;

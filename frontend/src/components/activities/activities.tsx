@@ -5,7 +5,7 @@ import './assests/css/activities.css'
 const ActivitiesPage: React.FC = () => {
     return (
         <div className="container-fluid text-center">
-            <div className="row hero-banner-container tour-hero-banner-container subpage-hero-banner">
+            <div className="row hero-banner-container activities-hero-banner-container subpage-hero-banner">
                 <div className="col hero-page-titles">
                     <h1>Aktivitäten</h1>
                     <p>Bleiben Sie wegen der Kälte nicht drinnen gefangen, sondern bleiben Sie unter der Sonne Namibias aktiv</p>
