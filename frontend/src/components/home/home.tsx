@@ -5,7 +5,7 @@ import './assets/css/home.css';
 import accommodationImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
 import giraffe from '../../assets/images/tours-images/giraffe.jpg'
 import whiteLogo from '../../assets/images/logo-images/hero-banner-zug-vogel-white-logo.png'
-import churchImg from '../../assets/images/aboutNamibia-images/church.jpg';
+import golfImg from '../../assets/images/actvities/golfer.jpg';
 
 const HomePage: React.FC = () => {
   return (
@@ -37,9 +37,9 @@ const HomePage: React.FC = () => {
       <div className="row">
         {/* tour */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
-          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
+          <div className="card homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={giraffe} alt="#" />
-            <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
+            <div className="card-body">
               <p className="card-text">
                 Ob Sie einen kurzen Wochenendausflug planen oder eine längere Entdeckungsreise von bis zu
                 14 Tagen unternehmen möchten: Wir organisieren unvergessliche Touren, die Ihren
@@ -53,9 +53,9 @@ const HomePage: React.FC = () => {
         </div>
         {/* accommodation */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
-          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
+          <div className="card homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={accommodationImg} alt="#" />
-            <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
+            <div className="card-body">
               <p className="card-text accomodation-text">
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
                 Wählen Sie Ihr ideales Sommerhaus aus unserer Auswahl sorgfältig kuratierter Häuser.
@@ -66,11 +66,11 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </div>
-        {/* about namibia */}
+        {/* activities */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
-          <div className="card homepage-card flex-fill d-flex flex-column align-items-center text-center h-100">
-            <img className="home-card-image card-img-top" src={churchImg} alt="#" />
-            <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
+          <div className="card homepage-card flex-fill h-100">
+            <img className="home-card-image card-img-top" src={golfImg} alt="#" />
+            <div className="card-body">
               <p className="card-text accomodation-text">
                 Windhoek bietet eine Fülle von Möglichkeiten, um Körper, Geist und Seele zu bereichern. Wir haben eine abwechslungsreiche
                 Auswahl an Aktivitäten zusammengestellt, die Ihnen sowohl die lebendige Kultur als auch die
@@ -84,11 +84,10 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-
+      {/* about namibia  and about us*/}
       <div className="row">
-        {/* about namibia */}
         <div className="col-12 col-md-6">
-          <div className='aboutus-and-contact-container mx-3' >
+          <div className='shadow-container aboutus-and-contact-container' >
             <h3 className='mt-2'>Über Namibia</h3>
             <p className='about-us-text'>Erfahren Sie mehr über Namibia und seine vielen Wunder.
               Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
@@ -114,7 +113,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className="col-12 col-md-6">
-          <div className='aboutus-and-contact-container mx-3' >
+          <div className='shadow-container aboutus-and-contact-container' >
             <h3 className='mt-2'>Über uns</h3>
             <p className='about-us-text'>Zugvogel Reisen Namibia richtet sich besonders an aktive und reiselustige Menschen,
               <br />
