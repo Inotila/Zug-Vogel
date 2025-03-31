@@ -34,13 +34,8 @@
 }
 
 .homepage-card {
- display: flex;
  flex-direction: column;
- text-align: center;
- box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
  margin: 0px 0px 0px 0px;
- border: 1px solid black !important;
- border-radius: 10px !important;
 }
 
 .home-card-image {
@@ -101,6 +96,13 @@
 
 /* learn about namibia container */
 
+.about-container{
+  flex-direction: column;
+}
+
+.about-text{
+margin: 0.75rem;
+}
 
 .important-information-list{
   list-style: none;

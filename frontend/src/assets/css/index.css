@@ -70,11 +70,12 @@ span:hover {
 }
 
 .shadow-container{
-  background-color: #fff;
-  border-radius: 10px;
+  display: flex;
   align-items: center; 
   justify-content: center; 
   text-align: center; 
+  background-color: #fff;
+  border-radius: 10px;
   border: 1px solid #000000 !important;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }

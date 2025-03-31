@@ -37,7 +37,7 @@ const HomePage: React.FC = () => {
       <div className="row">
         {/* tour */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
-          <div className="card homepage-card flex-fill h-100">
+          <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={giraffe} alt="#" />
             <div className="card-body">
               <p className="card-text">
@@ -53,7 +53,7 @@ const HomePage: React.FC = () => {
         </div>
         {/* accommodation */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
-          <div className="card homepage-card flex-fill h-100">
+          <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={accommodationImg} alt="#" />
             <div className="card-body">
               <p className="card-text accomodation-text">
@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
         </div>
         {/* activities */}
         <div className="col-12 col-md-4 card-col d-flex my-3">
-          <div className="card homepage-card flex-fill h-100">
+          <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={golfImg} alt="#" />
             <div className="card-body">
               <p className="card-text accomodation-text">
@@ -87,9 +87,9 @@ const HomePage: React.FC = () => {
       {/* about namibia  and about us*/}
       <div className="row">
         <div className="col-12 col-md-6">
-          <div className='shadow-container aboutus-and-contact-container' >
+          <div className='shadow-container about-container h-100' >
             <h3 className='mt-2'>Über Namibia</h3>
-            <p className='about-us-text'>Erfahren Sie mehr über Namibia und seine vielen Wunder.
+            <p className='about-text'>Erfahren Sie mehr über Namibia und seine vielen Wunder.
               Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
             </p>
             <Link to="/überNamibia" className="btn home-about-us-btn mt-auto">
@@ -113,9 +113,9 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         <div className="col-12 col-md-6">
-          <div className='shadow-container aboutus-and-contact-container' >
+          <div className='shadow-container about-container h-100' >
             <h3 className='mt-2'>Über uns</h3>
-            <p className='about-us-text'>Zugvogel Reisen Namibia richtet sich besonders an aktive und reiselustige Menschen,
+            <p className='about-text'>Zugvogel Reisen Namibia richtet sich besonders an aktive und reiselustige Menschen,
               <br />
               insbesondere Rentnerinnen und Rentner, aber auch an all jene, die dem Winter entfliehen und
               die namibische Sonne genießen möchten.
