@@ -85,7 +85,34 @@ const HomePage: React.FC = () => {
 
 
       <div className="row">
-        <div className="col">
+        {/* about namibia */}
+        <div className="col-12 col-md-6">
+          <div className='aboutus-and-contact-container mx-3' >
+            <h3 className='mt-2'>Über Namibia</h3>
+            <p className='about-us-text'>Erfahren Sie mehr über Namibia und seine vielen Wunder.
+              Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
+            </p>
+            <Link to="/überNamibia" className="btn home-about-us-btn mt-auto">
+              <p className='about-us-btn-text mx-3'>
+                Erfahren Sie mehr über Namibia
+              </p>
+            </Link>
+            <div className='important-information-container'>
+              <h4 className='mt-1'>Wichtige Links</h4>
+              <ul className='important-information-list'>
+                <li>
+                  Visa-Portal: <a href="https://eservices.mhaiss.gov.na/" target='blank'> e-service</a>
+                </li>
+                <li>
+                  Sicherheit und Einwanderung: <a href="https://mha.gov.na/">Ministry of Home affairs
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <div className="col-12 col-md-6">
           <div className='aboutus-and-contact-container mx-3' >
             <h3 className='mt-2'>Über uns</h3>
             <p className='about-us-text'>Zugvogel Reisen Namibia richtet sich besonders an aktive und reiselustige Menschen,
