@@ -32,8 +32,6 @@ body {
   padding: 0 !important;
 }
 
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -69,4 +67,15 @@ span {
 
 span:hover {
   color: #063c93 !important;
+}
+
+.shadow-container{
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  border: 1px solid #000000 !important;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }

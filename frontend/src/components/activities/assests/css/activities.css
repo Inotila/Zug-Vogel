@@ -1,0 +1,21 @@
+.activities-container{
+    flex-direction: column;
+    width: 100% !important;
+}
+
+.activities-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activities-col{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activities-text{
+    width: 75%;
+}

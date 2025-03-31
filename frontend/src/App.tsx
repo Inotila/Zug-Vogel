@@ -11,6 +11,7 @@ import AboutUsPage from './components/aboutUs/aboutUs'
 import SignUpPage from './components/userAuth/signup'
 import LoginPage from './components/userAuth/login'
 import ProfilePage from './components/userAuth/profile'
+import ActivitiesPage from './components/activities/activities';
 
 
 const App: React.FC = () => {
@@ -30,6 +31,7 @@ const App: React.FC = () => {
             <Route path="/signup" element={< SignUpPage />} />
             <Route path="/login" element={< LoginPage />} />
             <Route path="/profile" element={< ProfilePage />} />
+            <Route path="/Aktivitäten" element={< ActivitiesPage />} />
           </Routes>
         </div>
         <Footer />

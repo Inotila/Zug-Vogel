@@ -72,11 +72,12 @@ const HomePage: React.FC = () => {
             <img className="home-card-image card-img-top" src={churchImg} alt="#" />
             <div className="card-body d-flex flex-column align-items-center text-center flex-grow-1">
               <p className="card-text accomodation-text">
-                Erfahren Sie mehr über Namibia und seine vielen Wunder.
-                Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
+                Windhoek bietet eine Fülle von Möglichkeiten, um Körper, Geist und Seele zu bereichern. Wir haben eine abwechslungsreiche
+                Auswahl an Aktivitäten zusammengestellt, die Ihnen sowohl die lebendige Kultur als auch die
+                atemberaubende Natur Namibias näherbringen.
               </p>
-              <Link to="/überNamibia" className="btn home-btn mt-auto">
-                <h5 className="card-title accomodation-title">Über Namibia</h5>
+              <Link to="/Aktivitäten" className="btn home-btn mt-auto">
+                <h5 className="card-title accomodation-title">Aktivitäten</h5>
               </Link>
             </div>
           </div>
