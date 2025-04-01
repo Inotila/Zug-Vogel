@@ -4,6 +4,7 @@ import './assets/css/accommodationCard.css';
 
 interface AccommodationCardProps {
     title: string;
+    city: string;
     image: string;
     bedRooms: string;
     garge: string;
@@ -11,7 +12,7 @@ interface AccommodationCardProps {
     wifi: string;
 }
 
-const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, image, bedRooms, garge, pool, wifi }) => {
+const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, city, image, bedRooms, garge, pool, wifi }) => {
     return (
         <div className="accommodation-card card shadow-container">
             <div className="card-body">
@@ -22,7 +23,7 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, image, bed
                 <div className="accommodation-content flex-fill d-flex ">
                     <h4 className="card-title accommodation-card-title big-screen-title">{title}</h4>
                     <div className='location-text'>
-                        <p className='mx-1 amenities-title'>City { }, Country{ }</p>
+                        <p className='mx-1 amenities-title'>{city}, Namibia</p>
                         <p className='mx-1 amenities-title'>
                             <a href="#"> google map</a>
                         </p>

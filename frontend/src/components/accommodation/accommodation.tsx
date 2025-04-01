@@ -1,30 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/accommodation.css';
 import erosGuestHouseImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
 import klienWHKGuestHouseImg from '../../assets/images/accommodation-images/kleinWindhoekGuestHouse/klienWindhoekPool.jpg';
 import AccommodationCard from './accommodationCard';
 
-const accommodations = [
-  {
-    title: "Eleganz mit Panoramablick",
-    image: klienWHKGuestHouseImg,
-    bedRooms: "1",
-    garge: "Privatparkplatz",
-    pool: "Ja",
-    wifi: "Kostenloses WLAN",
-  },
-  {
-    title: "Gemütliche Pension in zentraler Lage",
-    image: erosGuestHouseImg,
-    bedRooms: "2",
-    garge: "Garage verfügbar",
-    pool: "Nein",
-    wifi: "Kostenloses WLAN",
-  },
-];
 
 const AccomodationPage: React.FC = () => {
+  const [accommodations, setAccommodations] = useState<any[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5010/api/contentful/entries")
+      .then((res) => res.json())
+      .then((data) => {
+        // Filter only "accommodation" entries
+        const filteredData = data.filter((item: any) => item.city);
+        setAccommodations(filteredData);
+      })
+      .catch((error) => console.error("Error fetching accommodations:", error));
+  }, []);
   return (
     <div className="container-fluid text-center">
       <div className="row hero-banner-container accommodation-hero-banner-container subpage-hero-banner">
@@ -48,9 +42,17 @@ const AccomodationPage: React.FC = () => {
 
       {/* ✅ Responsive Grid Layout */}
       <div className="row accommodation-grid">
-        {accommodations.map((accommodation, index) => (
-          <div key={index} className="col-sm-12 col-md-6 col-lg-6 d-flex mb-3 justify-content-center">
-            <AccommodationCard {...accommodation} />
+        {accommodations.map((accommodation) => (
+          <div key={accommodation.id} className="col-sm-12 col-md-4s col-lg-4 d-flex mb-3 justify-content-center">
+            <AccommodationCard
+              title={accommodation.title}
+              city={accommodation.city}
+              image={accommodation.image || "default-image.jpg"}  // Update image logic
+              bedRooms="N/A"  // Update this if Contentful provides it
+              garge="N/A"
+              pool="N/A"
+              wifi={accommodation.freeWifi ? "Kostenloses WLAN" : "Nein"}
+            />
           </div>
         ))}
       </div>
