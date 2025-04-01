@@ -1,13 +1,6 @@
 .accommodation-card {
     width: 100%;
-    border: 1px solid black !important;
-    background: white;
-    border: 2px solid black;
-    border-radius: 10px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .accommodation-card .card-body {
@@ -20,7 +13,7 @@
 }
 /* titles */
 
-.small-screen-title{
+.small-screen-title{ 
     display: none;
 }
 
@@ -39,6 +32,11 @@
 }
 
 /* content */
+
+.location-text{
+    display: flex;
+    flex-direction: row;
+}
 
 .amenities-title{
     text-decoration: underline;

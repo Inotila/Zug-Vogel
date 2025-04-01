@@ -12,6 +12,7 @@ import SignUpPage from './components/userAuth/signup'
 import LoginPage from './components/userAuth/login'
 import ProfilePage from './components/userAuth/profile'
 import ActivitiesPage from './components/activities/activities';
+import AccomodationDetailsPage from './components/accommodation/accommodationDetails';
 
 
 const App: React.FC = () => {
@@ -24,7 +25,7 @@ const App: React.FC = () => {
             {/* HomePage component */}
             <Route path="/" element={< HomePage />} />
             {/* AccomodationPage route */}
-            <Route path="/Unterkunft" element={< AccomodationPage />} />
+            <Route path="/unterkunft" element={< AccomodationPage />} />
             <Route path="/touren" element={< TourPage />} />
             <Route path="/überNamibia" element={< AboutNamibiaPage />} />
             <Route path="/überUns" element={< AboutUsPage />} />
@@ -32,6 +33,8 @@ const App: React.FC = () => {
             <Route path="/login" element={< LoginPage />} />
             <Route path="/profile" element={< ProfilePage />} />
             <Route path="/Aktivitäten" element={< ActivitiesPage />} />
+            <Route path="/unterkunftDetails" element={< AccomodationDetailsPage />} />
+
           </Routes>
         </div>
         <Footer />

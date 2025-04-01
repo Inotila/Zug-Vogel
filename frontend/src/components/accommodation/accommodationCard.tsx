@@ -13,15 +13,26 @@ interface AccommodationCardProps {
 
 const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, image, bedRooms, garge, pool, wifi }) => {
     return (
-        <div className="accommodation-card card">
+        <div className="accommodation-card card shadow-container">
             <div className="card-body">
-                <h3 className="card-title accommodation-card-title small-screen-title mb-3">{title}</h3>
+                <h4 className="card-title accommodation-card-title small-screen-title mb-1">{title}</h4>
                 <div className='accommodation-card-image-container'>
                     <img src={image} alt={title} className="accommodation-image" />
                 </div>
-                <div className="accommodation-content flex-fill d-flex flex-column align-items-center text-center">
-                    <h3 className="card-title accommodation-card-title big-screen-title">{title}</h3>
-                    <h4 className='mt-2 amenities-title'>Ausstattung</h4>
+                <div className="accommodation-content flex-fill d-flex ">
+                    <h4 className="card-title accommodation-card-title big-screen-title">{title}</h4>
+                    <div className='location-text'>
+                        <p className='mx-1 amenities-title'>City { }, Country{ }</p>
+                        <p className='mx-1 amenities-title'>
+                            <a href="#"> google map</a>
+                        </p>
+                    </div>
+                    <div className='summary-container'>
+                        <p className='summary-container'>
+                            this is a short text about the player, and this is just boiler plate text.
+                            stuff will be said and done , to this.
+                        </p>
+                    </div>
                     <ul className='accommodation-amenities-list'>
                         <li>Schlafzimmer: {bedRooms}</li>
                         <li>Parken: {garge}</li>
