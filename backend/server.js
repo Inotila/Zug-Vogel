@@ -5,6 +5,7 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 const activityRoutes = require('./routes/activityRoutes');
 const userRoutes = require('./routes/userRoutes');
+const contentfulRoutes = require('./routes/contentfulRoutes');
 
 const app = express();
 const port = process.env.PORT || 5010;
@@ -35,6 +36,7 @@ app.use((req, res, next) => {
 app.use('/api/auth', authRoutes);
 app.use('/api/activities', activityRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/contentful', contentfulRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello from the Backend!');
