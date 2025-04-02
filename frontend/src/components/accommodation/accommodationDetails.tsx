@@ -6,16 +6,16 @@ import './assets/css/accommodation.css';
 import './assets/css/accommodationDetails.css'
 
 const AccomodationDetailsPage: React.FC = () => {
-    const { id } = useParams();  // Get ID from URL
+    const { slug } = useParams();  // Get ID from URL
     const [accommodation, setAccommodation] = useState<any>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchAccommodation = async () => {
-            if (!id) return;  // Ensure ID is present
+            if (!slug) return;  // Ensure ID is present
 
             try {
-                const res = await fetch(`http://localhost:5010/api/contentful/accommodation/${id}`);
+                const res = await fetch(`http://localhost:5010/api/contentful/accommodation/${slug}`);
                 if (!res.ok) {
                     throw new Error(`Error ${res.status}: ${res.statusText}`);
                 }
@@ -30,7 +30,7 @@ const AccomodationDetailsPage: React.FC = () => {
         };
 
         fetchAccommodation();
-    }, [id]);
+    }, [slug]);
 
     if (loading) return <p>Loading...</p>;
     if (!accommodation) return <p>Accommodation not found.</p>;

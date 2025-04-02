@@ -14,6 +14,13 @@ interface AccommodationCardProps {
     wifi: string;
 }
 
+const generateSlug = (title: string) => {
+    return title
+        .toLowerCase()
+        .replace(/\s+/g, '-')   // Replace spaces with hyphens
+        .replace(/[^a-z0-9-]/g, '');  // Remove special characters
+};
+
 const AccommodationCard: React.FC<AccommodationCardProps> = ({ id, title, city, image, summaryText, googleMapDirection, garge, pool, wifi }) => {
     return (
         <div className="accommodation-card card shadow-container">
@@ -43,7 +50,7 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({ id, title, city, 
                             <li>W-lan: {wifi}</li>
                         </ul>
                     </div>
-                    <Link to={`/unterkunft/${id}`} className="btn main-btn keep-btn-at-bottom-of-div">
+                    <Link to={`/unterkunft/${generateSlug(title)}`} className="btn main-btn keep-btn-at-bottom-of-div">
                         Show more details
                     </Link>
                 </div>
