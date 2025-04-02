@@ -1,14 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
 import './assets/css/accommodation.css';
-import erosGuestHouseImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
+import './assets/css/accommodationDetails.css'
 
 const AccomodationDetailsPage: React.FC = () => {
+    const { id } = useParams();  // Get ID from URL
+    const [accommodation, setAccommodation] = useState<any>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchAccommodation = async () => {
+            if (!id) return;  // Ensure ID is present
+
+            try {
+                const res = await fetch(`http://localhost:5010/api/contentful/accommodation/${id}`);
+                if (!res.ok) {
+                    throw new Error(`Error ${res.status}: ${res.statusText}`);
+                }
+                const data = await res.json();
+                setAccommodation(data);
+            } catch (error) {
+                console.error("Error fetching accommodation details:", error);
+                setAccommodation(null);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchAccommodation();
+    }, [id]);
+
+    if (loading) return <p>Loading...</p>;
+    if (!accommodation) return <p>Accommodation not found.</p>;
+
     return (
         <div className="container-fluid text-center">
             <div className="row hero-banner-container accommodation-hero-banner-container subpage-hero-banner">
                 <div className="col hero-page-titles">
-                    <h1>Unterkünfte: Name of accommodation here</h1>
+                    <h1>Unterkünfte: {accommodation.title}</h1>
                     <p>Sie sich während Ihrer Reise rundum wohlfühlen können.</p>
                 </div>
             </div>
@@ -27,12 +58,24 @@ const AccomodationDetailsPage: React.FC = () => {
             <div className="row">
                 <div className="col">
                     <div className='video container'>
-                        <video src=""></video>
+                        <video src={accommodation.video || ""}></video>
                     </div>
                 </div>
                 <div className="col">
-                    <div>
-                        <p>Text about the place goes here</p>
+                    <div className='shadow-container description-container '>
+                        <div className='description-intro-container '>
+                            <h4 className='mt-3'>{accommodation.title}</h4>
+                            <div className='d-flex flex-row'>
+                                <p className='mx-1'>{accommodation.city},Namibia</p>
+                                <p className='mx-1'>
+                                    <a href={accommodation.googleMapLocation} target='blank'> google directions</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div className='description-container mt-3'>
+                            <p>{accommodation.summaryDescription}</p>
+                        </div>
+                        <Link to="#" className="btn main-btn my-3">Enquire</Link>
                     </div>
                 </div>
             </div>

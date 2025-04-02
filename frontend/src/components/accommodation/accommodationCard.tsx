@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './assets/css/accommodationCard.css';
 
 interface AccommodationCardProps {
+    id: string;
     title: string;
     city: string;
     image: string;
@@ -13,7 +14,7 @@ interface AccommodationCardProps {
     wifi: string;
 }
 
-const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, city, image, summaryText, googleMapDirection, garge, pool, wifi }) => {
+const AccommodationCard: React.FC<AccommodationCardProps> = ({ id, title, city, image, summaryText, googleMapDirection, garge, pool, wifi }) => {
     return (
         <div className="accommodation-card card shadow-container">
             <div className="card-body">
@@ -42,8 +43,7 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, city, imag
                             <li>W-lan: {wifi}</li>
                         </ul>
                     </div>
-
-                    <Link to="/accommodation-details" className="btn main-btn keep-btn-at-bottom-of-div">
+                    <Link to={`/unterkunft/${id}`} className="btn main-btn keep-btn-at-bottom-of-div">
                         Show more details
                     </Link>
                 </div>

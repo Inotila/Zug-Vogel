@@ -42,6 +42,7 @@ const AccomodationPage: React.FC = () => {
         {accommodations.map((accommodation) => (
           <div key={accommodation.id} className="col-sm-12 col-md-4s col-lg-4 d-flex mb-3 justify-content-center">
             <AccommodationCard
+              id={accommodation.id}
               title={accommodation.title}
               city={accommodation.city}
               googleMapDirection={accommodation.googleMapLocation}
