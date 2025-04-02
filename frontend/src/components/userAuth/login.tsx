@@ -44,7 +44,7 @@ const LoginPage: React.FC = () => {
             </div>
             <div className="row">
                 <div className="col">
-                    <div className='signup-login-container'>
+                    <div className='shadow-container signup-login-container mx-3'>
                         <h2 className='auth-page-title'>Login</h2>
                         <form onSubmit={handleSubmit}>
                             <input
