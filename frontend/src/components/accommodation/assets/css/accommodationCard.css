@@ -46,6 +46,7 @@
 
 .summary-container {
     font-size: 14px;
+    width: 100% !important;
 }
 
 .accommodation-content {
@@ -74,10 +75,6 @@
 margin: 0;
 text-decoration: underline;
 font-weight: bold;
-}
-
-.accommodation-details-btn {
-    margin-top: auto;
 }
 
 /* Responsive design for smaller screens */

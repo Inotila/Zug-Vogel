@@ -55,7 +55,7 @@ const LoginPage: React.FC = () => {
                                 className='auth-page-input' type="password" placeholder="Password" value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                            <button className='auth-btn' type="submit">Login</button>
+                            <button className='btn main-btn' type="submit">Login</button>
                         </form>
                         {message && <p>{message}</p>}
                     </div>

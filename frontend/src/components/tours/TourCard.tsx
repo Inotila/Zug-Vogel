@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './assets/css/tourCard.css';
+import '../../assets/css/index.css';
 
 interface TourCardProps {
     title: string;
@@ -21,7 +22,7 @@ const TourCard: React.FC<TourCardProps> = ({ title, image, description }) => {
                         <h2 className="card-title">{title}</h2>
                     </div>
                     <p className="tour-description">{description}</p>
-                    <Link to="/tour-details" className="btn tour-details-btn btn-outline-dark mt-2">
+                    <Link to="/tour-details" className="btn main-btn mt-2">
                         Show more details
                     </Link>
                 </div>

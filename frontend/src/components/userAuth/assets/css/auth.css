@@ -1,14 +1,5 @@
 .signup-login-container{
-    background-color: #fff;
-    border: 1px solid black;
-    border-radius: 10px;
-    display: flex; /* Enables flexbox */
     flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
-    text-align: center; /* Ensures text is centered */
-    margin: 0rem 0.75rem;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
 }
 
 .auth-page-title{

@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
                 14 Tagen unternehmen möchten: Wir organisieren unvergessliche Touren, die Ihren
                 Interessen und Ihrem Zeitrahmen entsprechen.
               </p>
-              <Link to="/touren" className="btn home-btn mt-auto">
+              <Link to="/touren" className="btn main-btn home-btn mt-auto">
                 <h5 className="card-title accomodation-title">Touren</h5>
               </Link>
             </div>
@@ -60,7 +60,7 @@ const HomePage: React.FC = () => {
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
                 Wählen Sie Ihr ideales Sommerhaus aus unserer Auswahl sorgfältig kuratierter Häuser.
               </p>
-              <Link to="/unterkunft" className="btn home-btn mt-auto">
+              <Link to="/unterkunft" className="btn main-btn home-btn mt-auto">
                 <h5 className="card-title accomodation-title">Unterkunft</h5>
               </Link>
             </div>
@@ -76,7 +76,7 @@ const HomePage: React.FC = () => {
                 Auswahl an Aktivitäten zusammengestellt, die Ihnen sowohl die lebendige Kultur als auch die
                 atemberaubende Natur Namibias näherbringen.
               </p>
-              <Link to="/Aktivitäten" className="btn home-btn mt-auto">
+              <Link to="/Aktivitäten" className="btn main-btn home-btn mt-auto">
                 <h5 className="card-title accomodation-title">Aktivitäten</h5>
               </Link>
             </div>
@@ -92,7 +92,7 @@ const HomePage: React.FC = () => {
             <p className='about-text'>Erfahren Sie mehr über Namibia und seine vielen Wunder.
               Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
             </p>
-            <Link to="/überNamibia" className="btn home-about-us-btn mt-auto">
+            <Link to="/überNamibia" className="btn sub-btn home-about-us-btn mt-auto">
               <p className='about-us-btn-text mx-3'>
                 Erfahren Sie mehr über Namibia
               </p>
@@ -120,7 +120,7 @@ const HomePage: React.FC = () => {
               insbesondere Rentnerinnen und Rentner, aber auch an all jene, die dem Winter entfliehen und
               die namibische Sonne genießen möchten.
             </p>
-            <Link to="/überUns" className="btn home-about-us-btn mt-auto">
+            <Link to="/überUns" className="btn sub-btn home-about-us-btn mt-auto">
               <p className='about-us-btn-text mx-3'>
                 Lernen Sie uns näher kennen
               </p>

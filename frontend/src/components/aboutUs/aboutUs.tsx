@@ -109,7 +109,7 @@ const AboutUsPage: React.FC = () => {
                         )}
 
                         {/* Toggle Button */}
-                        <button className="btn show-more-btn mb-3" onClick={() => setShowMore(!showMore)}>
+                        <button className="btn main-btn mb-3" onClick={() => setShowMore(!showMore)}>
                             {showMore ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                         </button>
                     </div>

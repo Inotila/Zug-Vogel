@@ -43,7 +43,7 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, city, imag
                         </ul>
                     </div>
 
-                    <Link to="/accommodation-details" className="btn accommodation-details-btn btn-outline-dark">
+                    <Link to="/accommodation-details" className="btn main-btn keep-btn-at-bottom-of-div">
                         Show more details
                     </Link>
                 </div>

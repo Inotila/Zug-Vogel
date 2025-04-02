@@ -50,16 +50,11 @@ code {
   flex-direction: column;
 }
 
-button {
-  background-color: #0083B7;
-  border-radius: 0.5rem !important;
-  width:fit-content;
-}
-
-a, link {
+a, p, link {
   padding: 0 !important;
   margin: 0 !important;
 }
+
 
 span {
   color: #000 !important;
@@ -78,4 +73,45 @@ span:hover {
   border-radius: 10px;
   border: 1px solid #000000 !important;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+/* buttons styles */
+
+.btn  {
+  border-radius: 0.5rem !important;
+  border: 1px solid #000 !important;
+  font-weight:bold !important;
+  padding: 0.2rem 0.75rem !important;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover  {
+  font-weight:bolder !important;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+}
+
+.main-btn{
+  background-color: #e8620f !important;
+}
+
+.main-btn:hover {
+  background-color: #eb6919 !important;
+  color: #fff !important;
+  font-weight:bolder !important;
+  cursor: pointer;
+}
+
+.sub-btn{
+  background-color: #288deb !important;
+}
+
+.sub-btn:hover {
+  background-color: #0275e1 !important; 
+  color: #fff !important;
+  font-weight:bold !important;
+  cursor: pointer;
+}
+
+.keep-btn-at-bottom-of-div {
+  margin-top: auto;
 }
