@@ -62,7 +62,7 @@ const AccomodationDetailsPage: React.FC = () => {
                     </div>
                 </div>
                 <div className="col">
-                    <div className='shadow-container description-container '>
+                    <div className='shadow-container description-container mx-3'>
                         <div className='description-intro-container '>
                             <h4 className='mt-3'>{accommodation.title}</h4>
                             <div className='d-flex flex-row'>
