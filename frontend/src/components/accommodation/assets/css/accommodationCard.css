@@ -73,6 +73,7 @@
 .amenities-title {
 margin: 0;
 text-decoration: underline;
+font-weight: bold;
 }
 
 .accommodation-details-btn {
