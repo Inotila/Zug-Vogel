@@ -40,7 +40,7 @@
 .location-text{
     display: flex;
     flex-direction: row;
-    font-size: small;
+    font-size: 11px;
     text-decoration: underline;
 }
 

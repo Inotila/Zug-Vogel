@@ -32,7 +32,7 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({ id, title, city, 
                 <div className="accommodation-content flex-fill d-flex ">
                     <h4 id='big-screen-title' className="card-title accommodation-card-title ">{title}</h4>
                     <div className='location-text'>
-                        <p className='mx-1'>{city}, Namibia</p>
+                        <p className='mx-1'>{city}</p>
                         <p className='mx-1'>
                             <a href={googleMapDirection} target='blank'> google directions</a>
                         </p>
