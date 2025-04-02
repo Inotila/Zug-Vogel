@@ -21,32 +21,40 @@ router.get('/entries', async (req, res) => {
     }
 });
 
-// Fetch a single accommodation entry by ID
-router.get('/accommodation/:id', async (req, res) => {
-    const { id } = req.params;
-
+// Fetch a single accommodation entry by slug (title)
+router.get('/accommodation/:slug', async (req, res) => {
     try {
-        const entry = await client.getEntry(id);
-        const contentType = entry?.sys?.contentType?.sys?.id; // Ensure contentType exists
+        const { slug } = req.params;
+        console.log(`Requested slug: ${slug}`);
 
-        if (!entry || contentType !== "accommodation") { // Confirm correct type
-            return res.status(404).json({ error: "Accommodation not found" });
+        // Fetch all accommodations from Contentful
+        const entries = await client.getEntries({ content_type: 'accommodation' });
+
+        // Normalize and filter the data
+        const normalizedSlug = slug.toLowerCase();
+        const accommodation = entries.items.find(item => 
+            item.fields.title.toLowerCase().replace(/\s+/g, '-') === normalizedSlug
+        );
+
+        if (!accommodation) {
+            return res.status(404).json({ message: 'Accommodation not found' });
         }
 
         res.json({
-            id: entry.sys.id,
-            title: entry.fields.title,
-            city: entry.fields.city || "Unknown",
-            googleMapLocation: entry.fields.googleMapLocation || "",
-            summaryDescription: entry.fields.summaryDescription || "",
-            video: entry.fields.video?.fields?.file?.url || "",
-            coverPhoto: entry.fields.coverPhoto?.fields?.file?.url || "",
-            parkingType: entry.fields.parkingType || "N/A",
-            accommodationHasPool: entry.fields.accommodationHasPool ? "Yes" : "No",
-            freeWifi: entry.fields.freeWifi ? "Yes" : "No"
+            id: accommodation.sys.id,
+            title: accommodation.fields.title,
+            freeWifi: accommodation.fields.freeWifi || false,
+            city: accommodation.fields.city || '',
+            summaryDescription: accommodation.fields.summaryDescription || '',
+            googleMapLocation: accommodation.fields.googleMapLocation || '',
+            description: accommodation.fields.description || '',
+            coverPhoto: accommodation.fields.coverPhoto?.fields.file.url || '',
+            accommodationHasPool: accommodation.fields.accommodationHasPool || false,
+            parkingType: accommodation.fields.parkingType || ''
         });
     } catch (error) {
-        res.status(500).json({ error: "Error fetching accommodation details", details: error.message });
+        console.error('Error fetching accommodation:', error);
+        res.status(500).json({ message: 'Internal Server Error' });
     }
 });
 
