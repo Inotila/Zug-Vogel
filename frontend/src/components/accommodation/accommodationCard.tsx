@@ -6,13 +6,14 @@ interface AccommodationCardProps {
     title: string;
     city: string;
     image: string;
-    bedRooms: string;
+    summaryText: string;
+    googleMapDirection: string;
     garge: string;
     pool: string;
     wifi: string;
 }
 
-const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, city, image, bedRooms, garge, pool, wifi }) => {
+const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, city, image, summaryText, googleMapDirection, garge, pool, wifi }) => {
     return (
         <div className="accommodation-card card shadow-container">
             <div className="card-body">
@@ -21,25 +22,27 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({ title, city, imag
                     <img src={image} alt={title} className="accommodation-image" />
                 </div>
                 <div className="accommodation-content flex-fill d-flex ">
-                    <h4 className="card-title accommodation-card-title big-screen-title">{title}</h4>
+                    <h4 id='big-screen-title' className="card-title accommodation-card-title ">{title}</h4>
                     <div className='location-text'>
-                        <p className='mx-1 amenities-title'>{city}, Namibia</p>
-                        <p className='mx-1 amenities-title'>
-                            <a href="#"> google map</a>
+                        <p className='mx-1'>{city}, Namibia</p>
+                        <p className='mx-1'>
+                            <a href={googleMapDirection} target='blank'> google directions</a>
                         </p>
                     </div>
-                    <div className='summary-container'>
-                        <p className='summary-container'>
-                            this is a short text about the player, and this is just boiler plate text.
-                            stuff will be said and done , to this.
+                    <div className='summary-container mx-1'>
+                        <p>
+                            {summaryText}
                         </p>
                     </div>
-                    <ul className='accommodation-amenities-list'>
-                        <li>Schlafzimmer: {bedRooms}</li>
-                        <li>Parken: {garge}</li>
-                        <li>Schwimmbad: {pool}</li>
-                        <li>W-lan: {wifi}</li>
-                    </ul>
+                    <div className='amenities-container'>
+                        <p className='amenities-title' >Ausstattung</p>
+                        <ul className='amenities-list'>
+                            <li>Parken: {garge}</li>
+                            <li>Schwimmbad: {pool}</li>
+                            <li>W-lan: {wifi}</li>
+                        </ul>
+                    </div>
+
                     <Link to="/accommodation-details" className="btn accommodation-details-btn btn-outline-dark">
                         Show more details
                     </Link>

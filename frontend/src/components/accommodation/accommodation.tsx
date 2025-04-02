@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/accommodation.css';
-import erosGuestHouseImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
-import klienWHKGuestHouseImg from '../../assets/images/accommodation-images/kleinWindhoekGuestHouse/klienWindhoekPool.jpg';
 import AccommodationCard from './accommodationCard';
-
 
 const AccomodationPage: React.FC = () => {
   const [accommodations, setAccommodations] = useState<any[]>([]);
@@ -47,10 +44,11 @@ const AccomodationPage: React.FC = () => {
             <AccommodationCard
               title={accommodation.title}
               city={accommodation.city}
-              image={accommodation.image || "default-image.jpg"}  // Update image logic
-              bedRooms="N/A"  // Update this if Contentful provides it
-              garge="N/A"
-              pool="N/A"
+              googleMapDirection={accommodation.googleMapLocation}
+              image={accommodation.coverPhoto.fields.file.url || "no pic available :("}
+              summaryText={accommodation.summaryDescription}
+              garge={accommodation.parkingType}
+              pool={accommodation.accommodationHasPool ? "Schwimmbad" : "Kein Schwimmbad"}
               wifi={accommodation.freeWifi ? "Kostenloses WLAN" : "Nein"}
             />
           </div>

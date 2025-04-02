@@ -17,6 +17,10 @@
     display: none;
 }
 
+#big-screen-title{
+    font-size: 21px;
+}
+
 /* card image */
 .accommodation-card-image-container{
     display: flex;
@@ -36,14 +40,17 @@
 .location-text{
     display: flex;
     flex-direction: row;
+    font-size: small;
+    text-decoration: underline;
 }
 
-.amenities-title{
-    text-decoration: underline;
+.summary-container {
+    font-size: 14px;
 }
 
 .accommodation-content {
     height: 100%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -57,9 +64,15 @@
     margin: 0rem 1rem ;
 }
 
-.accommodation-amenities-list {
+.amenities-list {
     list-style: none;
     padding: 0;
+    font-size: 14px;
+}
+
+.amenities-title {
+margin: 0;
+text-decoration: underline;
 }
 
 .accommodation-details-btn {
@@ -73,7 +86,7 @@
         display: unset !important;
     }
 
-    .big-screen-title {
+    #big-screen-title {
         display: none !important;
     }
 
