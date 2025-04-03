@@ -120,7 +120,24 @@ const AccomodationDetailsPage: React.FC = () => {
                             </div>
                         </div>
                         <div className="description-container mt-3">
-                            <p>{accommodation.description}</p>
+                            <div>
+                                <p>{accommodation.description}</p>
+                            </div>
+                            <div className="amenities-contianer mt-3">
+                                <h5>Ausstattung</h5>
+                                <ul className="amenities-list">
+                                    {accommodation.amenities && Array.isArray(accommodation.amenities) && accommodation.amenities.length > 0 ? (
+                                        accommodation.amenities.map((amenity: string, index: number) => (
+                                            <li key={index} className="amenity my-1">
+                                                {amenity}
+                                            </li>
+                                        ))
+                                    ) : (
+                                        <p>No amenities available</p>
+                                    )}
+                                </ul>
+                            </div>
+
                         </div>
                         <Link to="#" className="btn main-btn my-3">
                             Enquire
