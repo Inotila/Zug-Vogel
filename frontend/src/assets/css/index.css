@@ -115,3 +115,7 @@ span:hover {
 .keep-btn-at-bottom-of-div {
   margin-top: auto;
 }
+
+.off-padding{
+  padding: 0 !important;
+}
