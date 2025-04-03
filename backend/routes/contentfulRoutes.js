@@ -25,8 +25,7 @@ router.get('/entries', async (req, res) => {
 router.get('/accommodation/:slug', async (req, res) => {
     try {
         const { slug } = req.params;
-        console.log(`Requested slug: ${slug}`);
-
+        
         // Fetch all accommodations from Contentful
         const entries = await client.getEntries({ content_type: 'accommodation' });
 
@@ -49,6 +48,7 @@ router.get('/accommodation/:slug', async (req, res) => {
             googleMapLocation: accommodation.fields.googleMapLocation || '',
             description: accommodation.fields.description || '',
             coverPhoto: accommodation.fields.coverPhoto?.fields.file.url || '',
+            photos: accommodation.fields.photos || [],
             accommodationHasPool: accommodation.fields.accommodationHasPool || false,
             parkingType: accommodation.fields.parkingType || ''
         });
