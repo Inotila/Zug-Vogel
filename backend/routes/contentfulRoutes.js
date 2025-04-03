@@ -47,6 +47,7 @@ router.get('/accommodation/:slug', async (req, res) => {
             summaryDescription: accommodation.fields.summaryDescription || '',
             googleMapLocation: accommodation.fields.googleMapLocation || '',
             description: accommodation.fields.description || '',
+            amenities: accommodation.fields.amenities || '',
             coverPhoto: accommodation.fields.coverPhoto?.fields.file.url || '',
             photos: accommodation.fields.photos || [],
             accommodationHasPool: accommodation.fields.accommodationHasPool || false,
