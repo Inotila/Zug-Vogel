@@ -32,26 +32,24 @@ const AboutUsPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {/* Bevölkerung und Land */}
+            {/* founder countainer */}
             <div className="row ">
                 <div className="col">
-                    <div className='about-us-container mx-3'>
+                    <div className='about-us-container shadow-container mx-3'>
                         <div className='about-us-title mt-3'>
                             <h3>Unsere Gründer</h3>
                         </div>
-                        <div className='about-us-img-container'>
-                            <div className='founders-container'>
-                                <div className='founder-img-container'>
-                                    <img src={heinrichMG} alt="Founder 1" />
-                                    <h4 className='founder-title'>Heinrich Georg Pielok</h4>
-                                </div>
-                                <div className='founder-img-container'>
-                                    <img src={peterIMG} alt="Founder 2" />
-                                    <h4 className='founder-title'>Peter Kaulbach</h4>
-                                </div>
+                        <div className='founders-container my-3'>
+                            <div className='founder-img-container'>
+                                <img src={heinrichMG} className='founder-img' alt="Heinrich Georg Pielok" />
+                                <h5 className='founder-title mt-2'>Heinrich Georg Pielok</h5>
+                            </div>
+                            <div className='founder-img-container'>
+                                <img src={peterIMG} className='founder-img' alt="Peter Kaulbach" />
+                                <h5 className='founder-title mt-2'>Peter Kaulbach</h5>
                             </div>
                         </div>
-                        <div className='about-us-text'>
+                        <div className='about-us-text mt-3'>
                             <p>
                                 Zugvogel Reisen Namibia wurde 2024 von Peter Kaulbach und Heinrich Georg Pielok, zwei begeisterten Namibia-Liebhabern, gegründet.
                                 Ihre tiefe Verbundenheit mit dem Land bildet
@@ -59,8 +57,8 @@ const AboutUsPage: React.FC = () => {
                                 Mit Zugvogel Reisen erfüllen Heinrich und Peter nicht nur ihren eigenen Traum,
                                 sondern ermöglichen auch anderen unvergessliche Reisen.
                             </p>
+                            <br />
                         </div>
-
                         {/* Show More / Show Less Section */}
                         {showMore && (
                             <div className="about-us-text ">
@@ -73,6 +71,7 @@ const AboutUsPage: React.FC = () => {
                                     zahlreichen sozialen Kontakte und sein Wissen über das Land fließen in die Planung jeder
                                     Reise ein.
                                 </p>
+                                <br />
                                 <p>
                                     Peter kam 2018 als Austauschstudent nach Namibia und fühlte sich sofort von den Menschen
                                     und der Kultur angezogen. Fasziniert von der Weite und Freiheit des Landes, kehrte er 2019
@@ -87,6 +86,7 @@ const AboutUsPage: React.FC = () => {
                                     Begegnungen und tiefgehende Einblicke, die jede Reise unvergesslich machen.
                                     Unsere Motivation und unser Anspruch
                                 </p>
+                                <br />
                                 <p>
                                     Unser Ziel ist es, unseren Gästen nicht nur die Schönheit Namibias zu zeigen, sondern ihnen
                                     auch ein Gefühl von Heimat und Wohlbefinden zu vermitteln. Wir legen großen Wert auf
@@ -109,7 +109,7 @@ const AboutUsPage: React.FC = () => {
                         )}
 
                         {/* Toggle Button */}
-                        <button className="btn main-btn mb-3" onClick={() => setShowMore(!showMore)}>
+                        <button className="btn main-btn my-3" onClick={() => setShowMore(!showMore)}>
                             {showMore ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                         </button>
                     </div>
@@ -117,7 +117,7 @@ const AboutUsPage: React.FC = () => {
             </div>
             <div className="row ">
                 <div className="col">
-                    <div className='about-us-container mx-3'>
+                    <div className='about-us-container shadow-container mx-3'>
                         <div className='about-us-title mt-3'>
                             <h3>Kontaktieren Sie uns</h3>
                         </div>
@@ -130,15 +130,15 @@ const AboutUsPage: React.FC = () => {
                         <div className='contact-container d-flex justify-content-center text-center'>
                             <div className='contact-details-container '>
                                 <div className='phone-and-email-container'>
-                                    <div className='phone-and-email'>
+                                    <div className='phone-and-email mt-3'>
                                         <div className='phone-and-email mx-3'>
-                                            <a className='mx-3' href="#">
+                                            <a className='mx-2' href="#">
                                                 <FontAwesomeIcon icon="phone" size="2x" />
                                             </a>
-                                            <h3> 081 85 885650</h3>
+                                            <h3> 081 858 8650</h3>
                                         </div>
                                         <div className='phone-and-email mx-3'>
-                                            <a className='mx-3' href="#">
+                                            <a className='mx-2' href="#">
                                                 <FontAwesomeIcon icon="envelope" size="2x" />
                                             </a>
                                             <h3> zugvogel@gmail.com</h3>
@@ -156,7 +156,7 @@ const AboutUsPage: React.FC = () => {
                                         <a className='mx-3' href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                                             <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
                                         </a>
-                                        <h4 className='founder-title'>Facebook</h4>
+                                        <h4 className='founder-title'>Instagram</h4>
                                     </div>
 
                                 </div>
