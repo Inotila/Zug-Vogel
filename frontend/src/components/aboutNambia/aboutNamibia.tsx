@@ -4,6 +4,12 @@ import './assets/css/aboutNamibia.css';
 import churchImg from '../../assets/images/aboutNamibia-images/church.jpg';
 import trainStationImg from '../../assets/images/aboutNamibia-images/trainStation.jpg';
 import cbdImg from '../../assets/images/aboutNamibia-images/cbd.jpg';
+import musuemImg from '../../assets/images/aboutNamibia-images/musuem.jpg';
+import himbaIMG from '../../assets/images/aboutNamibia-images/himbas.jpg';
+import buffaloIMG from '../../assets/images/tours-images/buffalo.jpg'
+import flamingoIMG from '../../assets/images/tours-images/flamingo.jpg'
+import hippoIMG from '../../assets/images/tours-images/hippos.jpg'
+
 
 const AboutNamibiaPage: React.FC = () => {
     return (
@@ -28,7 +34,7 @@ const AboutNamibiaPage: React.FC = () => {
             {/* Bevölkerung und Land */}
             <div className="row ">
                 <div className="col">
-                    <div className='about-namibia-container mx-3'>
+                    <div className='shadow-container about-namibia-container mx-3'>
                         <div className='about-namibia-title'>
                             <h3>Bevölkerung und Land</h3>
                         </div>
@@ -40,8 +46,37 @@ const AboutNamibiaPage: React.FC = () => {
                                 eine moderne und zugleich überschaubare Stadt mit hoher Lebensqualität.
                             </p>
                         </div>
-                        <div className='about-namibia-img-container mb-3'>
-                            <img src="/images/tours/tour.JPG" alt="" />
+                        <div className='about-namibia-img-container my-3'>
+                            <img className='about-nam-img' src={musuemImg} alt="" />
+                            <img className='about-nam-img' src={himbaIMG} alt="" />
+                            <img className='about-nam-img' src={cbdImg} alt="" />
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Geschichte &amp; Gesellschaft */}
+            <div className="row  mt-3">
+                <div className="col">
+                    <div className='shadow-container about-namibia-container mx-3'>
+                        <div className='about-namibia-title'>
+                            <h3>Geschichte &amp; Gesellschaft</h3>
+                        </div>
+                        <div className='about-namibia-text my-3'>
+                            <p>
+                                Namibia erlangte 1990 seine Unabhängigkeit von Südafrika nach einem langen
+                                Befreiungskampf.
+                                ßDie Verfassung gilt als eine der fortschrittlichsten Afrikas, und Namibia
+                                zählt zu den stabilsten Demokratien des Kontinents.
+                                ß Die Bevölkerung ist kulturell vielfältig, mit zahlreichen ethnischen Gruppen und Sprachen.
+                                ß Offizielle Landessprache ist Englisch, doch Deutsch ist – neben Afrikaans und den
+                                einheimischen Sprachen – nach wie vor präsent.
+                                ßRund 15.000 Namibier haben deutsche
+                                Wurzeln. Deutsche Kultur wird mit Karnevalsvereinen, dem Oktoberfest und typisch
+                                deutscher Küche lebendig gehalten.
+                                ßAuch deutschsprachige Medien sind vertreten, darunter
+                                die „Allgemeine Zeitung“ sowie zwei Radiosender.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -49,7 +84,7 @@ const AboutNamibiaPage: React.FC = () => {
             {/* Klima & Natur */}
             <div className="row  mt-3">
                 <div className="col">
-                    <div className='about-namibia-container mx-3'>
+                    <div className='shadow-container about-namibia-container mx-3'>
                         <div className='about-namibia-title'>
                             <h3>Klima & Natur</h3>
                         </div>
@@ -69,45 +104,19 @@ const AboutNamibiaPage: React.FC = () => {
                                 Lagunen.
                             </p>
                         </div>
-                        <div className='about-namibia-img-container mb-3'>
-                            <img src="/images/tours/tour.JPG" alt="" />
+                        <div className='about-namibia-img-container my-3'>
+                            <img className='about-nam-img' src={flamingoIMG} alt="" />
+                            <img className='about-nam-img' src={buffaloIMG} alt="" />
+                            <img className='about-nam-img' src={hippoIMG} alt="" />
                         </div>
                     </div>
                 </div>
             </div>
-            {/* Geschichte &amp; Gesellschaft */}
-            <div className="row  mt-3">
-                <div className="col">
-                    <div className='about-namibia-container mx-3'>
-                        <div className='about-namibia-title'>
-                            <h3>Geschichte &amp; Gesellschaft</h3>
-                        </div>
-                        <div className='about-namibia-text'>
-                            <p>
-                                Namibia erlangte 1990 seine Unabhängigkeit von Südafrika nach einem langen
-                                Befreiungskampf.
-                                ßDie Verfassung gilt als eine der fortschrittlichsten Afrikas, und Namibia
-                                zählt zu den stabilsten Demokratien des Kontinents.
-                                ß Die Bevölkerung ist kulturell vielfältig, mit zahlreichen ethnischen Gruppen und Sprachen.
-                                ß Offizielle Landessprache ist Englisch, doch Deutsch ist – neben Afrikaans und den
-                                einheimischen Sprachen – nach wie vor präsent.
-                                ßRund 15.000 Namibier haben deutsche
-                                Wurzeln. Deutsche Kultur wird mit Karnevalsvereinen, dem Oktoberfest und typisch
-                                deutscher Küche lebendig gehalten.
-                                ßAuch deutschsprachige Medien sind vertreten, darunter
-                                die „Allgemeine Zeitung“ sowie zwei Radiosender.
-                            </p>
-                        </div>
-                        <div className='about-namibia-img-container mb-3'>
-                            <img src="/images/tours/tour.JPG" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             {/* Infrastruktur &amp; Lebensstandard */}
             <div className="row  mt-3">
                 <div className="col">
-                    <div className='about-namibia-container mx-3'>
+                    <div className='shadow-container about-namibia-container mx-3'>
                         <div className='about-namibia-title'>
                             <h3>Infrastruktur &amp; Lebensstandard</h3>
                         </div>
@@ -129,13 +138,11 @@ const AboutNamibiaPage: React.FC = () => {
                                 eine unvergessliche Zeit in der Sonne.
                             </p>
                         </div>
-                        <div className='about-namibia-img-container mb-3'>
+                        <div className='about-namibia-img-container m-3'>
                             <img className='about-nam-img' src={cbdImg} alt="" />
                             <img className='about-nam-img' src={churchImg} alt="" />
                             <img className='about-nam-img' src={trainStationImg} alt="" />
                         </div>
-
-                        <h4>booking the tour here and get more details from peter at zugogel@gmail.com</h4>
                     </div>
                 </div>
             </div>
