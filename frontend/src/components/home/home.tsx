@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
 
         {/* Right side: Text with border */}
         <div className="col-md-6  d-flex flex-column justify-content-center text-center">
-          <h1 className='hero-banner-text'>Zug Vogel</h1>
+          <h1 className='hero-banner-text'>Zugvogel</h1>
           <p className='hero-banner-text'>Überwintern im Sonnnparadis</p>
         </div>
       </div>
