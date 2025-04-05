@@ -4,6 +4,7 @@
 
 nav {
     background-color: #fff !important;
+    max-width: 100%;
 }
 
 .dropdown-menu {
@@ -13,4 +14,10 @@ nav {
   .dropdown-menu li {
     display: flex;
     justify-content: center; /* Centers the content horizontally */
+  }
+
+  .info-dropdown-menu{
+    position: absolute;
+    right: 0 !important;
+    left: auto !important;
   }

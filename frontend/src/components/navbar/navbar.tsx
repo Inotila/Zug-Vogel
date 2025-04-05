@@ -138,14 +138,33 @@ const Navbar: React.FC = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/überNamibia">
-                    Über Namibia
+                  <Link className="nav-link mx-3" to="/aktivitäten">
+                    Aktivitäten
                   </Link>
                 </li>
-                <li className="nav-item">
-                  <Link className="nav-link mx-3" to="/überUns">
-                    Über uns
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle mx-3"
+                    to="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Nützlich
                   </Link>
+                  <ul className="dropdown-menu info-dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                    <li>
+                      <Link className="dropdown-item" to="/überUns">
+                        Über uns
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="dropdown-item" to="/überNamibia">
+                        Über Namibia
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
