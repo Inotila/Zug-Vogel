@@ -31,6 +31,32 @@ const AboutNamibiaPage: React.FC = () => {
                     </div>
                 </div>
             </div>
+            {/* Geschichte &amp; Gesellschaft */}
+            <div className="row my-3">
+                <div className="col">
+                    <div className='shadow-container about-namibia-container mx-3'>
+                        <div className='about-namibia-title'>
+                            <h3>Wichtige Informationen</h3>
+                        </div>
+                        <div className='about-namibia-text my-3'>
+                            <p>
+                                Namibia ist ein modernes Land mit einem modernen Gesundheitswesen und anderen Einrichtungen in den meisten Großstädten.
+                                Wir haben einige Links für Sie zusammengestellt, die Ihnen während Ihres Aufenthalts nützlich sein werden,
+                                einschließlich der Online-Beantragung eines Visums.
+                            </p>
+                            <ul className='important-information-list mt-3'>
+                                <li>
+                                    Visa-Portal: <a href="https://eservices.mhaiss.gov.na/" target='blank'> e-service</a>
+                                </li>
+                                <li>
+                                    Sicherheit und Einwanderung: <a href="https://mha.gov.na/">Ministry of Home affairs
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {/* Bevölkerung und Land */}
             <div className="row ">
                 <div className="col">
@@ -41,7 +67,7 @@ const AboutNamibiaPage: React.FC = () => {
                         <div className='about-namibia-text'>
                             <p>
                                 Namibia ist mit 820.000 km² mehr als doppelt so groß wie Deutschland, gehört aber mit nur
-                                rund drei Millionen Einwohnern zu den am dünnsten besiedelten Ländern der Erde.
+                                rund 3 Millionen Einwohnern zu den am dünnsten besiedelten Ländern der Erde.
                                 Die Hauptstadt Windhoek, auf 1.650 Metern Höhe gelegen, ist mit etwa 400.000 Einwohnern
                                 eine moderne und zugleich überschaubare Stadt mit hoher Lebensqualität.
                             </p>
