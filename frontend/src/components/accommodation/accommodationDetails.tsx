@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import "../../assets/css/index.css";
 import "./assets/css/accommodation.css";
 import "./assets/css/accommodationDetails.css";
+import { fetchAccommodationBySlug } from "../../services/contentfulService";
 
-const AccomodationDetailsPage: React.FC = () => {
+const AccommodationDetailsPage: React.FC = () => {
     const { slug } = useParams();
     const [accommodation, setAccommodation] = useState<any>(null);
     const [loading, setLoading] = useState(true);
@@ -16,25 +17,14 @@ const AccomodationDetailsPage: React.FC = () => {
     const [isCoverViewerOpen, setIsCoverViewerOpen] = useState(false);
 
     useEffect(() => {
-        const fetchAccommodation = async () => {
+        const loadAccommodation = async () => {
             if (!slug) return;
-
-            try {
-                const res = await fetch(`http://localhost:5010/api/contentful/accommodation/${slug}`);
-                if (!res.ok) {
-                    throw new Error(`Error ${res.status}: ${res.statusText}`);
-                }
-                const data = await res.json();
-                setAccommodation(data);
-            } catch (error) {
-                console.error("Error fetching accommodation details:", error);
-                setAccommodation(null);
-            } finally {
-                setLoading(false);
-            }
+            const data = await fetchAccommodationBySlug(slug);
+            setAccommodation(data);
+            setLoading(false);
         };
 
-        fetchAccommodation();
+        loadAccommodation();
     }, [slug]);
 
     if (loading) return <p>Loading...</p>;
@@ -201,4 +191,4 @@ const AccomodationDetailsPage: React.FC = () => {
     );
 };
 
-export default AccomodationDetailsPage;
+export default AccommodationDetailsPage;

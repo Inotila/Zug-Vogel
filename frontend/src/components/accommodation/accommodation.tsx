@@ -2,19 +2,13 @@ import React, { useEffect, useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/accommodation.css';
 import AccommodationCard from './accommodationCard';
+import { fetchAccommodations } from '../../services/contentfulService';
 
 const AccomodationPage: React.FC = () => {
   const [accommodations, setAccommodations] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5010/api/contentful/entries")
-      .then((res) => res.json())
-      .then((data) => {
-        // Filter only "accommodation" entries
-        const filteredData = data.filter((item: any) => item.city);
-        setAccommodations(filteredData);
-      })
-      .catch((error) => console.error("Error fetching accommodations:", error));
+    fetchAccommodations().then(setAccommodations);
   }, []);
   return (
     <div className="container-fluid text-center">
