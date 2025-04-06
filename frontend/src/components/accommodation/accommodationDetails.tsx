@@ -5,6 +5,8 @@ import "../../assets/css/index.css";
 import "./assets/css/accommodation.css";
 import "./assets/css/accommodationDetails.css";
 import { fetchAccommodationBySlug } from "../../services/contentfulService";
+import EnquiryForm from "./EnquiryForm";
+
 
 const AccommodationDetailsPage: React.FC = () => {
     const { slug } = useParams();
@@ -15,6 +17,9 @@ const AccommodationDetailsPage: React.FC = () => {
     const [isViewerOpen, setIsViewerOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [isCoverViewerOpen, setIsCoverViewerOpen] = useState(false);
+
+    const [showEnquiryForm, setShowEnquiryForm] = useState(false);
+
 
     useEffect(() => {
         const loadAccommodation = async () => {
@@ -129,9 +134,9 @@ const AccommodationDetailsPage: React.FC = () => {
                             </div>
 
                         </div>
-                        <Link to="#" className="btn main-btn my-3">
+                        <button className="btn main-btn my-3" onClick={() => setShowEnquiryForm(true)}>
                             Enquire
-                        </Link>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -187,7 +192,10 @@ const AccommodationDetailsPage: React.FC = () => {
                     />
                 </div>
             )}
+            {showEnquiryForm && <EnquiryForm onClose={() => setShowEnquiryForm(false)} />}
+
         </div>
+
     );
 };
 

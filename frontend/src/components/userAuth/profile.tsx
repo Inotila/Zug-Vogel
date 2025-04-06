@@ -140,7 +140,7 @@ const ProfilePage: React.FC = () => {
             </div>
             <div className="row">
                 <div className="col">
-                    <div className='signup-login-container'>
+                    <div className='signup-login-container shadow-container mx-3'>
                         {user ? (
                             <div className='user-container'>
                                 <h2>{user.name}</h2>
