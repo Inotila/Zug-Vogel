@@ -4,14 +4,17 @@ import { getUserProfile } from '../../services/authService';
 
 interface EnquiryFormProps {
     onClose: () => void;
+    accommodationTitle: string;
 }
 
-const EnquiryForm: React.FC<EnquiryFormProps> = ({ onClose }) => {
+const EnquiryForm: React.FC<EnquiryFormProps> = ({ onClose, accommodationTitle }) => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [people, setPeople] = useState(1);
+    const [NumberOfAdults, setAdults] = useState(1);
+    const [NumberOfChildren, setChildren] = useState(1);
     const [arrivalDate, setArrivalDate] = useState('');
     const [departureDate, setDepartureDate] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -25,11 +28,43 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({ onClose }) => {
         }
     }, []);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // We'll handle SMTP here later
-        console.log({ name, email, people, arrivalDate, departureDate });
-        onClose(); // Close after submit for now
+        setIsSubmitting(true);
+
+        const formData = {
+            name,
+            email,
+            NumberOfAdults,
+            NumberOfChildren,
+            arrivalDate,
+            departureDate,
+            accommodationTitle,
+        };
+
+        try {
+            const response = await fetch('http://localhost:5010/api/enquiry', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                alert("Enquiry sent successfully!");
+                onClose();
+            } else {
+                const errorData = await response.json();
+                console.error("Error sending enquiry:", errorData);
+                alert("Failed to send enquiry. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -39,27 +74,66 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({ onClose }) => {
                 <form onSubmit={handleSubmit}>
                     <label>
                         Name:
-                        <input type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
                     </label>
                     <label>
                         Email:
-                        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
                     </label>
                     <label>
-                        Number of People:
-                        <input type="number" min={1} value={people} onChange={(e) => setPeople(Number(e.target.value))} required />
+                        Number of Adults:
+                        <input
+                            type="number"
+                            min={1}
+                            value={NumberOfAdults}
+                            onChange={(e) => setAdults(Number(e.target.value))}
+                            required
+                        />
+                    </label><label>
+                        Number of children
+                        <input
+                            type="number"
+                            min={0}
+                            value={NumberOfChildren}
+                            onChange={(e) => setChildren(Number(e.target.value))}
+                            required
+                        />
                     </label>
                     <label>
                         Arrival Date:
-                        <input type="date" value={arrivalDate} onChange={(e) => setArrivalDate(e.target.value)} required />
+                        <input
+                            type="date"
+                            value={arrivalDate}
+                            onChange={(e) => setArrivalDate(e.target.value)}
+                            required
+                        />
                     </label>
                     <label>
                         Departure Date:
-                        <input type="date" value={departureDate} onChange={(e) => setDepartureDate(e.target.value)} required />
+                        <input
+                            type="date"
+                            value={departureDate}
+                            onChange={(e) => setDepartureDate(e.target.value)}
+                            required
+                        />
                     </label>
                     <div className="button-group">
-                        <button type="submit" className="submit-btn">Submit</button>
-                        <button type="button" className="cancel-btn" onClick={onClose}>Cancel</button>
+                        <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                            {isSubmitting ? 'Sending...' : 'Submit'}
+                        </button>
+                        <button type="button" className="cancel-btn" onClick={onClose}>
+                            Cancel
+                        </button>
                     </div>
                 </form>
             </div>

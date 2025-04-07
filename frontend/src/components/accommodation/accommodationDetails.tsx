@@ -192,7 +192,13 @@ const AccommodationDetailsPage: React.FC = () => {
                     />
                 </div>
             )}
-            {showEnquiryForm && <EnquiryForm onClose={() => setShowEnquiryForm(false)} />}
+            {showEnquiryForm && (
+                <EnquiryForm
+                    onClose={() => setShowEnquiryForm(false)}
+                    accommodationTitle={accommodation.title}
+                />
+            )}
+
 
         </div>
 
