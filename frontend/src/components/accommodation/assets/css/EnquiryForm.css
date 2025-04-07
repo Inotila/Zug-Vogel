@@ -12,12 +12,8 @@
 }
 
 .enquiry-form-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+flex-direction: column;
+padding: 0.75rem;
 }
 
 .enquiry-form-container h3 {

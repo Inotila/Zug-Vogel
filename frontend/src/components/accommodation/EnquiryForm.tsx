@@ -81,7 +81,7 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({ onClose, accommodationTitle }
 
     return (
         <div className="enquiry-overlay">
-            <div className="enquiry-form-container">
+            <div className="enquiry-form-container shadow-container">
                 <h3>Booking Enquiry: <br />{accommodationTitle}</h3>
                 <p className='form-disclosure-text'>Füllen Sie das untenstehende Formular aus
                     <br /> und wir werden uns in Kürze mit einer Antwort auf Ihre Anfrage bei Ihnen melden.
