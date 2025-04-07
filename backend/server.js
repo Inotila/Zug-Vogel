@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const activityRoutes = require('./routes/activityRoutes');
 const userRoutes = require('./routes/userRoutes');
 const contentfulRoutes = require('./routes/contentfulRoutes');
+const enquiryRoutes = require('./routes/enquiryRoutes.js');
 
 const app = express();
 const port = process.env.PORT || 5010;
@@ -37,6 +38,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/activities', activityRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/contentful', contentfulRoutes);
+app.use('/api/enquiry', enquiryRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello from the Backend!');
