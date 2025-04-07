@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/accommodation.css';
+import '../../assets/css/serviceStyle.css';
 import AccommodationCard from './accommodationCard';
 import { fetchAccommodations } from '../../services/contentfulService';
 
@@ -32,7 +33,7 @@ const AccomodationPage: React.FC = () => {
       </div>
 
       {/* ✅ Responsive Grid Layout */}
-      <div className="row accommodation-grid">
+      <div className="row service-grid">
         {accommodations.map((accommodation) => (
           <div key={accommodation.id} className="col-sm-12 col-md-4s col-lg-4 d-flex mb-3 justify-content-center">
             <AccommodationCard

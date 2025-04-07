@@ -1,70 +1,3 @@
-.accommodation-card {
-    width: 100%;
-    flex-direction: column;
-}
-
-.accommodation-card .card-body {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-}
-/* titles */
-
-.small-screen-title{ 
-    display: none;
-}
-
-#big-screen-title{
-    font-size: 21px;
-}
-
-/* card image */
-.accommodation-card-image-container{
-    display: flex;
-    align-items: center;
-    justify-content: center !important;
-    width: 50%;
-}
-
-.accommodation-image {
-    max-width: 100%;
-    height: 250px;
-    border-radius: 5px;
-}
-
-/* content */
-
-.location-text{
-    display: flex;
-    flex-direction: row;
-    font-size: 11px;
-    text-decoration: underline;
-}
-
-.summary-container {
-    font-size: 14px;
-    width: 100% !important;
-}
-
-.accommodation-content {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    flex: 1;
-}
-
-.accommodation-card-title {
-    margin-bottom: auto;
-    margin: 0rem 1rem ;
-}
-
 .amenities-list {
     list-style: none;
     padding: 0;
@@ -75,21 +8,5 @@
 margin: 0;
 text-decoration: underline;
 font-weight: bold;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 1217px) {
-   
-    .small-screen-title {
-        display: unset !important;
-    }
-
-    #big-screen-title {
-        display: none !important;
-    }
-
-    .accommodation-card-image-container{
-        width:100%;
-    }
 }
 

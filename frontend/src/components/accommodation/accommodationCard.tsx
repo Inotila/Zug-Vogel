@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './assets/css/accommodationCard.css';
+import '../../assets/css/serviceStyle.css';
 
 interface AccommodationCardProps {
     id: string;
@@ -35,26 +36,29 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
     const slug = generateSlug(title);
 
     return (
-        <div className="accommodation-card card shadow-container">
+        <div className="services-card card shadow-container">
             <div className="card-body">
                 {/* Mobile title */}
-                <h4 className="card-title accommodation-card-title small-screen-title mb-1">{title}</h4>
+                <h4 className="card-title service-card-title small-screen-title mb-1">{title}</h4>
 
-                <div className="accommodation-card-image-container">
-                    <img src={image} alt={title} className="accommodation-image" />
+                <div className="service-card-image-container">
+                    <img src={image} alt={title} className="service-image" />
                 </div>
 
-                <div className="accommodation-content flex-fill d-flex flex-column">
+                <div className="service-content flex-fill ">
                     {/* Desktop title */}
-                    <h4 id="big-screen-title" className="card-title accommodation-card-title">{title}</h4>
 
-                    <div className="location-text">
-                        <p className="mx-1">{city}</p>
-                        <p className="mx-1">
-                            <a href={googleMapDirection} target="_blank" rel="noopener noreferrer">
-                                Google Directions
-                            </a>
-                        </p>
+                    <div>
+                        <h4 id="big-screen-title" className="card-title service-card-title">{title}</h4>
+                        <div className="location-text">
+
+                            <p className="mx-1">{city}</p>
+                            <p className="mx-1">
+                                <a href={googleMapDirection} target="_blank" rel="noopener noreferrer">
+                                    Google Directions
+                                </a>
+                            </p>
+                        </div>
                     </div>
 
                     <div className="summary-container mx-1">
@@ -64,9 +68,9 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
                     <div className="amenities-container">
                         <p className="amenities-title">Ausstattung</p>
                         <ul className="amenities-list">
-                            <li>Parken: {garge}</li>
                             <li>Schwimmbad: {pool}</li>
                             <li>WLAN: {wifi}</li>
+                            <li>Parken: {garge}</li>
                         </ul>
                     </div>
 

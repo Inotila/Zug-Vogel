@@ -1,9 +1,3 @@
-.accommodation-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .accommodation-hero-banner-container {
   background-image: url('../images/teaCup.jpg');
   background-position: center;

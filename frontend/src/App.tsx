@@ -6,6 +6,7 @@ import Footer from './components/footer/footer';
 import HomePage from './components/home/home';
 import AccomodationPage from './components/accommodation/accommodation';
 import TourPage from './components/tours/tours';
+import TourDetailsPage from './components/tours/tourDetails';
 import AboutNamibiaPage from './components/aboutNambia/aboutNamibia';
 import AboutUsPage from './components/aboutUs/aboutUs'
 import SignUpPage from './components/userAuth/signup'
@@ -27,6 +28,7 @@ const App: React.FC = () => {
             {/* AccomodationPage route */}
             <Route path="/unterkunft" element={< AccomodationPage />} />
             <Route path="/touren" element={< TourPage />} />
+            <Route path="/touren/:slug" element={< TourDetailsPage />} />
             <Route path="/überNamibia" element={< AboutNamibiaPage />} />
             <Route path="/überUns" element={< AboutUsPage />} />
             <Route path="/signup" element={< SignUpPage />} />
@@ -34,7 +36,6 @@ const App: React.FC = () => {
             <Route path="/profile" element={< ProfilePage />} />
             <Route path="/aktivitäten" element={< ActivitiesPage />} />
             <Route path="/unterkunft/:slug" element={< AccomodationDetailsPage />} />
-
           </Routes>
         </div>
         <Footer />

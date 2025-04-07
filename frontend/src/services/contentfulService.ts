@@ -25,3 +25,27 @@ export async function fetchAccommodations(): Promise<any[]> {
       return null;
     }
   }
+
+  export const fetchTours = async () => {
+    try {
+      const response = await fetch('http://localhost:5010/api/contentful/entries?type=tours');
+        const data = await response.json();
+        console.log('Fetched tours:', data);
+        return data;
+    } catch (error) {
+        console.error('Error fetching tours:', error);
+        return [];
+    }
+};
+
+export const fetchTourBySlug = async (slug: string) => {
+    try {
+        const response = await fetch(`http://localhost:5010/api/contentful/tour/${slug}`);
+        if (!response.ok) throw new Error(`Error ${response.status}: ${response.statusText}`);
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching tour by slug:', error);
+        return null;
+    }
+};
