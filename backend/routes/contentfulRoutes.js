@@ -9,7 +9,7 @@ router.get('/entries', async (req, res) => {
         const entries = await client.getEntries({
             content_type: type // Filters by content type
         });
-
+        // console.log('Entries:', entries.items); 
         const formattedEntries = entries.items.map(entry => ({
             id: entry.sys.id,
             ...entry.fields
@@ -60,27 +60,37 @@ router.get('/accommodation/:slug', async (req, res) => {
 });
 
 
-// Fetch a single tour entry by ID
-router.get('/tours/:id', async (req, res) => {
-    const { id } = req.params;
+router.get('/tour/:slug', async (req, res) => {
+    try{
+    const { slug } = req.params;
+    const normalizedSlug = slug.toLowerCase();
 
-    try {
-        const entry = await client.getEntry(id);
-        if (!entry || entry.sys.contentType.sys.id !== "tours") {
-            return res.status(404).json({ error: "Tour not found" });
-        }
+    const entries = await client.getEntries({ content_type: 'tours' });
 
-        res.json({
-            id: entry.sys.id,
-            title: entry.fields.title,
-            durationOfTrip: entry.fields.durationOfTrip || "N/A",
-            startingPoint: entry.fields.startingPoint || "Unknown",
-            mainDestination: entry.fields.mainDestination || "Unknown",
-            endDestination: entry.fields.endDestination || "Unknown"
+    const tour = entries.items.find(item => 
+        item.fields.title.toLowerCase().replace(/\s+/g, '-') === normalizedSlug
+    );
+
+    if (!tour) {
+        return res.status(404).json({ message: 'Tour not found' });
+    }
+    
+    res.json({
+            id: tour.sys.id,
+            title: tour.fields.title,
+            durationOfTrip: tour.fields.durationOfTrip || 'N/A',
+            startingPoint: tour.fields.startingPoint || 'Unknown',
+            mainDestination: tour.fields.mainDestination || 'Unknown',
+            endDestination: tour.fields.endDestination || 'Unknown',
+            description: tour.fields.description,
+            summaryText: tour.fields.summaryDescription,
+            coverPhoto: tour.fields.tourCoverPhoto?.fields.file.url  || 'Unknown',
+            photos: tour.fields.tourPhotos || []
         });
     } catch (error) {
-        res.status(500).json({ error: "Error fetching tour details", details: error.message });
+        res.status(500).json({ message: 'Error fetching tour', error: error.message });
     }
 });
+
 
 module.exports = router;
