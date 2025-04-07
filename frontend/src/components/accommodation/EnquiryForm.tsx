@@ -128,10 +128,10 @@ const EnquiryForm: React.FC<EnquiryFormProps> = ({ onClose, accommodationTitle }
                         />
                     </label>
                     <div className="button-group">
-                        <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                        <button type="submit" className="btn main-btn" disabled={isSubmitting}>
                             {isSubmitting ? 'Sending...' : 'Submit'}
                         </button>
-                        <button type="button" className="cancel-btn" onClick={onClose}>
+                        <button type="button" className="btn sub-btn cancel-btn" onClick={onClose}>
                             Cancel
                         </button>
                     </div>
