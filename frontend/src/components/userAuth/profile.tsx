@@ -143,13 +143,13 @@ const ProfilePage: React.FC = () => {
                     <div className='signup-login-container shadow-container mx-3'>
                         {user ? (
                             <div className='user-container'>
-                                <h2>{user.name}'s profile</h2>
+                                <h2>{user.name}s profil</h2>
                                 <div className='updateable-attributes'>
-                                    <p className='profile-attribute'> Email: {user.email}</p>
+                                    <p className='profile-attribute'> E-mail: {user.email}</p>
                                 </div>
                                 {/* Phone Number Section */}
                                 <div className='updateable-attributes'>
-                                    <p className='profile-attribute'>Phone Number: {phoneNumber}</p>
+                                    <p className='profile-attribute'>Telefonnummer: {phoneNumber}</p>
                                     {!isEditingPhone ? (
                                         <span onClick={() => setIsEditingPhone(true)} style={{ cursor: 'pointer', color: 'blue' }}>
                                             <FontAwesomeIcon icon={faEdit} /> {/* Font Awesome Edit Icon */}
@@ -172,7 +172,7 @@ const ProfilePage: React.FC = () => {
 
                                 {/* Preferred Language Section */}
                                 <div className='updateable-attributes'>
-                                    <p className='profile-attribute'>Preferred Language: {preferredLanguage}</p>
+                                    <p className='profile-attribute'>Bevorzugte Sprache: {preferredLanguage}</p>
                                     {!isEditingLanguage ? (
                                         <span onClick={() => setIsEditingLanguage(true)} style={{ cursor: 'pointer', color: 'blue' }}>
                                             <FontAwesomeIcon icon={faEdit} /> {/* Font Awesome Edit Icon */}
@@ -197,7 +197,7 @@ const ProfilePage: React.FC = () => {
 
                                 {/* Interests Section with checkboxes */}
                                 <div className='updateable-attributes activity-container mb-3'>
-                                    <p className='profile-attribute mx-3'>Interests: </p>
+                                    <p className='profile-attribute mx-3'>Interessen: </p>
                                     {isEditingInterests ? (
                                         <div className="interest-list-container">
                                             <p>
