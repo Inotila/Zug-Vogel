@@ -143,9 +143,10 @@ const ProfilePage: React.FC = () => {
                     <div className='signup-login-container shadow-container mx-3'>
                         {user ? (
                             <div className='user-container'>
-                                <h2>{user.name}</h2>
-                                <p className='profile-attribute'> Email: {user.email}</p>
-
+                                <h2>{user.name}'s profile</h2>
+                                <div className='updateable-attributes'>
+                                    <p className='profile-attribute'> Email: {user.email}</p>
+                                </div>
                                 {/* Phone Number Section */}
                                 <div className='updateable-attributes'>
                                     <p className='profile-attribute'>Phone Number: {phoneNumber}</p>
@@ -161,7 +162,7 @@ const ProfilePage: React.FC = () => {
                                                 onChange={(e) => setPhoneNumber(e.target.value)}
                                                 placeholder="Enter your phone number"
                                             />
-                                            <button className='mx-3' onClick={() => {
+                                            <button className='mx-3 btn main-btn' onClick={() => {
                                                 updateUserField('phoneNumber', phoneNumber);
                                                 setIsEditingPhone(false);
                                             }}>Save</button>
@@ -186,7 +187,7 @@ const ProfilePage: React.FC = () => {
                                                 <option value="German">German</option>
                                                 <option value="French">French</option>
                                             </select>
-                                            <button className='mx-3' onClick={() => {
+                                            <button className=' btn main-btn mx-3' onClick={() => {
                                                 updateUserField('preferredLanguage', preferredLanguage);
                                                 setIsEditingLanguage(false);
                                             }}>Save</button>
@@ -195,7 +196,7 @@ const ProfilePage: React.FC = () => {
                                 </div>
 
                                 {/* Interests Section with checkboxes */}
-                                <div className='updateable-attributes activity-container'>
+                                <div className='updateable-attributes activity-container mb-3'>
                                     <p className='profile-attribute mx-3'>Interests: </p>
                                     {isEditingInterests ? (
                                         <div className="interest-list-container">
@@ -217,18 +218,18 @@ const ProfilePage: React.FC = () => {
                                             ))}
                                             <div className='interest-btn-container'>
                                                 <button
-                                                    className="save-button"
+                                                    className="save-button btn main-btn"
                                                     onClick={() => {
                                                         setIsEditingInterests(false);
                                                         handleSubmit();
                                                     }}
                                                 >
-                                                    Update
+                                                    Aktualisieren
                                                 </button>
                                             </div>
                                         </div>
                                     ) : (
-                                        <div>
+                                        <div className='d-flex'>
                                             {user.interests?.length > 0 ? (
                                                 user.interests.join(', ')
                                             ) : (
