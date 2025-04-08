@@ -1,6 +1,12 @@
 import React from 'react';
 import '../../assets/css/index.css';
-import './assests/css/activities.css'
+import './assests/css/activities.css';
+import "../../assets/css/serviceStyle.css";
+import golfer from '../../assets/images/actvities/golfer.jpg';
+import golfPlayers from '../../assets/images/hero-images/activities-hero-img.jpg';
+import swimmer from '../../assets/images/actvities/swimmer.jpg';
+import cafeSitters from '../../assets/images/actvities/cafeSitters.jpg';
+import cartDriver from '../../assets/images/actvities/cartDriver.jpg';
 
 const ActivitiesPage: React.FC = () => {
     return (
@@ -53,13 +59,18 @@ const ActivitiesPage: React.FC = () => {
                                 kommt eine überaus vielfältige Tierwelt
                             </p>
                         </div>
-                        <div className='mb-3'>
-                            {/* <img className='about-nam-img' src={cbdImg} alt="" />
-                            <img className='about-nam-img' src={churchImg} alt="" />
-                            <img className='about-nam-img' src={trainStationImg} alt="" /> */}
-                        </div>
-
                         <h4>book your activities via zugogel@gmail.com</h4>
+                    </div>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
+                    <h4 className="mt-3">Gallery</h4>
+                    <div className="image-container mb-3">
+                        <img src={golfPlayers} alt="activities to do in Namibia" className="gallery-photo" />
+                        <img src={swimmer} alt="activities to do in Namibia" className="gallery-photo" />
+                        <img src={cafeSitters} alt="activities to do in Namibia" className="gallery-photo" />
+                        <img src={cartDriver} alt="activities to do in Namibia" className="gallery-photo" />
                     </div>
                 </div>
             </div>

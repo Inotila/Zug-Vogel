@@ -123,7 +123,6 @@ const TourDetailsPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-
             {/* Fullscreen Gallery Viewer */}
             {isViewerOpen && (
                 <div className="fullscreen-viewer">
