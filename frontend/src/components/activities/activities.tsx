@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { getUserProfile } from '../../services/authService';  // Assuming this service checks user authentication
 import '../../assets/css/index.css';
 import './assests/css/activities.css';
 import "../../assets/css/serviceStyle.css";
@@ -9,6 +11,22 @@ import cafeSitters from '../../assets/images/actvities/cafeSitters.jpg';
 import cartDriver from '../../assets/images/actvities/cartDriver.jpg';
 
 const ActivitiesPage: React.FC = () => {
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    // Check if the user is authenticated by verifying token
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            getUserProfile(token).then((data) => {
+                if (data) {
+                    setIsAuthenticated(true);
+                }
+            }).catch(() => {
+                setIsAuthenticated(false);
+            });
+        }
+    }, []);
+
     return (
         <div className="container-fluid text-center">
             <div className="row hero-banner-container activities-hero-banner-container subpage-hero-banner">
@@ -36,7 +54,7 @@ const ActivitiesPage: React.FC = () => {
                         <div className=' mt-3'>
                             <h3>Aktivitäten</h3>
                         </div>
-                        <div className='activities-text'>
+                        <div className='activities-text mb-3'>
                             <p>
                                 Tauchen Sie ein in ein aktives Leben mit Sportangeboten wie Golf, Tennis, Paddeltennis oder
                                 Schwimmen. Erkunden Sie die umliegenden Berge auf malerischen Wanderwegen oder
@@ -59,7 +77,20 @@ const ActivitiesPage: React.FC = () => {
                                 kommt eine überaus vielfältige Tierwelt
                             </p>
                         </div>
-                        <h4>book your activities via zugogel@gmail.com</h4>
+
+                        {/* Conditionally render the 'updateActivityOnProfile' div if user is authenticated */}
+                        {isAuthenticated && (
+                            <div className='updateActivityOnProfile mb-3'>
+                                <p>
+                                    Teilen Sie uns mit, an welchen Aktivitäten Sie interessiert sind,
+                                    damit wir für Ihren Aufenthalt spannende Aktivitäten für Sie organisieren können.
+                                </p>
+                                <Link to="/profile" className="btn main-btn home-btn mt-3">
+                                    <p>Aktualisieren Sie Ihr Profil</p>
+                                </Link>
+                            </div>
+                        )}
+
                     </div>
                 </div>
             </div>
