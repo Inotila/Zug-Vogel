@@ -1,20 +1,28 @@
 /* hero banner */
 .home-hero-banner-container {
-  background-image: url('../../../../assets/images/hero-images/whk-mountains.jpg') !important;
-  background-position:top !important;
-}
-
-.home-hero-banner-img-container {
-  width: 50%;
-  height: 100%; 
+  background-image: url('../../../../assets/images/hero-images/flamingo.jpg') !important;
+  justify-content: flex-end; 
+  align-content: start !important;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
-.home-hero-banner-img {
-  height: 100%;
-  object-fit: cover;
+.home-hero-content {
+  width: 100%;
+  text-align: center;
+}
+
+.company-title, .company-moto{
+  font-weight: bolder;
+}
+
+.company-title{
+  font-size: 6rem;
+}
+
+.company-moto{
+  font-size: 2rem;
+
 }
 
 /* homepage cards */

@@ -4,22 +4,17 @@ import '../../assets/css/index.css';
 import './assets/css/home.css';
 import accommodationImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
 import giraffe from '../../assets/images/tours-images/giraffe.jpg'
-import whiteLogo from '../../assets/images/logo-images/hero-banner-zug-vogel-white-logo.png'
 import golfImg from '../../assets/images/actvities/golfer.jpg';
 
 const HomePage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
-      <div className="row hero-banner-container home-hero-banner-container d-flex">
-        {/* Left side: Image */}
-        <div className="col-md-6 hero-banner-img-container">
-          <img className="hero-banner-img" src={whiteLogo} alt="Logo" />
-        </div>
-
-        {/* Right side: Text with border */}
-        <div className="col-md-6  d-flex flex-column justify-content-center text-center">
-          <h1 className='hero-banner-text'>Zugvogel</h1>
-          <p className='hero-banner-text'>Überwintern im Sonnnparadis</p>
+      <div className="row hero-banner-container home-hero-banner-container">
+        <div className='home-hero-content'>
+          <div className="d-flex flex-column home-hero-banner-text-container">
+            <h1 className='hero-banner-text company-title'>Zugvogel</h1>
+            <p className='hero-banner-text company-moto'>Überwintern im Sonnnparadis</p>
+          </div>
         </div>
       </div>
       <div className="row hero-text-container text-center">
@@ -40,7 +35,7 @@ const HomePage: React.FC = () => {
           <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={giraffe} alt="#" />
             <div className="card-body">
-              <p className="card-text">
+              <p className="card- mb-2">
                 Ob Sie einen kurzen Wochenendausflug planen oder eine längere Entdeckungsreise von bis zu
                 14 Tagen unternehmen möchten: Wir organisieren unvergessliche Touren, die Ihren
                 Interessen und Ihrem Zeitrahmen entsprechen.
@@ -56,12 +51,12 @@ const HomePage: React.FC = () => {
           <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={accommodationImg} alt="#" />
             <div className="card-body">
-              <p className="card-text accomodation-text">
+              <p className="card-text mb-2">
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
                 Wählen Sie Ihr ideales Sommerhaus aus unserer Auswahl sorgfältig kuratierter Häuser.
               </p>
               <Link to="/unterkunft" className="btn main-btn home-btn mt-auto">
-                <h5 className="card-title accomodation-title">Unterkunft</h5>
+                <h5 className="card-title">Unterkunft</h5>
               </Link>
             </div>
           </div>
@@ -71,13 +66,13 @@ const HomePage: React.FC = () => {
           <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={golfImg} alt="#" />
             <div className="card-body">
-              <p className="card-text accomodation-text">
+              <p className="card-text mb-2">
                 Windhoek bietet eine Fülle von Möglichkeiten, um Körper, Geist und Seele zu bereichern. Wir haben eine abwechslungsreiche
                 Auswahl an Aktivitäten zusammengestellt, die Ihnen sowohl die lebendige Kultur als auch die
                 atemberaubende Natur Namibias näherbringen.
               </p>
               <Link to="/Aktivitäten" className="btn main-btn home-btn mt-auto">
-                <h5 className="card-title accomodation-title">Aktivitäten</h5>
+                <h5 className="card-title">Aktivitäten</h5>
               </Link>
             </div>
           </div>
