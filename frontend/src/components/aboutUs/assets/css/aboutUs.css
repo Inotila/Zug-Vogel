@@ -1,6 +1,7 @@
 /* hero-banner */
 .about-us-hero-banner-container{
-    background-color: #fff;
+    background-image: url('../../../../assets/images/hero-images/flamingo.jpg') !important;
+
 }
 
 .about-us-hero-img>img{
@@ -10,7 +11,6 @@
 
 .about-us-container {
    flex-direction: column;
-   margin: 1rem 0rem 0rem 0rem !important;
 }
 
 .founders-container {

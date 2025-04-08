@@ -14,12 +14,11 @@ const AccomodationPage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
       <div className="row hero-banner-container accommodation-hero-banner-container subpage-hero-banner">
-        <div className="col hero-page-titles">
-          <h1>Unterkünfte</h1>
-          <p>Sie sich während Ihrer Reise rundum wohlfühlen können.</p>
+        <div className="d-flex flex-column hero-banner-text-container">
+          <h1 className='hero-banner-text '>Unterkünfte</h1>
+          <p className='hero-banner-text'>Sie sich während Ihrer Reise rundum wohlfühlen können</p>
         </div>
       </div>
-
       <div className="row hero-text-container">
         <div className="col">
           <div className='hero-text'>

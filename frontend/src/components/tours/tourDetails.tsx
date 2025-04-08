@@ -55,9 +55,9 @@ const TourDetailsPage: React.FC = () => {
     return (
         <div className="container-fluid text-center">
             <div className="row hero-banner-container tour-hero-banner-container subpage-hero-banner">
-                <div className="col hero-page-titles">
-                    <h1>Tour: {tour.title}</h1>
-                    <p>Entdeckungsreisen in Namibia und darüber hinaus</p>
+                <div className="d-flex flex-column hero-banner-text-container">
+                    <h1 className='hero-banner-text '>Tour: {tour.title}</h1>
+                    <p className='hero-banner-text'>Entdeckungsreisen in Namibia und darüber hinaus</p>
                 </div>
             </div>
 

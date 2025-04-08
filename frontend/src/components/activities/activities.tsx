@@ -30,9 +30,10 @@ const ActivitiesPage: React.FC = () => {
     return (
         <div className="container-fluid text-center">
             <div className="row hero-banner-container activities-hero-banner-container subpage-hero-banner">
-                <div className="col hero-page-titles">
-                    <h1>Aktivitäten</h1>
-                    <p>Bleiben Sie wegen der Kälte nicht drinnen gefangen, sondern bleiben Sie unter der Sonne Namibias aktiv</p>
+                <div className="d-flex flex-column hero-banner-text-container">
+                    <h1 className='hero-banner-text '>Aktivitäten</h1>
+                    <p className='hero-banner-text'>Bleiben Sie wegen der Kälte nicht drinnen gefangen,
+                        sondern bleiben Sie unter der Sonne Namibias aktiv</p>
                 </div>
             </div>
             <div className="row hero-text-container">

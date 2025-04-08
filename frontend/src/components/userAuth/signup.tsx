@@ -42,7 +42,11 @@ const SignUpPage: React.FC = () => {
 
     return (
         <div className="container-fluid text-center">
-            <div className="row hero-banner-container home-hero-banner-container d-flex">
+            <div className="row hero-banner-container home-hero-banner-container">
+                <div className="d-flex flex-column hero-banner-text-container">
+                    <h1 className='hero-banner-text '>Melden Sie sich an</h1>
+                    <p className='hero-banner-text'>einfach und schnell</p>
+                </div>
             </div>
             <div className="row hero-text-container text-center">
                 <div className="col">
@@ -56,7 +60,7 @@ const SignUpPage: React.FC = () => {
             <div className="row">
                 <div className="col">
                     <div className='shadow-container signup-login-container mx-3'>
-                        <h2 className='auth-page-title'>Sign Up</h2>
+                        <h2 className='auth-page-title'>Melden Sie sich an</h2>
                         <form onSubmit={handleSubmit}>
                             <input
                                 className='auth-page-input' type="text" placeholder="Name" value={name}

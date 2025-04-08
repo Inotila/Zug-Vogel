@@ -32,6 +32,10 @@ const LoginPage: React.FC = () => {
     return (
         <div className="container-fluid text-center">
             <div className="row hero-banner-container home-hero-banner-container d-flex">
+                <div className="d-flex flex-column hero-banner-text-container">
+                    <h1 className='hero-banner-text '>Login</h1>
+                    <p className='hero-banner-text'>einfach und schnell</p>
+                </div>
             </div>
             <div className="row hero-text-container text-center">
                 <div className="col">

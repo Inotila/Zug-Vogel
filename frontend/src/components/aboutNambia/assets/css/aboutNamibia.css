@@ -1,3 +1,8 @@
+.about-namibia-hero-banner-container{
+    background-image: url('../../../../assets/images/hero-images/zebraHero.jpg');
+    background-position:center !important; 
+}
+
 .about-namibia-container {
     flex-direction: column;
     /* padding: 20px;  */

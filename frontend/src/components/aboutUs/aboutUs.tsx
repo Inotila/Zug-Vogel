@@ -11,12 +11,9 @@ const AboutUsPage: React.FC = () => {
 
     return (
         <div className="container-fluid text-center">
-            <div className="row hero-banner-container about-us-hero-banner-container">
-                <div className="col hero-page-titles">
-                    <div className="about-us-hero-img">
-                        <img src={colorLogo} alt="" />
-                    </div>
-                    <h1>Über uns</h1>
+            <div className="row hero-banner-container about-us-hero-banner-container subpage-hero-banner">
+                <div className="d-flex flex-column hero-banner-text-container">
+                    <h1 className='hero-banner-text '>Über uns</h1>
                 </div>
             </div>
             <div className="row hero-text-container">
@@ -35,9 +32,9 @@ const AboutUsPage: React.FC = () => {
             {/* founder countainer */}
             <div className="row ">
                 <div className="col">
-                    <div className='about-us-container shadow-container mx-3'>
+                    <div className='about-us-container shadow-container m-3'>
                         <div className='about-us-title mt-3'>
-                            <h3>Unsere Gründer</h3>
+                            <h3>Unsere Gründer a</h3>
                         </div>
                         <div className='founders-container my-3'>
                             <div className='founder-img-container'>

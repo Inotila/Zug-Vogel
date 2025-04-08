@@ -126,7 +126,10 @@ const ProfilePage: React.FC = () => {
     return (
         <div className="container-fluid text-center">
             <div className="row hero-banner-container home-hero-banner-container d-flex">
-                {/* Hero Banner */}
+                <div className="d-flex flex-column hero-banner-text-container">
+                    <h1 className='hero-banner-text '>Profil</h1>
+                    <p className='hero-banner-text'>Hallo, willkommen</p>
+                </div>
             </div>
             <div className="row hero-text-container text-center">
                 <div className="col">
