@@ -81,10 +81,11 @@ const HomePage: React.FC = () => {
 
       {/* about namibia  and about us*/}
       <div className="row">
-        <div className="col-12 col-md-6">
+        <div className="col-12 col-md-6 mb-3 mb-md-0">
           <div className='shadow-container about-container h-100' >
             <h3 className='mt-2'>Über Namibia</h3>
-            <p className='about-text'>Erfahren Sie mehr über Namibia und seine vielen Wunder.
+            <p className='about-text'>
+              Erfahren Sie mehr über Namibia und seine vielen Wunder.
               Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
             </p>
             <Link to="/überNamibia" className="btn sub-btn home-about-us-btn mt-auto">
@@ -110,7 +111,8 @@ const HomePage: React.FC = () => {
         <div className="col-12 col-md-6">
           <div className='shadow-container about-container h-100' >
             <h3 className='mt-2'>Über uns</h3>
-            <p className='about-text'>Zugvogel Reisen Namibia richtet sich besonders an aktive und reiselustige Menschen,
+            <p className='about-text'>
+              Zugvogel Reisen Namibia richtet sich besonders an aktive und reiselustige Menschen,
               <br />
               insbesondere Rentnerinnen und Rentner, aber auch an all jene, die dem Winter entfliehen und
               die namibische Sonne genießen möchten.
@@ -121,7 +123,7 @@ const HomePage: React.FC = () => {
               </p>
             </Link>
             <h4 className='mt-1'>Kontakt</h4>
-            <p>Kontaktieren Sie uns gerne unter:
+            <p className='mb-2'>Kontaktieren Sie uns gerne unter:
               <br />
               Email: zugvogel@gmail.com or 264 81 85 88 650
             </p>

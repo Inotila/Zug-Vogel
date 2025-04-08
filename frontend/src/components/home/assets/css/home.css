@@ -89,7 +89,7 @@ width: auto;
 }
 
 .about-text{
-margin: 0.75rem;
+margin: 0 0.75rem !important;
 }
 
 .important-information-list{

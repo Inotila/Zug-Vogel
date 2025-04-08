@@ -4,11 +4,6 @@
 
 }
 
-.about-us-hero-img>img{
-    /* background-color: #cc5500; */
-    height:12rem;
-}
-
 .about-us-container {
    flex-direction: column;
 }
@@ -27,7 +22,7 @@
 }
 
 .founder-img{
-    height: 100%;
+    height: 85%;
     width:auto;
     border-radius: 10px;
     margin: 0rem 1rem ;

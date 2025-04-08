@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../../assets/css/index.css';
 import './assets/css/aboutUs.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import colorLogo from '../../assets/images/logo-images/zug-vogel-color-logo.png'
 import peterIMG from '../../assets/images/founder-images/peter.jpg'
 import heinrichMG from '../../assets/images/founder-images/heinrich.jpg'
 
@@ -33,8 +32,8 @@ const AboutUsPage: React.FC = () => {
             <div className="row ">
                 <div className="col">
                     <div className='about-us-container shadow-container m-3'>
-                        <div className='about-us-title mt-3'>
-                            <h3>Unsere Gründer a</h3>
+                        <div className='about-us-title mt-1'>
+                            <h3>Unsere Gründer</h3>
                         </div>
                         <div className='founders-container my-3'>
                             <div className='founder-img-container'>
@@ -46,7 +45,7 @@ const AboutUsPage: React.FC = () => {
                                 <h5 className='founder-title mt-2'>Peter Kaulbach</h5>
                             </div>
                         </div>
-                        <div className='about-us-text mt-3'>
+                        <div className='about-us-text'>
                             <p>
                                 Zugvogel Reisen Namibia wurde 2024 von Peter Kaulbach und Heinrich Georg Pielok, zwei begeisterten Namibia-Liebhabern, gegründet.
                                 Ihre tiefe Verbundenheit mit dem Land bildet
@@ -84,7 +83,7 @@ const AboutUsPage: React.FC = () => {
                                     Unsere Motivation und unser Anspruch
                                 </p>
                                 <br />
-                                <p>
+                                <p className='mb-3'>
                                     Unser Ziel ist es, unseren Gästen nicht nur die Schönheit Namibias zu zeigen, sondern ihnen
                                     auch ein Gefühl von Heimat und Wohlbefinden zu vermitteln. Wir legen großen Wert auf
                                     persönliche Betreuung, maßgeschneiderte Reisepläne und höchste Qualität bei Unterkünften,
@@ -106,7 +105,7 @@ const AboutUsPage: React.FC = () => {
                         )}
 
                         {/* Toggle Button */}
-                        <button className="btn main-btn my-3" onClick={() => setShowMore(!showMore)}>
+                        <button className="btn main-btn mb-3" onClick={() => setShowMore(!showMore)}>
                             {showMore ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                         </button>
                     </div>
@@ -142,7 +141,7 @@ const AboutUsPage: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className='social-media-links-container mt-3'>
+                                {/* <div className='social-media-links-container mt-3'>
                                     <div className='soial-links'>
                                         <a className='mx-3' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                                             <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
@@ -156,7 +155,7 @@ const AboutUsPage: React.FC = () => {
                                         <h4 className='founder-title'>Instagram</h4>
                                     </div>
 
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>
