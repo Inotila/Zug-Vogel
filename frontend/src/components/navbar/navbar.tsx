@@ -20,17 +20,18 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
-        <div className="row w-100 align-items-center">
+        <div className="navbar-content">
 
           {/* Logo */}
-          <div className="col-4 d-flex justify-content-start">
+          <div className="nav-logo-container mx-3">
             <Link to="/" className="navbar-brand">
-              <img className="nav-logo mx-3" src={logo} alt="Logo" />
+              <img className="nav-logo" src={logo} alt="Logo" />
             </Link>
           </div>
 
-          <div className="col-4 d-flex justify-content-center">
-            <form className="d-flex w-100">
+          {/* Search Bar */}
+          <div className="nav-search-container">
+            <form className="d-flex">
               <input
                 className="form-control"
                 type="search"
@@ -41,7 +42,7 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Burger Menu & Navbar Links */}
-          <div className="col-4 d-flex justify-content-end">
+          <div className="nav-links-container">
             <button
               className="navbar-toggler"
               type="button"
@@ -54,7 +55,7 @@ const Navbar: React.FC = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            {/* Navbar Links (inside the same column) */}
+            {/* Navbar Links */}
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
               <ul className="navbar-nav">
                 {token ? (
@@ -169,7 +170,7 @@ const Navbar: React.FC = () => {
               </ul>
             </div>
           </div>
-        </div> {/* End row */}
+        </div> {/* End navbar-content */}
       </div>
     </nav>
   );
