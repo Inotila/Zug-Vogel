@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../../assets/css/index.css";
+import "../../assets/css/serviceDetails.css";
+import "../../assets/css/serviceDetails.css";
 import "./assets/css/accommodation.css";
 import "./assets/css/accommodationDetails.css";
 import { fetchAccommodationBySlug } from "../../services/contentfulService";
@@ -92,7 +94,7 @@ const AccommodationDetailsPage: React.FC = () => {
                                 <img
                                     src={accommodation.coverPhoto}
                                     alt="cover"
-                                    className="accommodation-cover-image"
+                                    className="details-cover-image"
                                     onClick={openCoverViewer}
                                     style={{ cursor: "pointer" }}
                                 />
@@ -142,7 +144,7 @@ const AccommodationDetailsPage: React.FC = () => {
 
             {/* Photo Gallery */}
             <div className="row">
-                <div className="col shadow-container accomdation-details-photo-container mx-3 mt-3">
+                <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
                     <div className="mt-3">
                         <h4>Gallery</h4>
                     </div>
@@ -153,7 +155,7 @@ const AccommodationDetailsPage: React.FC = () => {
                                     key={index}
                                     src={`https:${photo.fields.file.url}`}
                                     alt={photo.fields.title}
-                                    className="accommodation-photo"
+                                    className="gallery-photo"
                                     onClick={() => openViewer(index)}
                                 />
                             ))

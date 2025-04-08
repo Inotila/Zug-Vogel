@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../../assets/css/index.css";
+import "../../assets/css/serviceDetails.css";
 import "./assets/css/tours.css";
 import "../../assets/css/serviceStyle.css";
 import { fetchTourBySlug } from "../../services/contentfulService";
@@ -75,7 +76,7 @@ const TourDetailsPage: React.FC = () => {
                             <img
                                 src={tour.coverPhoto}
                                 alt="cover"
-                                className="accommodation-cover-image"
+                                className="details-cover-image"
                                 onClick={openCoverViewer}
                                 style={{ cursor: "pointer" }}
                             />
@@ -94,7 +95,7 @@ const TourDetailsPage: React.FC = () => {
                                 <p className="mx-2">Ausgangspunkt: {tour.endDestination}</p>
                             </div>
                         </div>
-                        <div className="description-container my-3">
+                        <div className="description-container mt-3">
                             <p>{tour.description}</p>
                         </div>
                     </div>
@@ -103,7 +104,7 @@ const TourDetailsPage: React.FC = () => {
 
             {/* Photo Gallery */}
             <div className="row">
-                <div className="col shadow-container accomdation-details-photo-container mx-3 mt-3">
+                <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
                     <h4 className="mt-3">Gallery</h4>
                     <div className="image-container mb-3">
                         {tour.photos && tour.photos.length > 0 ? (
@@ -112,7 +113,7 @@ const TourDetailsPage: React.FC = () => {
                                     key={index}
                                     src={`https:${photo.fields.file.url}`}
                                     alt={photo.fields.title}
-                                    className="accommodation-photo"
+                                    className="gallery-photo"
                                     onClick={() => openViewer(index)}
                                 />
                             ))
