@@ -1,9 +1,14 @@
 /* hero banner */
 .home-hero-banner-container {
   background-image: url('../../../../assets/images/hero-images/flamingo.jpg') !important;
+  background-size: cover;
+  background-position: top !important;
+  background-repeat: no-repeat;
+  width: 100% !important;
+  height: 15rem !important;
+  display: flex;
   justify-content: flex-end; 
   align-content: start !important;
-  display: flex;
   flex-direction: column;
 }
 
