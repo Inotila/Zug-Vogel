@@ -65,13 +65,12 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
                     <div className="amenities-container">
                         <p className="amenities-title">Ausstattung</p>
                         <ul className="amenities-list">
-                            <li>Schwimmbad: {pool}</li>
-                            <li>WLAN: {wifi}</li>
-                            <li>Parken: {garge}</li>
+                            <li><span className='card-main-title'>Schwimmbad:</span> {pool}</li>
+                            <li><span className='card-main-title'>WLAN:</span> {wifi}</li>
+                            <li><span className='card-main-title'>Parken:</span> {garge}</li>
                         </ul>
-                    </div>
 
-                    <Link to={`/unterkunft/${slug}`} className="btn main-btn keep-btn-at-bottom-of-div">
+                    </div>               <Link to={`/unterkunft/${slug}`} className="btn main-btn keep-btn-at-bottom-of-div">
                         <h5 className='btn-text card-title'>Mehr Details</h5>
                     </Link>
                 </div>
