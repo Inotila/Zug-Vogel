@@ -63,7 +63,7 @@ const TourCard: React.FC<TourCardProps> = ({
                         <p>{summaryText}</p>
                     </div>
                     <Link to={`/touren/${slug}`} className="btn main-btn">
-                        More Details
+                        <h5 className='btn-text card-title'>Mehr Details</h5>
                     </Link>
                 </div>
 

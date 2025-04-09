@@ -72,7 +72,7 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
                     </div>
 
                     <Link to={`/unterkunft/${slug}`} className="btn main-btn keep-btn-at-bottom-of-div">
-                        Mehr Details anzeigen
+                        <h5 className='btn-text card-title'>Mehr Details</h5>
                     </Link>
                 </div>
             </div>

@@ -82,15 +82,17 @@ span:hover {
 }
 
 /* buttons styles */
+.btn-text{
+  font-weight:600 !important;
+}
 
 .btn  {
   border-radius: 0.5rem !important;
   border: 1px solid #000 !important;
-  font-weight:bold !important;
   padding: 0.2rem 0.75rem !important;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
-
+ 
 .btn:hover  {
   font-weight:bolder !important;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);

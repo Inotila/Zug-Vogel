@@ -40,7 +40,7 @@ const HomePage: React.FC = () => {
                 Interessen und Ihrem Zeitrahmen entsprechen.
               </p>
               <Link to="/touren" className="btn main-btn home-btn mt-auto">
-                <h5 className="card-title accomodation-title">Touren</h5>
+                <h5 className="btn-text card-title">Touren</h5>
               </Link>
             </div>
           </div>
@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
                 Wählen Sie Ihr ideales Sommerhaus aus unserer Auswahl sorgfältig kuratierter Häuser.
               </p>
               <Link to="/unterkunft" className="btn main-btn home-btn mt-auto">
-                <h5 className="card-title">Unterkunft</h5>
+                <h5 className="btn-text card-title">Unterkunft</h5>
               </Link>
             </div>
           </div>
@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
                 atemberaubende Natur Namibias näherbringen.
               </p>
               <Link to="/Aktivitäten" className="btn main-btn home-btn mt-auto">
-                <h5 className="card-title">Aktivitäten</h5>
+                <h5 className="btn-text card-title">Aktivitäten</h5>
               </Link>
             </div>
           </div>
@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
               Erhalten Sie wichtige Informationen zur Vorbereitung Ihres Aufenthalts und vieles mehr.
             </p>
             <Link to="/überNamibia" className="btn sub-btn home-about-us-btn mt-auto">
-              <p className='about-us-btn-text mx-3'>
+              <p className='btn-text about-us-btn-text mx-3'>
                 Erfahren Sie mehr über Namibia
               </p>
             </Link>
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
               die namibische Sonne genießen möchten.
             </p>
             <Link to="/überUns" className="btn sub-btn home-about-us-btn mt-auto">
-              <p className='about-us-btn-text mx-3'>
+              <p className='btn-text about-us-btn-text mx-3'>
                 Lernen Sie uns näher kennen
               </p>
             </Link>

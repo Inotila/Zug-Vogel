@@ -136,7 +136,7 @@ const AccommodationDetailsPage: React.FC = () => {
 
                         </div>
                         <button className="btn main-btn my-3" onClick={() => setShowEnquiryForm(true)}>
-                            Enquire
+                            <h5 className='btn-text card-title'>Erkundigen</h5>
                         </button>
                     </div>
                 </div>
@@ -145,7 +145,7 @@ const AccommodationDetailsPage: React.FC = () => {
             {/* Photo Gallery */}
             <div className="row">
                 <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
-                    <div className="mt-3">
+                    <div className="mt-2">
                         <h4>Gallery</h4>
                     </div>
                     <div className="image-container mb-3">

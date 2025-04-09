@@ -87,7 +87,7 @@ const ActivitiesPage: React.FC = () => {
                                     damit wir für Ihren Aufenthalt spannende Aktivitäten für Sie organisieren können.
                                 </p>
                                 <Link to="/profile" className="btn main-btn home-btn mt-3">
-                                    <p>Aktualisieren Sie Ihr Profil</p>
+                                    <h5 className='btn-text card-title'>Aktualisieren Sie Ihr Profil</h5>
                                 </Link>
                             </div>
                         )}
@@ -97,7 +97,7 @@ const ActivitiesPage: React.FC = () => {
             </div>
             <div className="row">
                 <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
-                    <h4 className="mt-3">Gallery</h4>
+                    <h4 className="mt-2">Gallery</h4>
                     <div className="image-container mb-3">
                         <img src={golfPlayers} alt="activities to do in Namibia" className="gallery-photo" />
                         <img src={swimmer} alt="activities to do in Namibia" className="gallery-photo" />
