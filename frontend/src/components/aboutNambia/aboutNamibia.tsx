@@ -31,8 +31,7 @@ const AboutNamibiaPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {/* Geschichte &amp; Gesellschaft */}
-            <div className="row my-3">
+            <div className="row mt-1 mb-3">
                 <div className="col">
                     <div className='shadow-container about-namibia-container mx-3'>
                         <div className='about-namibia-title'>

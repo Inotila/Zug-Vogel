@@ -35,9 +35,8 @@
 .hero-text-container {
     display: flex;
     justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    text-align: center; /* Ensures text inside is centered */
-    font-weight: 600;
+    align-items: center; 
+    text-align: center; 
     text-shadow: 2px 2px 4px rgba(254, 254, 254, 0.7);
     background: linear-gradient(
       to bottom,
@@ -49,6 +48,7 @@
 }
 
 .hero-text {
-    margin: 0.75rem auto; /* Centers the block element horizontally */
+    margin: 0.75rem auto;
     width: 75%;
+    font-weight: bold;
 }

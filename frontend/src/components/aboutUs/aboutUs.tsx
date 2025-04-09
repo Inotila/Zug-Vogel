@@ -31,7 +31,7 @@ const AboutUsPage: React.FC = () => {
             {/* founder countainer */}
             <div className="row ">
                 <div className="col">
-                    <div className='about-us-container shadow-container m-3'>
+                    <div className='about-us-container shadow-container mt-1 mb-3 mx-3'>
                         <div className='about-us-title mt-1'>
                             <h3>Unsere Gründer</h3>
                         </div>

@@ -51,7 +51,6 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
                     <div>
                         <h4 id="big-screen-title" className="card-title service-card-title">{title}</h4>
                         <div className="location-text">
-
                             <p className="mx-1">{city}</p>
                             <p className="mx-1">
                                 <a href={googleMapDirection} target="_blank" rel="noopener noreferrer">
@@ -60,11 +59,9 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
                             </p>
                         </div>
                     </div>
-
                     <div className="summary-container mx-1">
                         <p>{summaryText}</p>
                     </div>
-
                     <div className="amenities-container">
                         <p className="amenities-title">Ausstattung</p>
                         <ul className="amenities-list">

@@ -49,7 +49,7 @@ const ActivitiesPage: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <div className="row activities-row mt-3">
+            <div className="row activities-row mt-1">
                 <div className="col activities-col">
                     <div className='activities-container shadow-container mx-3'>
                         <div className=' mt-3'>

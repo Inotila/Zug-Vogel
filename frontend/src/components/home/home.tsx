@@ -25,13 +25,12 @@ const HomePage: React.FC = () => {
               Namibia liegt im Südwesten Afrikas und bietet erschwingliche Lebensbedingungen,
               freundliche Einheimische und eine breite Palette an Freizeitaktivitäten.
             </p>
-            <h5>Zugvogel Namibia setzt sich dafür ein, dass Ihr Aufenthalt in Namibia zu einem unvergesslichen Erlebnis wird.</h5>
           </div>
         </div>
       </div>
       <div className="row">
         {/* tour */}
-        <div className="col-12 col-md-4 card-col d-flex my-3">
+        <div className="col-12 col-md-4 card-col d-flex mt-1 mb-3">
           <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={giraffe} alt="#" />
             <div className="card-body">
@@ -47,7 +46,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         {/* accommodation */}
-        <div className="col-12 col-md-4 card-col d-flex my-3">
+        <div className="col-12 col-md-4 card-col d-flex mt-1 mb-3">
           <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={accommodationImg} alt="#" />
             <div className="card-body">
@@ -62,7 +61,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
         {/* activities */}
-        <div className="col-12 col-md-4 card-col d-flex my-3">
+        <div className="col-12 col-md-4 card-col d-flex mt-1 mb-3">
           <div className="card shadow-container homepage-card flex-fill h-100">
             <img className="home-card-image card-img-top" src={golfImg} alt="#" />
             <div className="card-body">
