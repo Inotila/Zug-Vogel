@@ -33,7 +33,7 @@ const AboutUsPage: React.FC = () => {
                 <div className="col">
                     <div className='about-us-container shadow-container mt-1 mb-3 mx-3'>
                         <div className='about-us-title mt-1'>
-                            <h3>Unsere Gründer</h3>
+                            <h3 className='card-main-title'>Unsere Gründer</h3>
                         </div>
                         <div className='founders-container my-3'>
                             <div className='founder-img-container'>
@@ -105,7 +105,7 @@ const AboutUsPage: React.FC = () => {
                         )}
 
                         {/* Toggle Button */}
-                        <button className="btn main-btn mb-3" onClick={() => setShowMore(!showMore)}>
+                        <button className="btn main-btn mb-3 show-more-about-us-btn" onClick={() => setShowMore(!showMore)}>
                             {showMore ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                         </button>
                     </div>
@@ -115,7 +115,7 @@ const AboutUsPage: React.FC = () => {
                 <div className="col">
                     <div className='about-us-container shadow-container mx-3'>
                         <div className='about-us-title mt-3'>
-                            <h3>Kontaktieren Sie uns</h3>
+                            <h3 className='card-main-title'>Kontaktieren Sie uns</h3>
                         </div>
                         <div className='about-us-title mt-3'>
                             <p>Kontaktieren Sie uns noch heute für alle Ihre Buchungswünsche. Wir beantworten auch gerne alle Ihre Fragen zu Namibia.
@@ -126,7 +126,7 @@ const AboutUsPage: React.FC = () => {
                         <div className='contact-container d-flex justify-content-center text-center'>
                             <div className='contact-details-container '>
                                 <div className='phone-and-email-container'>
-                                    <div className='phone-and-email mt-3'>
+                                    <div className='phone-and-email my-3'>
                                         <div className='phone-and-email mx-3'>
                                             <a className='mx-2' href="#">
                                                 <FontAwesomeIcon icon="phone" size="2x" />

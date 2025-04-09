@@ -87,12 +87,12 @@ const TourDetailsPage: React.FC = () => {
                 <div className="description-container-col col-sm-12 col-md-6 col-lg-8 me-3 off-padding">
                     <div className="shadow-container description-container">
                         <div className="description-intro-container">
-                            <h4 className="mt-3">{tour.title}</h4>
+                            <h4 className="card-main-title">{tour.title}</h4>
                             <div className="d-flex flex-row justify-content-center">
-                                <p className="mx-2">Reisedauer: {tour.durationOfTrip} Tage</p>
-                                <p className="mx-2">Ausgangspunkt: {tour.startingPoint}</p>
-                                <p className="mx-2">Hauptziel: {tour.mainDestination}</p>
-                                <p className="mx-2">Ausgangspunkt: {tour.endDestination}</p>
+                                <p className="mx-2"><span className="card-main-title">Reisedauer:</span> {tour.durationOfTrip} Tage</p>
+                                <p className="mx-2"><span className="card-main-title">Ausgangspunkt:</span> {tour.startingPoint}</p>
+                                <p className="mx-2"><span className="card-main-title">Hauptziel:</span> {tour.mainDestination}</p>
+                                <p className="mx-2"><span className="card-main-title">Ausgangspunkt:</span> {tour.endDestination}</p>
                             </div>
                         </div>
                         <div className="description-container mt-3">
@@ -105,7 +105,7 @@ const TourDetailsPage: React.FC = () => {
             {/* Photo Gallery */}
             <div className="row">
                 <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
-                    <h4 className="mt-3">Gallery</h4>
+                    <h4 className="mt-2 card-main-title">Gallery</h4>
                     <div className="image-container mb-3">
                         {tour.photos && tour.photos.length > 0 ? (
                             tour.photos.map((photo: any, index: number) => (

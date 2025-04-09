@@ -52,8 +52,8 @@ const ActivitiesPage: React.FC = () => {
             <div className="row activities-row mt-1">
                 <div className="col activities-col">
                     <div className='activities-container shadow-container mx-3'>
-                        <div className=' mt-3'>
-                            <h3>Aktivitäten</h3>
+                        <div className=' my-2'>
+                            <h3 className='card-main-title'>Aktivitäten</h3>
                         </div>
                         <div className='activities-text mb-3'>
                             <p>
@@ -97,7 +97,7 @@ const ActivitiesPage: React.FC = () => {
             </div>
             <div className="row">
                 <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
-                    <h4 className="mt-2">Gallery</h4>
+                    <h4 className="mt-2 card-main-title">Gallery</h4>
                     <div className="image-container mb-3">
                         <img src={golfPlayers} alt="activities to do in Namibia" className="gallery-photo" />
                         <img src={swimmer} alt="activities to do in Namibia" className="gallery-photo" />

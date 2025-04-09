@@ -40,6 +40,7 @@
 
 .founder-title{
     font-size: 1rem;
+    font-weight: 600;
 }
 
 /* text */
@@ -73,4 +74,10 @@
     display: flex;
     flex-direction: row;   
     justify-content: center;
+}
+
+/* btn */
+
+.show-more-about-us-btn{
+    font-weight: 600 !important;
 }

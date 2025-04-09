@@ -105,7 +105,7 @@ const AccommodationDetailsPage: React.FC = () => {
                 <div className="description-container-col col-sm-12 col-md-6 col-lg-8 me-3 off-padding">
                     <div className="shadow-container description-container">
                         <div className="description-intro-container ">
-                            <h4 className="mt-3">{accommodation.title}</h4>
+                            <h4 className="card-main-title">{accommodation.title}</h4>
                             <div className="d-flex flex-row">
                                 <p className="mx-1">{accommodation.city}, Namibia</p>
                                 <p className="mx-1">
@@ -115,12 +115,12 @@ const AccommodationDetailsPage: React.FC = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="description-container mt-3">
+                        <div className="description-container mt-2">
                             <div>
                                 <p>{accommodation.description}</p>
                             </div>
-                            <div className="amenities-contianer mt-3">
-                                <h5>Ausstattung</h5>
+                            <div className="amenities-contianer mt-2">
+                                <h5 className="card-main-title">Ausstattung</h5>
                                 <ul className="amenities-list">
                                     {accommodation.amenities && Array.isArray(accommodation.amenities) && accommodation.amenities.length > 0 ? (
                                         accommodation.amenities.map((amenity: string, index: number) => (
@@ -135,7 +135,7 @@ const AccommodationDetailsPage: React.FC = () => {
                             </div>
 
                         </div>
-                        <button className="btn main-btn my-3" onClick={() => setShowEnquiryForm(true)}>
+                        <button className="btn main-btn" onClick={() => setShowEnquiryForm(true)}>
                             <h5 className='btn-text card-title'>Erkundigen</h5>
                         </button>
                     </div>
@@ -146,7 +146,7 @@ const AccommodationDetailsPage: React.FC = () => {
             <div className="row">
                 <div className="col shadow-container gallery-details-photo-container mx-3 mt-3">
                     <div className="mt-2">
-                        <h4>Gallery</h4>
+                        <h4 className="card-main-title">Gallery</h4>
                     </div>
                     <div className="image-container mb-3">
                         {accommodation.photos && accommodation.photos.length > 0 ? (
