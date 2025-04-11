@@ -96,10 +96,10 @@ const HomePage: React.FC = () => {
               <h4 className='mt-1'>Wichtige Links</h4>
               <ul className='important-information-list'>
                 <li>
-                  Visa-Portal: <a href="https://eservices.mhaiss.gov.na/" target='blank'> e-service</a>
+                  <span className='card-main-title'>Visa-Portal:</span> <a href="https://eservices.mhaiss.gov.na/" target='blank'> e-service</a>
                 </li>
                 <li>
-                  Sicherheit und Einwanderung: <a href="https://mha.gov.na/">Ministry of Home affairs
+                  <span className='card-main-title'>Sicherheit und Einwanderung:</span> <a href="https://mha.gov.na/">Ministry of Home affairs
                   </a>
                 </li>
               </ul>
@@ -124,7 +124,7 @@ const HomePage: React.FC = () => {
             <h4 className='mt-1'>Kontakt</h4>
             <p className='mb-2'>Kontaktieren Sie uns gerne unter:
               <br />
-              Email: zugvogel@gmail.com or 264 81 85 88 650
+              <span className='card-main-title'>Email:</span> zugvogel@gmail.com or 264 81 85 88 650
             </p>
           </div>
         </div>
