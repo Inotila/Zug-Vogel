@@ -128,15 +128,15 @@ const AboutUsPage: React.FC = () => {
                                 <div className='phone-and-email-container'>
                                     <div className='phone-and-email my-3'>
                                         <div className='phone-and-email mx-3'>
-                                            <a className='mx-2' href="#">
+                                            <span className='mx-2'>
                                                 <FontAwesomeIcon icon="phone" size="2x" />
-                                            </a>
+                                            </span>
                                             <h3> 081 858 8650</h3>
                                         </div>
                                         <div className='phone-and-email mx-3'>
-                                            <a className='mx-2' href="#">
+                                            <span className='mx-2'>
                                                 <FontAwesomeIcon icon="envelope" size="2x" />
-                                            </a>
+                                            </span>
                                             <h3> zugvogel@gmail.com</h3>
                                         </div>
                                     </div>

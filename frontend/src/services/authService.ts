@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 
 const API_URL = 'http://localhost:5010/api/auth'; // Backend API URL
 
