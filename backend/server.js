@@ -21,19 +21,17 @@ app.use(express.json());
 
 // CORS Configuration (update for production if needed)
 app.use(cors({
-  origin: ['http://localhost:3000', process.env.FRONTEND_URL], // allow localhost & production
+  origin: (origin, callback) => {
+    if (!origin || origin === 'http://localhost:3000' || origin === process.env.FRONTEND_URL) {
+      callback(null, true);  // Allow the request if it's from localhost or production frontend
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 }));
-
-// Additional CORS headers
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
 
 // API Routes
 app.use('/api/auth', authRoutes);
