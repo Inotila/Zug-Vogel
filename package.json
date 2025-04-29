@@ -1,0 +1,20 @@
+{
+  "name": "zug-vogel",
+  "version": "1.0.0",
+  "description": "Last updated: **February 13, 2025**",
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "cd frontend && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inotila/Zug-Vogel.git"
+  },
+  "keywords": [],
+  "author": "Inovative Studios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Inotila/Zug-Vogel/issues"
+  },
+  "homepage": "https://github.com/Inotila/Zug-Vogel#readme"
+}
