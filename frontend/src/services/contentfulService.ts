@@ -2,7 +2,7 @@ import { API_BASE_URL } from '../config/apiConfig';
 
 export async function fetchAccommodations(): Promise<any[]> {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/contentful/entries`);
+    const response = await fetch(`${API_BASE_URL.replace(/\/$/, '')}/api/contentful/entries`);
     const data = await response.json();
 
     // Filter for only accommodation entries (those with a 'city' field)
@@ -16,7 +16,7 @@ export async function fetchAccommodations(): Promise<any[]> {
 
 export async function fetchAccommodationBySlug(slug: string): Promise<any | null> {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/contentful/accommodation/${slug}`);
+    const response = await fetch(`${API_BASE_URL.replace(/\/$/, '')}/api/contentful/accommodation/${slug}`);
     if (!response.ok) throw new Error(`Error ${response.status}: ${response.statusText}`);
     const data = await response.json();
     return data;
