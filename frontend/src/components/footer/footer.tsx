@@ -10,10 +10,10 @@ const Footer: React.FC = () => {
       <div className="row">
         <div className="col">
           <div className='mt-3'>
-            <a className='mx-3' href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+            <a className='mx-3' href="https://www.facebook.com/share/1GXRoez9NM/?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
             </a>
-            <a className='mx-3' href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <a className='mx-3' href="https://www.instagram.com/zugvogelnamibia/#" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
             </a>
           </div>
