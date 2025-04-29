@@ -4,4 +4,4 @@ const isLocalhost =
 
 export const API_BASE_URL = isLocalhost
   ? 'http://localhost:5010'
-  : 'https://zugvogelnamibia-7487d9708ad8.herokuapp.com/'; // Replace with your real Heroku URL
+  : 'https://zugvogelnamibia-7487d9708ad8.herokuapp.com/'; 

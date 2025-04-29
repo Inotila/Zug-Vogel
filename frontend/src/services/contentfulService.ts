@@ -28,9 +28,13 @@ export async function fetchAccommodationBySlug(slug: string): Promise<any | null
 
 export const fetchTours = async (): Promise<any[]> => {
   try {
+    console.log('Fetching from:', `${API_BASE_URL}/api/contentful/entries?type=tours`);
+
     const response = await fetch(`${API_BASE_URL}/api/contentful/entries?type=tours`);
     const data = await response.json();
     console.log('Fetched tours:', data);
+    console.log('Fetched tours:', data);
+
     return data;
   } catch (error) {
     console.error('Error fetching tours:', error);
