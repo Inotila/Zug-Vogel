@@ -62,6 +62,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start server
+
 app.listen(port, () => {
   console.log(`Backend running on http://localhost:${port}`);
 });
