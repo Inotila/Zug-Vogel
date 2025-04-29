@@ -28,9 +28,9 @@ export async function fetchAccommodationBySlug(slug: string): Promise<any | null
 
 export const fetchTours = async (): Promise<any[]> => {
   try {
-    console.log('Fetching from:', `${API_BASE_URL}/api/contentful/entries?type=tours`);
+    console.log('Fetching from:', `${API_BASE_URL.replace(/\/$/, '')}/api/contentful/entries?type=tours`);
 
-    const response = await fetch(`${API_BASE_URL}/api/contentful/entries?type=tours`);
+    const response = await fetch(`${API_BASE_URL.replace(/\/$/, '')}/api/contentful/entries?type=tours`);
     const data = await response.json();
     console.log('Fetched tours:', data);
     console.log('Fetched tours:', data);
@@ -44,7 +44,7 @@ export const fetchTours = async (): Promise<any[]> => {
 
 export const fetchTourBySlug = async (slug: string): Promise<any | null> => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/contentful/tour/${slug}`);
+    const response = await fetch(`${API_BASE_URL.replace(/\/$/, '')}/api/contentful/tour/${slug}`);
     if (!response.ok) throw new Error(`Error ${response.status}: ${response.statusText}`);
     const data = await response.json();
     return data;
