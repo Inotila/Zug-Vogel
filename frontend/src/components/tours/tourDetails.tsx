@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../../assets/css/index.css";
-import "../../assets/css/serviceDetails.css";
 import "./assets/css/tours.css";
+import "../../assets/css/serviceDetails.css";
 import "../../assets/css/serviceStyle.css";
 import { fetchTourBySlug } from "../../services/contentfulService";
 
