@@ -4,6 +4,7 @@ import { getUserProfile } from '../../services/authService';
 import '../../assets/css/index.css';
 import './assests/css/activities.css';
 import "../../assets/css/serviceStyle.css";
+import "../../assets/css/serviceDetails.css";
 import golfPlayers from '../../assets/images/hero-images/activities-hero-img.jpg';
 import swimmer from '../../assets/images/actvities/swimmer.jpg';
 import cafeSitters from '../../assets/images/actvities/cafeSitters.jpg';
