@@ -4,4 +4,4 @@ const isLocalhost =
 
 export const API_BASE_URL = isLocalhost
   ? 'http://localhost:5010'
-  : 'https://zugvogelnamibia-7487d9708ad8.herokuapp.com/'; 
+  : 'https://www.zugvogelnamibia.com'; 
