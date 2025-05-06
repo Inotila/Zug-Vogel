@@ -127,7 +127,9 @@ const HomePage: React.FC = () => {
               <span className='card-main-title'>Email:</span> info@zugvogel.com
               <span className='card-main-title'> Telefonnummer:</span> +264 81 727 8228
               <br />
-              <span className='card-main-title'> Handy/Festnetz:</span> +49 176 56729274 / +49 46 131 07780
+              <span className='card-main-title'> Handy:</span> +49 176 56729274
+              <span className='card-main-title'> Festnetz:</span> +49 46 131 07780
+
 
             </p>
           </div>
