@@ -125,20 +125,24 @@ const AboutUsPage: React.FC = () => {
                         </div>
                         <div className='contact-container d-flex justify-content-center text-center'>
                             <div className='contact-details-container '>
-                                <div className='phone-and-email-container'>
-                                    <div className='phone-and-email my-3'>
-                                        <div className='phone-and-email mx-3'>
-                                            <span className='mx-2'>
-                                                <FontAwesomeIcon icon="phone" size="2x" />
-                                            </span>
-                                            <h3> 081 858 8650</h3>
-                                        </div>
-                                        <div className='phone-and-email mx-3'>
-                                            <span className='mx-2'>
-                                                <FontAwesomeIcon icon="envelope" size="2x" />
-                                            </span>
-                                            <h3> zugvogel@gmail.com</h3>
-                                        </div>
+                                <div className='phone-and-email-container my-3'>
+                                    <div className='phone-and-email mx-3'>
+                                        <h3 className='mx-2'>
+                                            <FontAwesomeIcon icon="phone" size="1x" />
+                                        </h3>
+                                        <h3> +264 81 727 8228 oder +264 81 704 0439 </h3>
+                                    </div>
+                                    <div className='phone-and-email mx-3'>
+                                        <h3 className='mx-2'>
+                                            Deutsches Mobilfunknetz / Festnetz:
+                                        </h3>
+                                        <h3> +49 176 56729274 / +49 46 131 07780 </h3>
+                                    </div>
+                                    <div className='phone-and-email mx-3'>
+                                        <span className='mx-2'>
+                                            <FontAwesomeIcon icon="envelope" size="2x" />
+                                        </span>
+                                        <h3> info@zugvogel.com</h3>
                                     </div>
                                 </div>
                                 {/* <div className='social-media-links-container mt-3'>
