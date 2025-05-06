@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
         <div className='home-hero-content'>
           <div className="d-flex flex-column home-hero-banner-text-container">
             <h1 className='hero-banner-text company-title'>Zugvogel</h1>
-            <p className='hero-banner-text company-moto'>Überwintern im Sonnnparadis</p>
+            <p className='hero-banner-text company-moto'>Überwintern im Sonnnparadies</p>
           </div>
         </div>
       </div>
