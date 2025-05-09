@@ -12,7 +12,7 @@ const HomePage: React.FC = () => {
     <div className="container-fluid text-center">
       <div className="row hero-banner-container home-hero-banner-container ">
         <div className='home-hero-content'>
-          <div className='hero-logo-container d-flex justify-content-center align-items-center'>
+          <div className=' d-flex justify-content-center align-items-center'>
             <img className='hero-logo' src={logo} alt="Zugvogel company logo" />
           </div>
           <div className="home-hero-banner-text-container align-self-end mb-2">
