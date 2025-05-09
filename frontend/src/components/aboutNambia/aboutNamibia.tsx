@@ -37,21 +37,70 @@ const AboutNamibiaPage: React.FC = () => {
                         <div className='about-namibia-title'>
                             <h3>Wichtige Informationen</h3>
                         </div>
-                        <div className='about-namibia-text my-3'>
+                        <div className='about-namibia-text'>
                             <p>
                                 Namibia ist ein modernes Land mit einem modernen Gesundheitswesen und anderen Einrichtungen in den meisten Großstädten.
                                 Wir haben einige Links für Sie zusammengestellt, die Ihnen während Ihres Aufenthalts nützlich sein werden,
                                 einschließlich der Online-Beantragung eines Visums.
                             </p>
-                            <ul className='important-information-list mt-3'>
-                                <li>
-                                    Visa-Portal: <a href="https://eservices.mhaiss.gov.na/" target='blank'> e-service</a>
-                                </li>
-                                <li>
-                                    Sicherheit und Einwanderung: <a href="https://mha.gov.na/">Ministry of Home affairs
-                                    </a>
-                                </li>
-                            </ul>
+                            <div className='mt-2'>
+                                <div>
+                                    <h5>Botschaften und Visa</h5>
+                                </div>
+                                <div>
+                                    <ul className='important-information-list mt-1'>
+                                        <li>
+                                            <span className='card-main-title'>Visa-Portal:</span><a className='ms-1' href="https://eservices.mhaiss.gov.na/" target="_blank" rel="noopener noreferrer"> e-service</a>
+                                        </li>
+                                        <li>
+                                            <span className='card-main-title'>Botschaften:</span>
+                                            <a className='ms-1' href="https://www.namibia-botschaft.de/" target="_blank" rel="noopener noreferrer">Botschaft der Republik Namibia
+                                            </a>(Berlin, Deutschland),
+                                            <br />
+                                            <a className='ms-1' href="https://www.namibia-botschaft.de/">Botschaft der Republik Namibia
+                                            </a>(Windhoek, Namibia)
+                                        </li>
+                                        <li>
+                                            <span className='card-main-title'>Sicherheit und Einwanderung:</span><a className='ms-1' href="https://mha.gov.na/" target="_blank" rel="noopener noreferrer">Ministry of Home affairs
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='mt-1'>
+                                <div>
+                                    <h5>Wetter</h5>
+                                </div>
+                                <div>
+                                    <ul className='important-information-list mt-1'>
+                                        <li>
+                                            <a className='ms-1 card-main-title' href="https://www.timeanddate.com/weather/namibia/windhoek/ext" target="_blank" rel="noopener noreferrer">Wetter in Namibia</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className='mt-1'>
+                                <div>
+                                    <h5>Medien und Unterhaltung</h5>
+                                </div>
+                                <div>
+                                    <ul className='important-information-list mt-1'>
+                                        <li>
+                                            <span className='card-main-title'>Zeitungen:</span><a className='ms-1' href="https://www.namibian.com.na/" target="_blank" rel="noopener noreferrer">The Namibian</a>,
+                                            <a className='ms-1' href="https://www.az.com.na/" target="_blank" rel="noopener noreferrer"> Allemeinie Zeitung</a>
+                                        </li>
+                                        <li>
+                                            <span className='card-main-title'>Radio:</span>
+                                            <a className='ms-1' href="https://hitradio.com.na/" target="_blank" rel="noopener noreferrer">Hit Radio Namibia
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <span className='card-main-title'>Live Webcam:</span><a className='ms-1' href="https://www.youtube.com/@NamibiaCam" target="_blank" rel="noopener noreferrer">NamibiaCam
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

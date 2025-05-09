@@ -140,3 +140,9 @@ span:hover {
 .card-main-title{
   font-weight:600;
 }
+
+/* information list */
+
+.important-information-list {
+  list-style: none;
+}

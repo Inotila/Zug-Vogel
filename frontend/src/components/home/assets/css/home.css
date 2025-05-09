@@ -98,11 +98,6 @@ height: 90%;
 margin: 0 0.75rem !important;
 }
 
-.important-information-list{
-  list-style: none;
-}
-
-
 @media (max-width: 1217px) {
     
   .company-title{

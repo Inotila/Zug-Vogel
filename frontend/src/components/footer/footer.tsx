@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
       <div className="row">
         <div className="col">
           <div className='footter-copy-right-container mt-3'>
-            <a href="https://www.termsfeed.com/live/6a2ac480-a508-4f63-a4fe-05badda930f4">Datenschutzrichtlinie</a>
+            <a href="https://www.termsfeed.com/live/6a2ac480-a508-4f63-a4fe-05badda930f4" target="_blank" rel="noopener noreferrer">Datenschutzrichtlinie</a>
             <p className='mx-3'>&copy; {new Date().getFullYear()} Zug Vogel Namibia</p>
             <p>info@zugvogel.com</p>
           </div>
