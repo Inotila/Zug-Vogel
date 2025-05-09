@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../../assets/css/index.css";
-import logo from "../../assets/images/logo-images/nav-zug-vogel-color-logo.png";
+import logo from "../../assets/images/logo-images/nav-logo.png";
 import "./navbar.css";
 
 const Navbar: React.FC = () => {
