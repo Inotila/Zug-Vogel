@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
+import CookieConsent from './components/cookiesConsent/CookieConsent';
 
 // Lazy-loaded components
 const HomePage = lazy(() => import('./components/home/home'));
@@ -16,6 +17,7 @@ const LoginPage = lazy(() => import('./components/userAuth/login'));
 const ProfilePage = lazy(() => import('./components/userAuth/profile'));
 const ActivitiesPage = lazy(() => import('./components/activities/activities'));
 const AccomodationDetailsPage = lazy(() => import('./components/accommodation/accommodationDetails'));
+
 
 const App: React.FC = () => {
   return (
@@ -39,6 +41,7 @@ const App: React.FC = () => {
             </Routes>
           </Suspense>
         </div>
+        <CookieConsent />
         <Footer />
       </div>
     </Router>
