@@ -50,14 +50,16 @@
 .hero-text {
     margin: 0.75rem auto;
     width: 75%;
-    font-weight: bold;
+}
+
+.hero-text > p {
+    font-weight: bold !important;
 }
 
 @media (max-width: 817px) {
     .hero-text {
         margin: 0.75rem 0.75rem;
         width: auto;
-        font-weight: bold;
         font-size: 13px;
     }
 }

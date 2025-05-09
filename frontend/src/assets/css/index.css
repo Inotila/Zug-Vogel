@@ -50,6 +50,10 @@ code {
   flex-direction: column;
 }
 
+p { 
+  font-weight: 500;
+}
+
 a, p, link {
   padding: 0 !important;
   margin: 0 !important;
