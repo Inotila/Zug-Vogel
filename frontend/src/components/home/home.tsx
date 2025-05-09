@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/css/index.css';
 import './assets/css/home.css';
+import logo from '../../assets/images/logo-images/logo-main.png'
 import accommodationImg from '../../assets/images/accommodation-images/eros-guest-house/eros-pool.jpg';
 import giraffe from '../../assets/images/tours-images/giraffe.jpg'
 import golfImg from '../../assets/images/actvities/golfer.jpg';
@@ -9,9 +10,12 @@ import golfImg from '../../assets/images/actvities/golfer.jpg';
 const HomePage: React.FC = () => {
   return (
     <div className="container-fluid text-center">
-      <div className="row hero-banner-container home-hero-banner-container">
+      <div className="row hero-banner-container home-hero-banner-container ">
         <div className='home-hero-content'>
-          <div className="d-flex flex-column home-hero-banner-text-container">
+          <div className='hero-logo-container d-flex justify-content-center align-items-center'>
+            <img className='hero-logo' src={logo} alt="Zugvogel company logo" />
+          </div>
+          <div className="home-hero-banner-text-container align-self-end mb-2">
             <h1 className='hero-banner-text company-title'>Zugvogel</h1>
             <p className='hero-banner-text company-moto'>Überwintern im Sonnnparadies</p>
           </div>

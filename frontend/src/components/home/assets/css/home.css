@@ -13,8 +13,29 @@
 }
 
 .home-hero-content {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  justify-content: space-between; 
+  position: relative;
+}
+
+.hero-logo-container{
+  
+}
+
+.hero-logo{
+height: 90%; 
+}
+
+.home-hero-banner-text-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .company-title, .company-moto{
