@@ -121,3 +121,9 @@ margin: 0 0.75rem !important;
     }
 
 }
+
+@media (max-width: 1119px) {
+  .home-btn{
+    width: auto;
+  }
+}
