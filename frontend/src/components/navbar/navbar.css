@@ -11,6 +11,11 @@
   flex: 1;
 }
 
+.nav-logo{
+  height: 100%;
+  width: auto;
+}
+
 .nav-search-container {
   display: flex;
   justify-content: center;
