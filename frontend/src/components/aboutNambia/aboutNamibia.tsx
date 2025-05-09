@@ -43,64 +43,58 @@ const AboutNamibiaPage: React.FC = () => {
                                 Wir haben einige Links für Sie zusammengestellt, die Ihnen während Ihres Aufenthalts nützlich sein werden,
                                 einschließlich der Online-Beantragung eines Visums.
                             </p>
-                            <div className='mt-2'>
-                                <div>
-                                    <h5>Botschaften und Visa</h5>
+                            <div className='infromation-links-container'>
+                                <div className='mt-2'>
+                                    <div >
+                                        <h5>Botschaften und Visa</h5>
+                                    </div>
+                                    <div>
+                                        <ul className='important-information-list mt-1'>
+                                            <li>
+                                                <span className='card-main-title'>Visa-Portal:</span><a className='ms-1' href="https://eservices.mhaiss.gov.na/" target="_blank" rel="noopener noreferrer"> e-service</a>
+                                            </li>
+                                            <li>
+                                                <span className='card-main-title'>Botschaften:</span>
+                                                <a className='ms-1' href="https://www.namibia-botschaft.de/" target="_blank" rel="noopener noreferrer">Botschaft der Republik Namibia
+                                                </a>(Berlin, Deutschland),
+                                                <br />
+                                                <a className='ms-1' href="https://www.namibia-botschaft.de/">Botschaft der Republik Namibia
+                                                </a>(Windhoek, Namibia)
+                                            </li>
+                                            <li>
+                                                <span className='card-main-title'>Sicherheit und Einwanderung:</span><a className='ms-1' href="https://mha.gov.na/" target="_blank" rel="noopener noreferrer">Ministry of Home affairs
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div>
-                                    <ul className='important-information-list mt-1'>
-                                        <li>
-                                            <span className='card-main-title'>Visa-Portal:</span><a className='ms-1' href="https://eservices.mhaiss.gov.na/" target="_blank" rel="noopener noreferrer"> e-service</a>
-                                        </li>
-                                        <li>
-                                            <span className='card-main-title'>Botschaften:</span>
-                                            <a className='ms-1' href="https://www.namibia-botschaft.de/" target="_blank" rel="noopener noreferrer">Botschaft der Republik Namibia
-                                            </a>(Berlin, Deutschland),
-                                            <br />
-                                            <a className='ms-1' href="https://www.namibia-botschaft.de/">Botschaft der Republik Namibia
-                                            </a>(Windhoek, Namibia)
-                                        </li>
-                                        <li>
-                                            <span className='card-main-title'>Sicherheit und Einwanderung:</span><a className='ms-1' href="https://mha.gov.na/" target="_blank" rel="noopener noreferrer">Ministry of Home affairs
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className='mt-1'>
-                                <div>
-                                    <h5>Wetter</h5>
-                                </div>
-                                <div>
-                                    <ul className='important-information-list mt-1'>
-                                        <li>
-                                            <a className='ms-1 card-main-title' href="https://www.timeanddate.com/weather/namibia/windhoek/ext" target="_blank" rel="noopener noreferrer">Wetter in Namibia</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className='mt-1'>
-                                <div>
-                                    <h5>Medien und Unterhaltung</h5>
-                                </div>
-                                <div>
-                                    <ul className='important-information-list mt-1'>
-                                        <li>
-                                            <span className='card-main-title'>Zeitungen:</span><a className='ms-1' href="https://www.namibian.com.na/" target="_blank" rel="noopener noreferrer">The Namibian</a>,
-                                            <a className='ms-1' href="https://www.az.com.na/" target="_blank" rel="noopener noreferrer"> Allemeinie Zeitung</a>
-                                        </li>
-                                        <li>
-                                            <span className='card-main-title'>Radio:</span>
-                                            <a className='ms-1' href="https://hitradio.com.na/" target="_blank" rel="noopener noreferrer">Hit Radio Namibia
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <span className='card-main-title'>Live Webcam:</span><a className='ms-1' href="https://www.youtube.com/@NamibiaCam" target="_blank" rel="noopener noreferrer">NamibiaCam
-                                            </a>
-                                        </li>
-                                    </ul>
+                                <div className='mt-1 text-center'>
+                                    <div>
+                                        <h5>Nachricht und Unterhaltung</h5>
+                                    </div>
+                                    <div>
+                                        <ul className='important-information-list mt-1'>
+                                            <li>
+                                                <span className='card-main-title'>Radio:</span>
+                                                <a className='ms-1' href="https://hitradio.com.na/" target="_blank" rel="noopener noreferrer">Hit Radio Namibia</a>
+                                            </li>
+                                            <li>
+                                                <span className='card-main-title'>Zeitungen:</span><a className='ms-1' href="https://www.namibian.com.na/" target="_blank" rel="noopener noreferrer">The Namibian</a>,
+                                                <a className='ms-1' href="https://www.az.com.na/" target="_blank" rel="noopener noreferrer">Allemeinie Zeitung</a>
+                                            </li>
+                                            <li>
+                                                <span className='card-main-title'>Live Webcam:</span><a className='ms-1' href="https://www.youtube.com/@NamibiaCam" target="_blank" rel="noopener noreferrer">NamibiaCam
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <span className='card-main-title'>Wetter:</span><a className='ms-1 card-main-title' href="https://www.timeanddate.com/weather/namibia/windhoek/ext" target="_blank" rel="noopener noreferrer">Wetter in Namibia</a>
+
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
