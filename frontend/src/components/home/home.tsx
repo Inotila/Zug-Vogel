@@ -36,7 +36,7 @@ const HomePage: React.FC = () => {
         {/* tour */}
         <div className="col-12 col-md-4 card-col d-flex mt-1 mb-3">
           <div className="card shadow-container homepage-card flex-fill h-100">
-            <img className="home-card-image card-img-top" src={giraffe} alt="#" />
+            <img className="home-card-image card-img-top" src={giraffe} alt="A giraffe in the Namibian wild" />
             <div className="card-body">
               <p className="card- mb-2">
                 Ob Sie einen kurzen Wochenendausflug planen oder eine längere Entdeckungsreise von bis zu
@@ -52,7 +52,7 @@ const HomePage: React.FC = () => {
         {/* accommodation */}
         <div className="col-12 col-md-4 card-col d-flex mt-1 mb-3">
           <div className="card shadow-container homepage-card flex-fill h-100">
-            <img className="home-card-image card-img-top" src={accommodationImg} alt="#" />
+            <img className="home-card-image card-img-top" src={accommodationImg} alt="A house in Namibia availble for booking" />
             <div className="card-body">
               <p className="card-text mb-2">
                 Wir bieten hochwertige Unterkünfte in Windhoek, die sich ideal für einen erholsamen Aufenthalt eignen.
