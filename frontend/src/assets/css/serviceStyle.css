@@ -85,7 +85,10 @@
 
 /* Responsive design for smaller screens */
 @media (max-width: 1217px) {
-   
+    .service-content {
+        width: 100%;
+    }
+
     .small-screen-title {
         display: unset !important;
     }

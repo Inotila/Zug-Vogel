@@ -48,8 +48,7 @@ const TourCard: React.FC<TourCardProps> = ({
                     />
                 </div>
                 <div className='service-content'>
-
-                    <div className="">
+                    <div className="my-1">
                         <h4 id="big-screen-title" className="card-title service-card-title">{title}</h4>
                         <div className='location-text'>
                             <p className="mx-1">Starting: {startingPoint}</p>
@@ -59,10 +58,10 @@ const TourCard: React.FC<TourCardProps> = ({
                         </div>
 
                     </div>
-                    <div className="summary-container mx-1">
+                    <div className="summary-container">
                         <p>{summaryText}</p>
                     </div>
-                    <Link to={`/touren/${slug}`} className="btn main-btn">
+                    <Link to={`/touren/${slug}`} className="btn main-btn mt-2">
                         <h5 className='btn-text card-title'>Mehr Details</h5>
                     </Link>
                 </div>

@@ -47,10 +47,9 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
 
                 <div className="service-content flex-fill ">
                     {/* Desktop title */}
-
                     <div>
                         <h4 id="big-screen-title" className="card-title service-card-title">{title}</h4>
-                        <div className="location-text">
+                        <div className="location-text my-1">
                             <p className="mx-1">{city}</p>
                             <p className="mx-1">
                                 <a href={googleMapDirection} target="_blank" rel="noopener noreferrer">
@@ -59,7 +58,7 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
                             </p>
                         </div>
                     </div>
-                    <div className="summary-container mx-1">
+                    <div className="summary-container">
                         <p>{summaryText}</p>
                     </div>
                     <div className="amenities-container">
@@ -70,7 +69,8 @@ const AccommodationCard: React.FC<AccommodationCardProps> = ({
                             <li><span className='card-main-title'>Parken:</span> {garge}</li>
                         </ul>
 
-                    </div>               <Link to={`/unterkunft/${slug}`} className="btn main-btn keep-btn-at-bottom-of-div">
+                    </div>
+                    <Link to={`/unterkunft/${slug}`} className="btn main-btn keep-btn-at-bottom-of-div mt-2">
                         <h5 className='btn-text card-title'>Mehr Details</h5>
                     </Link>
                 </div>
